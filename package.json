@@ -1,0 +1,30 @@
+{
+  "name": "tia",
+  "version": "1.0.0",
+  "description": "Connecting SPM students with volunteer tutors.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify --cleanDestinationDir",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "tutor",
+    "spm",
+    "tuition",
+    "volunteer"
+  ],
+  "author": "TIA",
+  "license": "GPL-3.0",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.17",
+    "bootstrap": "^5.3.2",
+    "hugo-bin": "^0.119.0",
+    "postcss-cli": "^11.0.0"
+  }
+}

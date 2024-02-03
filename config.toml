@@ -1,0 +1,7 @@
+baseURL = 'https://tutors-in-action.org/'
+languageCode = 'en-us'
+title = 'Tutors in Action'
+description = 'Connecting SPM students with volunteer tutors.'
+
+[params]
+pages = ['Home', 'Project', 'Resources', 'About Us']

@@ -1,3 +1,13 @@
 {{- define "main" -}}
-{{- partial "nav.html" -}}
+<div class="container">
+    {{- partial "nav.html" -}}
+
+    <main style="height:1000px;">
+        <!-- Content goes here -->
+    </main>
+
+    <div class="row">
+        {{- partial "footer.html" -}}
+    </div>
+</div>
 {{- end -}}

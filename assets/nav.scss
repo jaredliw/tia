@@ -1,0 +1,7 @@
+@import "app";
+
+#donate-btn:hover {
+  color: $primary;
+  // `$primary` color, not able to specify `a` without knowing its RGB
+  background-color: rgba(9, 114, 118, 0.15);
+}

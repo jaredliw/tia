@@ -1,0 +1,46 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$primary: #097276;
+$background: #c3e1d7;
+
+$body-bg: $background;
+$border-width: 1.5px;
+$theme-colors: map-merge($theme-colors, (
+        "primary": $primary
+));
+$navbar-light-hover-color: $primary;
+
+@font-face {
+  font-family: "Kollektif";
+  src: url("/fonts/Kollektif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: url("/fonts/Kollektif-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: url("/fonts/Kollektif-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: url("/fonts/Kollektif-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: Kollektif, sans-serif;
+}
+
+@import "bootstrap/scss/bootstrap";

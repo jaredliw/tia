@@ -1,5 +1,9 @@
 @import "app";
 
+nav {
+  background-color: $background;
+}
+
 #donate-btn:hover {
   color: $primary;
   // `$primary` color, not able to specify `a` without knowing its RGB

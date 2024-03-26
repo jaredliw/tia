@@ -7,3 +7,6 @@
 
 # Dependency directory
 node_modules/
+
+# IntelliJ IDEA files
+.idea/

@@ -2,45 +2,25 @@
 @import "bootstrap/scss/variables";
 
 $primary: #097276;
+$secondary: #f9f2bc;
 $background: #c3e1d7;
 
 $body-bg: $background;
 $border-width: 1.5px;
+$border-color: #fff8dd;
+$nav-pills-link-active-bg: $secondary;
+$accordion-button-active-bg: none;
+$accordion-button-focus-border-color: none;
+$accordion-button-focus-box-shadow: none;
 $theme-colors: map-merge($theme-colors, (
-        "primary": $primary
+        "primary": $primary,
+        "secondary": $secondary
 ));
 $navbar-light-hover-color: $primary;
 
-@font-face {
-  font-family: "Kollektif";
-  src: url("/fonts/Kollektif.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Kollektif";
-  src: url("/fonts/Kollektif-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Kollektif";
-  src: url("/fonts/Kollektif-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Kollektif";
-  src: url("/fonts/Kollektif-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
 body {
-  font-family: Kollektif, sans-serif;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-weight: 700 !important;
 }
 
 @import "bootstrap/scss/bootstrap";

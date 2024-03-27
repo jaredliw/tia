@@ -4,4 +4,4 @@ title = 'Tutors in Action'
 description = 'Connecting SPM students with volunteer tutors.'
 
 [params]
-pages = ['Home', 'Project', 'Resources', 'About Us']
+pages = ['Home', 'Projects', 'Resources', 'About Us']

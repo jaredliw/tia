@@ -11,6 +11,15 @@ impacts = [
     [142, "students impacted"],
     [130, "hours of tutoring"]
 ]
+socials = [
+    ["/svgs/facebook.svg", "https://www.facebook.com/tutors.in.action.malaysia"],
+    ["/svgs/instagram.svg", "https://www.instagram.com/tutors.in.action/"],
+    ["/svgs/telegram.svg", "https://t.me/TIA_helpbot"],
+    ["/svgs/youtube.svg", "https://www.youtube.com/@tutorsinactionmalaysia"],
+    ["/svgs/discord.svg", "https://discord.com/invite/7AE6cGVg2Y"],
+    ["/svgs/linkedin.svg", "https://www.linkedin.com/company/tutors-in-action-malaysia/"],
+    ["/svgs/xiaohongshu.svg", "https://www.xiaohongshu.com/user/profile/62f653c1000000001f005342"]
+]
 
 [module]
 [[module.mounts]]

@@ -55,18 +55,20 @@
             the following milestones:
         </p>
         <div class="d-flex justify-content-around px-5 my-4">
+            {{ range site.Params.impacts }}
             <div>
-                <h1 class="text-primary mb-1">789</h1>
-                <p class="fw-bold text-secondary">No. of tutors</p>
+                <h1 class="text-primary mb-1" id="{{ crypto.MD5 (index . 1) }}"></h1>
+                <p class="fw-bold">{{ index . 1 }}</p>
             </div>
-            <div>
-                <h1 class="text-primary">242</h1>
-                <p class="fw-bold text-secondary">No. of tutees</p>
-            </div>
-            <div>
-                <h1 class="text-primary">5320</h1>
-                <p class="fw-bold text-secondary">Hours tutored</p>
-            </div>
+            {{ end }}
+<!--            <div>-->
+<!--                <h1 class="text-primary" id="noOfTutees"></h1>-->
+<!--                <p class="fw-bold text-secondary">No. of tutees</p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <h1 class="text-primary" id="hoursTutored"></h1>-->
+<!--                <p class="fw-bold text-secondary">Hours tutored</p>-->
+<!--            </div>-->
         </div>
         <p class="mb-0">
             With your support and involvement, we will make greater strides together in the future!
@@ -176,11 +178,15 @@
     }
 </style>
 
-<script type="application/javascript">
+<script type="module">
     "use strict";
+    import { CountUp } from '/js/countUp.js';
 
-    (function ($) {
-
-    })(jQuery);
+    {{ range site.Params.impacts }}
+        new CountUp('{{ crypto.MD5 (index . 1) }}', {{ index . 0 }}, {
+            enableScrollSpy: true,
+            scrollSpyOnce: true
+        });
+    {{ end }}
 </script>
 {{- end -}}

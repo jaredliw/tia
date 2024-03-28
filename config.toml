@@ -5,3 +5,14 @@ description = 'Connecting SPM students with volunteer tutors.'
 
 [params]
 pages = ['Home', 'Projects', 'Resources', 'About Us']
+impacts = [
+    [20, "projects lauched"],
+    [47, "volunteers recruited"],
+    [142, "students impacted"],
+    [130, "hours of tutoring"]
+]
+
+[module]
+[[module.mounts]]
+source = "node_modules/countup.js/dist"
+target = "static/js"

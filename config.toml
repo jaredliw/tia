@@ -24,4 +24,16 @@ socials = [
 [module]
 [[module.mounts]]
 source = "node_modules/countup.js/dist"
-target = "static/js"
+target = "static/countup"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist"
+target = "static/bootstrap"
+
+[[module.mounts]]
+source = "node_modules/jquery/dist"
+target = "static/jquery"
+
+[[module.mounts]]
+source = "node_modules/jquery.easing"
+target = "static/jquery.easing"

@@ -61,14 +61,6 @@
                 <p class="fw-bold">{{ index . 1 }}</p>
             </div>
             {{ end }}
-<!--            <div>-->
-<!--                <h1 class="text-primary" id="noOfTutees"></h1>-->
-<!--                <p class="fw-bold text-secondary">No. of tutees</p>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <h1 class="text-primary" id="hoursTutored"></h1>-->
-<!--                <p class="fw-bold text-secondary">Hours tutored</p>-->
-<!--            </div>-->
         </div>
         <p class="mb-0">
             With your support and involvement, we will make greater strides together in the future!
@@ -180,7 +172,7 @@
 
 <script type="module">
     "use strict";
-    import { CountUp } from '/js/countUp.js';
+    import { CountUp } from '/countup/countUp.js';
 
     {{ range site.Params.impacts }}
         new CountUp('{{ crypto.MD5 (index . 1) }}', {{ index . 0 }}, {

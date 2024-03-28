@@ -71,6 +71,11 @@
     </div>
 </footer>
 
-{{ $options := (dict "targetPath" "footer.css" "includePaths" (slice "node_modules")) -}}
-{{ $css := resources.Get "footer.scss" | resources.ToCSS $options -}}
-<link rel="stylesheet" href="{{ $css.Permalink }}"/>
+<style>
+    .social-btn {
+        border-style: solid;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+    }
+</style>

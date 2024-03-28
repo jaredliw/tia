@@ -111,11 +111,17 @@
         transition-delay: 0.1s;
     }
 
-    #mainNav.navbar-scrolled .nav-link, #mainNav.navbar-scrolled .navbar-brand {
+    #mainNav.navbar-scrolled .nav-link:not(:hover) {
         color: inherit !important;
     }
 
-    .nav-link:hover, .nav-link:focus, #mainNav.navbar-scrolled a.navbar-brand {
+    a.nav-link:hover, a.nav-link:focus {
+        color: var(--bs-gray-400) !important;
+    }
+
+    #mainNav.navbar-scrolled a.nav-link:hover,
+    #mainNav.navbar-scrolled a.nav-link:focus,
+    #mainNav.navbar-scrolled a.navbar-brand {
         color: var(--bs-primary) !important;
     }
 

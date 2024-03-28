@@ -1,0 +1,65 @@
+[
+  {
+    "section": "general",
+    "qna": [
+      [
+        "I have successfully registered. When can I expect to be paired?",
+        "We aim to pair you with a tutor/tutee within 5 days of your registration date. Please note that the waiting period may be longer in the case of:\n- Low tutee sign-ups\n- Low subject demand/supply"
+      ],
+      [
+        "How will I know if I have been successfully paired?",
+        "Our Welfare-Ops team will send you a confirmation message via Telegram. The message will consist of your pairing details and further instructions on how to proceed."
+      ],
+      [
+        "When should the classes be conducted? How long should they be?",
+        "Classes should be arranged according to tutor’s and tutee's availability.\n\nAlthough there is no minimum duration, we encourage you to conduct each class for at least 1 hour."
+      ],
+      [
+        "How does TIA ensure the protection of my personal data (e.g. phone number)?",
+        "Your Telegram handle will be the ONLY contact detail provided to your tutor/tutee. Therefore, we encourage you and your tutee to use Telegram as your main communication platform."
+      ],
+      [
+        "I would like to withdraw from the tutoring programme. What can I do?",
+        "You may submit the “Tutor/Tutee Pairing Termination Form”.\n\nPlease note that re-registration is required if you are interested in participating in our tutoring programme again in the future."
+      ],
+      [
+        "I think my tutor/tutee and I are incompatible. What can I do?",
+        "You may approach the Welfare-Ops team to clarify your issue, and we will strive to mitigate it while protecting you and the best interests of your tutor/tutee.\n\nIf the issue persists, you may terminate the pairing by submitting the “Tutee/Tutor Pairing Termination Form”. We will then assign you to a new tutor/tutee as soon as possible."
+      ]
+    ]
+  },
+  {
+    "section": "for tutors",
+    "qna": [
+      [
+        "Does TIA provide resources that can assist me in class?",
+        "Yes! Our Resource team has compiled an extensive folder complete with textbooks, notes, practice questions, state trial papers and more! You can find the link to the folder in your onboarding email."
+      ],
+      [
+        "What are the different e-certificate categories?",
+        "There are 7 e-certificate categories:\n1. Beginner\n2. Advance\n3. Master\n4. Professional\n5. Diamond\n6. Crown\n7. Tutor of Honour\n\nFor every 4 lessons conducted, you will be eligible for the next e-certificate category."
+      ],
+      [
+        "How many lessons do I need to conduct to be eligible for an e-certificate?",
+        "You are required to conduct **at least 4 lessons every month**.\n\nPlease be reminded to **take a screenshot** of each of your lessons to serve as proof. You are required to submit these screenshots in our “Proof of Classes” form. This allows us to track your progress and determine your e-certificate eligibility. "
+      ],
+      [
+        "When can I expect to receive my e-certificate?",
+        "You can expect to receive your e-certificate by the end of the month.\n\nIf you need it urgently, please approach our Welfare-Ops team via Telegram."
+      ]
+    ]
+  },
+  {
+    "section": "for tutees",
+    "qna": [
+      [
+        "How does TIA select the most suitable tutor for me?",
+        "We aim to pair you up with a tutor who is:\n- Proficient in your subject\n- From the same stream as you (DLP / Non-DLP)\n- Able to teach in your preferred language\n- Suits your special requests"
+      ],
+      [
+        "How can I be sure that my tutor is qualified to teach this subject?",
+        "Our tutors must have scored **at least A-** in their SPM in order to be qualified to teach the subject. Moreover, they must also familiarise themselves with the current syllabus."
+      ]
+    ]
+  }
+]

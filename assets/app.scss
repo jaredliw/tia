@@ -6,7 +6,8 @@ $secondary: #f1f7d7;
 $background: #c3e1d7;
 
 $border-width: 1.5px;
-$border-color: #fff8dd;
+$border-color: $secondary;
+$accordion-border-color: $secondary;
 $nav-pills-link-active-bg: $secondary;
 $accordion-button-active-bg: none;
 $accordion-button-focus-border-color: none;
@@ -19,9 +20,20 @@ $body-tertiary-bg: $body-secondary-bg;
 $body-secondary-bg: $background;
 $navbar-light-hover-color: $primary;
 $body-color: $gray-800;
+$accordion-button-color: $gray-600;
+$accordion-button-active-color: $primary;
 
 body {
   font-weight: 600 !important;
+}
+
+p, li {
+  color: var(--bs-gray-600);
+  font-weight: lighter;
+}
+
+b, strong {
+  font-weight: bold !important;
 }
 
 @import "bootstrap/scss/bootstrap";

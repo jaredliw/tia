@@ -58,4 +58,9 @@ a:hover {
   color: var(--bs-gray-500) !important;
 }
 
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 @import "bootstrap/scss/bootstrap";

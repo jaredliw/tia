@@ -4,7 +4,12 @@ title = 'Tutors in Action'
 description = 'Connecting SPM students with volunteer tutors.'
 
 [params]
-pages = ['Home', 'Projects', 'Resources', 'About Us']
+pages = [
+    ['Home', '/'],
+    ['Projects', '/'],
+    ['Resources', '/'],
+    ['About', '/about']
+]
 impacts = [
     [20, "projects lauched"],
     [47, "volunteers recruited"],
@@ -20,6 +25,13 @@ socials = [
     ["/svgs/linkedin.svg", "https://www.linkedin.com/company/tutors-in-action-malaysia/"],
     ["/svgs/xiaohongshu.svg", "https://www.xiaohongshu.com/user/profile/62f653c1000000001f005342"]
 ]
+
+[menu]
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
+weight = 4
 
 [module]
 [[module.mounts]]

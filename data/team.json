@@ -1,0 +1,192 @@
+[
+  {
+    "department": "Executive",
+    "members": [
+      {
+        "name": "John Doe",
+        "role": "Director",
+        "avatar": "https://i.pravatar.cc/300?img=48"
+      },
+      {
+        "name": "Lorem Ipsum",
+        "role": "Secretary",
+        "avatar": "https://i.pravatar.cc/300?img=43"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Treasurer",
+        "avatar": "https://i.pravatar.cc/300?img=32"
+      }
+    ]
+  },
+  {
+    "department": "Welfare-Operations",
+    "members": [
+      {
+        "name": "Jane Doe",
+        "role": "Director",
+        "avatar": "https://i.pravatar.cc/300?img=25"
+      },
+      {
+        "name": "Ipsum Lorem",
+        "role": "Deputy Director",
+        "avatar": "https://i.pravatar.cc/300?img=14"
+      },
+      {
+        "name": "Ipsum Lorem",
+        "role": "Deputy Director",
+        "avatar": "https://i.pravatar.cc/300?img=12"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=6"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=5"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=4"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=3"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=2"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=1"
+      }
+    ]
+  },
+  {
+    "department": "Public Relations",
+    "members": [
+      {
+        "name": "Jane Doe",
+        "role": "Director",
+        "avatar": "https://i.pravatar.cc/300?img=56"
+      },
+      {
+        "name": "Ipsum Lorem",
+        "role": "Deputy Director",
+        "avatar": "https://i.pravatar.cc/300?img=57"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=62"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=58"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=48"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=37"
+      }
+    ]
+  },
+  {
+    "department": "Tech",
+    "members": [
+      {
+        "name": "Jane Doe",
+        "role": "Director",
+        "avatar": "https://i.pravatar.cc/300?img=3"
+      },
+      {
+        "name": "Ipsum Lorem",
+        "role": "Deputy Director",
+        "avatar": "https://i.pravatar.cc/300?img=1"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=2"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=70"
+      }
+    ]
+  },
+  {
+    "department": "Outreach",
+    "members": [
+      {
+        "name": "Jane Doe",
+        "role": "Director",
+        "avatar": "https://i.pravatar.cc/300?img=54"
+      },
+      {
+        "name": "Ipsum Lorem",
+        "role": "Deputy Director",
+        "avatar": "https://i.pravatar.cc/300?img=13"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=22"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=20"
+      },
+      {
+        "name": "Amet Consectetur",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=15"
+      }
+    ]
+  },
+  {
+    "department": "Resource",
+    "members": [
+      {
+        "name": "Jane Doe",
+        "role": "Director",
+        "avatar": "https://i.pravatar.cc/300?img=43"
+      },
+      {
+        "name": "Ipsum Lorem",
+        "role": "Deputy Director",
+        "avatar": "https://i.pravatar.cc/300?img=42"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=28"
+      },
+      {
+        "name": "Dolor Sit",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=30"
+      },
+      {
+        "name": "Amet Consectetur",
+        "role": "Executive",
+        "avatar": "https://i.pravatar.cc/300?img=25"
+      }
+    ]
+  }
+]

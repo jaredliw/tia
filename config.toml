@@ -1,8 +1,9 @@
 baseURL = 'https://tutors-in-action.org/'
 languageCode = 'en-us'
-title = 'Tutors in Action'
+title = 'Tutors in Action Malaysia (TIA)'
 
 [params]
+subtitle = 'Persatuan Pelajar Bantu Pelajar Malaysia (PPBPM)'
 description = 'We are a team of Malaysian youths hoping to help SPM students achieve their best.'
 inspiration = 'Exacerbated by class disruptions during the pandemic, we realised that not everyone had the privilege of receiving one-to-one guidance from teachers on topics they may struggle with.'
 aim = 'We aim to assist struggling Malaysian youth who lack academic support primarily through specialised online one-to-one or group tutoring by our own team of bright and accomplished volunteer tutors. Furthermore, we plan to use our platform to expand our reach by means of collaborations, fundraisers and more.'

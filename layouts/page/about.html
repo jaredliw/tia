@@ -1,7 +1,18 @@
 {{- define "main" -}}
 {{ partial "nav.html" (dict "nav_white" 1) }}
 
-<div class="row justify-content-center bg-body-secondary page-section px-3 pb-5" style="padding-top: 6.5rem;">
+<div class="row justify-content-center page-section px-5" style="padding-top: 6.5rem;">
+    <div>
+        <h2 class="text-center text-primary fw-lighter">
+            Our <span class="fw-bold">story</span>.
+        </h2>
+        <hr class="divider my-4"/>
+
+        <p class="text-start">{{ site.Params.story | safeHTML }}</p>
+    </div>
+</div>
+
+<div class="row justify-content-center bg-body-secondary page-section px-3 pb-5">
     <div class="text-center">
         <h2 class="text-primary fw-lighter">Meet the <span class="fw-bold">team</span>.</h2>
         <hr class="divider my-4"/>

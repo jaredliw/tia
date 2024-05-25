@@ -7,11 +7,8 @@
                 <h1 class="text-uppercase text-white">Tutors in Action Malaysia</h1>
                 <hr class="divider my-4"/>
             </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="fs-5 fw-lighter mb-5">
-                    We're an independent, student-led project aiming to assist Form 5 students who lack access to
-                    affordable tuition with SPM Preparation for free.
-                </p>
+            <div class="col-lg-7 align-self-baseline">
+                <p class="fs-5 fw-lighter mb-5">{{ site.Params.description }}</p>
             </div>
         </div>
     </div>
@@ -19,25 +16,14 @@
 
 {{- partial "nav.html" -}}
 
-<div class="row justify-content-center page-section mx-3">
+<div class="row justify-content-center page-section mx-3 pb-5">
     <div class="text-center">
         <h2 class="mt-0 text-primary fw-lighter">Our <span class="fw-bold">aim</span>.</h2>
         <hr class="divider my-4"/>
 
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center">
-                <p class="px-4 col-7">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis sem nec libero eleifend commodo.
-                    Fusce et nulla eu metus cursus ultrices. Ut ac magna eu odio tincidunt sodales. Quisque nec tortor
-                    eget ligula suscipit hendrerit. In hac habitasse platea dictumst. Nulla facilisi. Suspendisse
-                    potenti. Donec hendrerit leo vel mauris tincidunt, nec fermentum arcu molestie.<br>
-                    <br>
-                    Integer ac odio quis sem laoreet consectetur. Nullam gravida, quam a tristique dictum, justo justo
-                    suscipit ligula, nec gravida augue tortor nec nunc. Suspendisse potenti. Curabitur at felis vel est
-                    scelerisque fringilla. Integer nec nisi nec magna malesuada vehicula. Maecenas rutrum, mauris sit
-                    amet aliquam aliquet, dolor tortor faucibus neque, sed tincidunt odio lorem id nisi. Sed vel lectus
-                    vel mi posuere laoreet.
-                </p>
+                <p class="px-4 col-7 fs-6">{{ site.Params.aim }}</p>
                 <div class="col-4">
                     <img src="/svgs/clipart-teaching.svg" alt="Clip art">
                 </div>
@@ -46,12 +32,29 @@
     </div>
 </div>
 
-<div class="row justify-content-center page-section bg-body-secondary px-5">
+<div class="row justify-content-center page-section px-5 pb-5 bg-body-secondary">
+    <div class="text-center">
+        <h2 class="mt-0 text-primary fw-lighter">What <span class="fw-bold">inspired</span> us?</h2>
+        <hr class="divider my-4"/>
+
+        <p class="px-4">{{ site.Params.inspiration }}</p>
+        <!--        <div class="container-fluid">-->
+        <!--            <div class="row justify-content-center align-items-center">-->
+        <!--                <p class="px-4 col-7">{{ site.Params.inspiration }}</p>-->
+        <!--                <div class="col-4">-->
+        <!--                    <img src="/svgs/clipart-teaching.svg" alt="Clip art">-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+</div>
+
+<div class="row justify-content-center page-section px-5 pb-5">
     <div class="text-center">
         <h2 class="mt-0 text-primary fw-lighter">Our <span class="fw-bold">impact</span>.</h2>
         <hr class="divider my-4"/>
         <p>
-            Over the years from <b class="text-primary">2020</b> to <b class="text-primary">2023</b>, we have achieved
+            Over the years from <b class="text-primary">2020</b> to <b class="text-primary">2024</b>, we have achieved
             the following milestones:
         </p>
         <div class="d-flex justify-content-around px-5 my-4">
@@ -68,38 +71,38 @@
     </div>
 </div>
 
-<div class="row justify-content-center page-section px-5">
-    <div class="text-center">
-        <h2 class="mt-0 text-primary fw-lighter"><span class="fw-bold">FAQ</span>s.</h2>
-        <hr class="divider my-4"/>
+<!--<div class="row justify-content-center page-section px-5">-->
+<!--    <div class="text-center">-->
+<!--        <h2 class="mt-0 text-primary fw-lighter"><span class="fw-bold">FAQ</span>s.</h2>-->
+<!--        <hr class="divider my-4"/>-->
 
-        {{ range site.Data.faqs }}
-        <h6 class="text-uppercase pt-4">- {{ .section }} -</h6>
-        {{ $sectionHash := crypto.MD5 .section }}
-        <div class="accordion accordion-flush" id="faqAccordion-{{ $sectionHash }}">
-            {{ range .qna }}
-            {{ $hash := crypto.MD5 (print (index . 0) (index . 1)) }}
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="accordionHeader-{{ $hash }}">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#accordionCollapse-{{ $hash }}" aria-expanded="false"
-                            aria-controls="accordionCollapse-{{ $hash }}">
-                        {{ index . 0 | markdownify }}
-                    </button>
-                </h2>
-                <div id="accordionCollapse-{{ $hash }}" class="accordion-collapse collapse"
-                     aria-labelledby="accordionHeader-{{ $hash }}"
-                     data-bs-parent="#faqAccordion-{{ $sectionHash }}">
-                    <div class="accordion-body text-start py-0 pb-2">
-                        <p>{{ index . 1 | markdownify }}</p>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
-</div>
+<!--        {{ range site.Data.faqs }}-->
+<!--        <h6 class="text-uppercase pt-4">- {{ .section }} -</h6>-->
+<!--        {{ $sectionHash := crypto.MD5 .section }}-->
+<!--        <div class="accordion accordion-flush" id="faqAccordion-{{ $sectionHash }}">-->
+<!--            {{ range .qna }}-->
+<!--            {{ $hash := crypto.MD5 (print (index . 0) (index . 1)) }}-->
+<!--            <div class="accordion-item">-->
+<!--                <h2 class="accordion-header" id="accordionHeader-{{ $hash }}">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
+<!--                            data-bs-target="#accordionCollapse-{{ $hash }}" aria-expanded="false"-->
+<!--                            aria-controls="accordionCollapse-{{ $hash }}">-->
+<!--                        {{ index . 0 | markdownify }}-->
+<!--                    </button>-->
+<!--                </h2>-->
+<!--                <div id="accordionCollapse-{{ $hash }}" class="accordion-collapse collapse"-->
+<!--                     aria-labelledby="accordionHeader-{{ $hash }}"-->
+<!--                     data-bs-parent="#faqAccordion-{{ $sectionHash }}">-->
+<!--                    <div class="accordion-body text-start py-0 pb-2">-->
+<!--                        <p>{{ index . 1 | markdownify }}</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            {{ end }}-->
+<!--        </div>-->
+<!--        {{ end }}-->
+<!--    </div>-->
+<!--</div>-->
 
 <div class="row">
     {{- partial "footer.html" -}}

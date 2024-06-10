@@ -1,42 +1,77 @@
-<nav class="navbar navbar-expand-lg fixed-top py-2 {{ if .nav_white -}} navbar-scrolled {{- end -}}"
+<nav class="navbar navbar-expand-md fixed-top py-2 py-sm-0 {{ if .nav_white -}} navbar-scrolled {{- end -}}"
      id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="#">
+    <div class="container py-0 py-sm-1">
+        <a class="navbar-brand" href="/">
             <img src="/logo.png" width="50" height="50" alt="logo">
         </a>
 
-        <a class="navbar-brand js-scroll-trigger lh-sm text-white" href="#main">
+        <a class="d-none d-xl-block navbar-brand lh-sm text-white text-center text-xl-start" href="/">
             <span style="font-size: 1.3em">{{ site.Title }}</span><br>
             {{ site.Params.subtitle }}
         </a>
 
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                {{ range site.Params.pages }}
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger text-uppercase text-white" href="{{ index . 1}}">
-                        {{ index . 0 }}
-                    </a>
-                </li>
-                {{ end }}
+        <!-- For sm screen and down -->
+        <div class="d-flex d-md-none offcanvas offcanvas-end" id="offcanvasNavbar">
+            <div class="offcanvas-header d-flex flex-column">
+                <button type="button" class="btn-close me-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a class="navbar-brand offcanvas-navbar-brand lh-sm text-center mt-3 me-0 flex-wrap" href="/">
+                    <span style="font-size: 1.1rem">{{ site.Title }}</span><br>
+                    {{ site.Params.subtitle }}
+                </a>
+            </div>
 
-                <li class="ms-2">
-                    <button id="donate-btn" class="btn btn-outline-primary text-uppercase ps-4 pe-4 rounded-0"
-                            type="button">
-                        Donate
-                    </button>
-                    <button class="btn btn-primary text-uppercase ps-4 pe-4 rounded-0 ms-2" type="button">
-                        Join Us
-                    </button>
-                </li>
-            </ul>
+            <div class="offcanvas-body pt-0">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    {{ range site.Params.pages }}
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase py-1 text-center"
+                           href="{{ index . 1}}">
+                            {{ index . 0 }}
+                        </a>
+                    </li>
+                    {{ end }}
+
+                    <li class="ms-2 pt-4">
+                        <button class="btn donate-btn btn-outline-primary text-uppercase px-3 rounded-0"
+                                type="button" style="font-size: 0.9rem;">
+                            Donate
+                        </button>
+                        <button class="btn btn-primary text-uppercase px-3 rounded-0 ms-2" type="button"
+                                style="font-size: 0.9rem;">
+                            Join Us
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <!-- For md screen and up -->
+        <ul class="d-none d-md-flex navbar-nav flex-row ms-auto">
+            {{ range site.Params.pages }}
+            <li class="nav-item">
+                <a class="nav-link text-uppercase text-white text-start" href="{{ index . 1}}">
+                    {{ index . 0 }}
+                </a>
+            </li>
+            {{ end }}
+
+            <li class="ms-2">
+                <button class="btn donate-btn btn-outline-primary text-uppercase px-4 rounded-0"
+                        type="button" style="font-size: 0.9rem;">
+                    Donate
+                </button>
+                <button class="btn btn-primary text-uppercase px-4 rounded-0 ms-2" type="button"
+                        style="font-size: 0.9rem;">
+                    Join Us
+                </button>
+            </li>
+        </ul>
     </div>
 </nav>
 
@@ -103,15 +138,17 @@
         transition: background-color 0.2s ease;
     }
 
+    /* .shadow is added by javascript */
+    /* noinspection ALL */
     #mainNav.navbar-scrolled.shadow {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
 
-    .navbar-brand {
+    .navbar-brand:not(.offcanvas-navbar-brand) {
         opacity: 0;
     }
 
-    #mainNav.navbar-scrolled .navbar-brand {
+    #mainNav.navbar-scrolled .navbar-brand:not(.offcanvas-navbar-brand) {
         opacity: 1;
         transition: opacity 0.3s ease;
         transition-delay: 0.1s;
@@ -125,57 +162,48 @@
         color: var(--bs-gray-400) !important;
     }
 
+    .offcanvas-navbar-brand,
     #mainNav.navbar-scrolled a.nav-link:hover,
     #mainNav.navbar-scrolled a.nav-link:focus,
     #mainNav.navbar-scrolled a.navbar-brand {
         color: var(--bs-primary) !important;
     }
 
-    #donate-btn {
+    .donate-btn {
         background-color: white;
         border-color: white;
     }
 
-    #donate-btn:hover, #donate-btn:focus {
+    .donate-btn:hover, .donate-btn:focus {
         color: var(--bs-primary);
         background-color: var(--bs-gray-300);
     }
 
-    #mainNav.navbar-scrolled #donate-btn {
+    #offcanvasNavbar .donate-btn,
+    #mainNav.navbar-scrolled .donate-btn {
         border-color: var(--bs-primary);
     }
 
-    #mainNav.navbar-scrolled #donate-btn:hover, #mainNav.navbar-scrolled #donate-btn:focus {
+    #mainNav.navbar-scrolled .donate-btn:hover, #mainNav.navbar-scrolled .donate-btn:focus {
         color: var(--bs-primary);
         /* `var(--bs-primary)` color, not able to specify `a` without knowing its RGB */
         background-color: rgba(9, 114, 118, 0.08);
     }
+
+    @media (max-width: 575.98px) {
+        img[alt=logo] {
+            width: 42px;
+            height: 42px;
+        }
+    }
 </style>
 
 <script src="/jquery/jquery.min.js"></script>
-<script src="/jquery.easing/jquery.easing.min.js"></script>
 
 <script type="application/javascript">
     "use strict";
 
     (function ($) {
-        {{ if not .nav_white }}
-            // Smooth scrolling using jQuery easing
-            $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-                if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
-                    && location.hostname === this.hostname) {
-                    let target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: (target.offset().top - 72)
-                        }, 1000, "easeInOutExpo");
-                        return false;
-                    }
-                }
-            });
-        {{ end }}
-
         let listenScrollEvent = function () {
             let nav = $("#mainNav");
 

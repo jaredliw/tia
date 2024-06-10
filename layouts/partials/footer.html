@@ -1,13 +1,13 @@
 <footer class="p-3 pt-0 d-grid text-body-secondary bg-body-tertiary gap-1 fw-normal">
-    <div class="row justify-content-center text-center py-4">
-        <div class="col col-4 lh-lg">
-            <span class="text-primary fw-bold fs-6">General Inquiries</span><br>
+    <div class="row justify-content-center text-center py-3 py-sm-4 flex-column flex-sm-row">
+        <div class="col lh-lg mb-3 mb-sm-0">
+            <span class="text-primary fw-bold fs-6 fs-xxl-5">General Inquiries</span><br>
             <a class="page-link text-decoration-underline" href="mailto:tutors.in.action.malaysia@gmail.com">
                 tutors.in.action.malaysia@gmail.com
             </a>
         </div>
-        <div class="col col-4 lh-lg">
-            <span class="text-primary fw-bold fs-6">
+        <div class="col lh-lg">
+            <span class="text-primary fw-bold fs-6 fs-xxl-5">
                 Collaboration & Sponsorships
             </span><br>
             <a class="page-link text-decoration-underline" href="mailto:outreach@tutors-in-action.org">
@@ -15,7 +15,7 @@
             </a>
         </div>
     </div>
-    <div class="d-flex justify-content-center gap-3 mb-1">
+    <div class="d-flex justify-content-center gap-2 gap-sm-3 mb-1">
         {{ range site.Params.socials }}
         <a class="text-body-secondary" href="{{ index . 1 }}">
             <div class="d-flex justify-content-center align-items-center border-1 social-btn">
@@ -24,9 +24,9 @@
         </a>
         {{ end }}
     </div>
-    <div class="text-center">
+    <div id="copyrightNotice" class="text-center px-lg-3" style="font-size: 0.9rem;">
         Persatuan Pelajar Bantu Pelajar Malaysia (PPM-007-14-12102022) © 2024 - All rights reserved. |
-        <a href="/privacy-policy">Privacy Policy</a>.
+        <a href="/privacy-policy" style="font-size: 0.9rem;">Privacy Policy</a>.
     </div>
 </footer>
 
@@ -44,5 +44,21 @@
 
     img[alt=icon] {
         opacity: 0.7;
+    }
+
+    /* XX-Large devices (larger desktops, 1400px and up) */
+    @media (min-width: 1400px) {
+        #copyrightNotice, #copyrightNotice > . {
+            font-size: 1rem;
+        }
+
+        .social-btn {
+            height: 50px;
+            width: 50px;
+        }
+
+        img[alt=icon] {
+            width: 50%;
+        }
     }
 </style>

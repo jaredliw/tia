@@ -1,7 +1,7 @@
 {{- define "main" -}}
 {{ partial "nav.html" (dict "nav_white" 1) }}
 
-<div class="row justify-content-center page-section px-5" style="padding-top: 6.5rem;">
+<div class="row justify-content-center page-section px-3 px-md-5" style="padding-top: 6.5rem;">
     <div>
         <h2 class="text-center text-primary fw-lighter">
             Our <span class="fw-bold">story</span>.
@@ -21,9 +21,9 @@
             {{ $first := true }}
             {{ range site.Data.team }}
             <h6 class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}">- {{ .department }} -</h6>
-            <div class="row justify-content-around align-items-center">
+            <div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
                 {{ range .members }}
-                <div class="col-2 pb-3">
+                <div class="pb-3">
                     <img src="{{ .avatar }}" alt="avatar" class="avatar my-3">
                     <p style="letter-spacing: 1px;" class=" mb-0 fw-lighter">{{ .name }}</p>
                     <small class="text-primary text-uppercase fw-bold">{{ .role }}</small>

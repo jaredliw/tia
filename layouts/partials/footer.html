@@ -17,11 +17,11 @@
     </div>
     <div class="d-flex justify-content-center gap-2 gap-sm-3 mb-1">
         {{ range site.Params.socials }}
-        <a class="text-body-secondary" href="{{ index . 1 }}">
-            <div class="d-flex justify-content-center align-items-center border-1 social-btn">
-                <img src="{{ index . 0}}" alt="icon">
-            </div>
-        </a>
+            <a class="text-body-secondary" href="{{ index . 1 }}">
+                <div class="d-flex justify-content-center align-items-center border-1 social-btn">
+                    <img src="{{ index . 0 }}" alt="icon">
+                </div>
+            </a>
         {{ end }}
     </div>
     <div id="copyrightNotice" class="text-center px-lg-3" style="font-size: 0.9rem;">

@@ -1,47 +1,48 @@
 {{- define "main" -}}
-{{ partial "nav.html" (dict "nav_white" 1) }}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
 
-<div class="row justify-content-center page-section px-3 px-md-5" style="padding-top: 6.5rem;">
-    <h2 class="text-center text-primary fw-lighter">
-        Our <span class="fw-bold">story</span>.
-    </h2>
-    <hr class="divider my-4"/>
-
-    <p class="text-start">{{ .Content }}</p>
-</div>
-
-<div class="row justify-content-center bg-body-secondary page-section px-3 pb-5">
-    <div class="text-center">
-        <h2 class="text-primary fw-lighter">Meet the <span class="fw-bold">team</span>.</h2>
+    <div class="row justify-content-center page-section px-3 px-md-5" style="padding-top: 6.5rem;">
+        <h2 class="text-center text-primary fw-lighter">
+            Our <span class="fw-bold">story</span>.
+        </h2>
         <hr class="divider my-4"/>
 
-        <div class="container container-fluid px-5">
-            {{ $first := true }}
-            {{ range site.Data.team }}
-            <h6 class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}">- {{ .department }} -</h6>
-            <div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
-                {{ range .members }}
-                <div class="pb-3">
-                    <img src="{{ .avatar }}" alt="avatar" class="avatar my-3">
-                    <p style="letter-spacing: 1px;" class=" mb-0 fw-lighter">{{ .name }}</p>
-                    <small class="text-primary text-uppercase fw-bold">{{ .role }}</small>
-                </div>
+        <p class="text-start">{{ .Content }}</p>
+    </div>
+
+    <div class="row justify-content-center bg-body-secondary page-section px-3 pb-5">
+        <div class="text-center">
+            <h2 class="text-primary fw-lighter">Meet the <span class="fw-bold">team</span>.</h2>
+            <hr class="divider my-4"/>
+
+            <div class="container container-fluid px-5">
+                {{ $first := true }}
+                {{ range site.Data.team }}
+                    <h6 class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}">- {{ .department }}
+                        -</h6>
+                    <div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
+                        {{ range .members }}
+                            <div class="pb-3">
+                                <img src="{{ .avatar }}" alt="avatar" class="avatar my-3">
+                                <p style="letter-spacing: 1px;" class=" mb-0 fw-lighter">{{ .name }}</p>
+                                <small class="text-primary text-uppercase fw-bold">{{ .role }}</small>
+                            </div>
+                        {{ end }}
+                    </div>
+                    {{ $first = false }}
                 {{ end }}
             </div>
-            {{ $first = false }}
-            {{ end }}
         </div>
     </div>
-</div>
 
-{{ partial "footer.html" }}
+    {{ partial "footer.html" }}
 
-<style>
-    .avatar {
-        vertical-align: middle;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-    }
-</style>
+    <style>
+        .avatar {
+            vertical-align: middle;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+    </style>
 {{- end -}}

@@ -25,13 +25,14 @@
 
     {{ $options := (dict "targetPath" "app.css" "includePaths" (slice "node_modules")) -}}
     {{ $css := resources.Get "app.scss" | resources.ToCSS $options -}}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+    <link rel="stylesheet" href="{{ $css.Permalink }}"/>
 </head>
 
 <body>
 {{- block "main" . -}}
 {{- end -}}
 
+<!--suppress HtmlUnknownTarget -->
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

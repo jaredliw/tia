@@ -23,7 +23,6 @@ $body-color: $gray-800;
 $accordion-button-color: $gray-600;
 $accordion-button-active-color: $primary;
 
-
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
@@ -35,9 +34,17 @@ body {
   font-weight: 600 !important;
 }
 
-p, li {
+p, li, td {
   color: var(--bs-gray-600);
   font-weight: 400;
+}
+
+table {
+  margin-bottom: 1rem;
+}
+
+tr > *:not(:last-child) {
+  padding-right: 18px;
 }
 
 b, strong {

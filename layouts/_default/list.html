@@ -1,0 +1,69 @@
+{{- define "main" -}}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
+
+    <div class="row justify-content-center page-section px-3 pb-5" style="padding-top: 6.5rem;">
+        <div class="text-center">
+            <h2 class="text-primary fw-lighter">Our <span class="fw-bold">projects</span>.</h2>
+            <hr class="divider my-4"/>
+
+            <div id="pageList" class="container container-fluid">
+                {{ $nPages := len .Pages }}
+                {{ range seq 0 1 }}
+                    {{ $i := . }}
+                    {{ range $.Pages }}
+                        {{ if or (and (not $i) .Params.pinned) (and $i (not .Params.pinned)) }}
+                            <a href="{{ .RelPermalink }}" style="text-decoration: inherit;">
+                                <div class="card mb-3 px-0 flex-row border-0" style="height: 13rem;">
+                                    {{ if .Params.pinned }}
+                                        <span class="position-absolute top-0 start-0 badge text-bg-primary m-2">
+                                        Ongoing
+                                    </span>
+                                    {{ end }}
+                                    <img class="col-4 card-img-left" src="{{ .Params.coverImage }}"
+                                         alt="{{ .Params.coverCaption }}">
+                                    <div class="col-8 card-body d-flex flex-column justify-content-center align-items-start pe-3">
+                                        <h4 class="card-title text-start text-truncate" style="width: 80%;">
+                                            {{ .LinkTitle }}
+                                        </h4>
+                                        <p class="card-text text-start clamp-2 me-3">{{ .Summary }}</p>
+                                        <!-- Date layout string must follow the components listed here:
+                                        https://gohugo.io/methods/time/format/#layout-string -->
+                                        <p class="card-text"><small
+                                                class="text-muted font-monospace">{{ .Date.Format "2 Jan 2006" }}</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {{ $nPages = sub $nPages 1 }}
+                            {{ if gt $nPages 0 }}
+                                <hr>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .card-img-left {
+            border-top-left-radius: var(--bs-card-inner-border-radius);
+            border-bottom-left-radius: var(--bs-card-inner-border-radius);
+            object-fit: cover;
+        }
+
+        .clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        #pageList hr {
+            color: var(--bs-secondary-bg);
+        }
+    </style>
+
+    {{ partial "footer.html" }}
+{{- end -}}

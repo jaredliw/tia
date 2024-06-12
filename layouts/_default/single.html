@@ -3,7 +3,7 @@
 
     <div id="readingArea" class="row justify-content-center page-section mx-2" style="padding-top: 6.5rem;">
         <h1 class="fw-bold text-break" style="max-width: 100%;">{{ .Title }}</h1>
-        <h5 class="text-primary fst-italic">Lorem ipsum dolar sit amet.</h5>
+        <h5 class="text-primary fst-italic">{{ .Params.subtitle }}</h5>
         <!-- Date layout string must follow the components listed here:
         https://gohugo.io/methods/time/format/#layout-string -->
         <p class="font-monospace mb-3"> {{ .Date.Format "2 Jan 2006" }} | {{ .WordCount }} words</p>

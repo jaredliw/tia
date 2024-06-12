@@ -13,25 +13,31 @@
                     {{ range $.Pages }}
                         {{ if or (and (not $i) .Params.pinned) (and $i (not .Params.pinned)) }}
                             <a href="{{ .RelPermalink }}" style="text-decoration: inherit;">
-                                <div class="card mb-3 px-0 flex-row border-0" style="height: 13rem;">
+                                <div class="card mb-3 px-0 flex-row border-0 post-card">
                                     {{ if .Params.pinned }}
-                                        <span class="position-absolute top-0 start-0 badge text-bg-primary m-2">
+                                        <span class="d-none d-md-block position-absolute top-0 start-0 badge text-bg-primary m-2">
                                             Ongoing
                                         </span>
                                     {{ end }}
-                                    <img class="col-4 card-img-left" src="{{ .Params.coverImage }}"
+                                    <img class="d-none d-md-block col-4 card-img-left rounded-0"
+                                         src="{{ .Params.coverImage }}"
                                          alt="{{ .Params.coverCaption }}">
-                                    <div class="col-8 card-body d-flex flex-column justify-content-center align-items-start pe-3">
+                                    <div class="col-12 col-md-8 card-body d-flex flex-column justify-content-center align-items-start pe-md-3">
                                         <h4 class="card-title text-start text-truncate" style="width: 80%;">
                                             {{ .LinkTitle }}
                                         </h4>
-                                        <p class="card-text text-start clamp-2 me-3">{{ .Summary }}</p>
+                                        <p class="card-text text-start clamp-2 me-0 me-md-3">{{ .Summary }}</p>
                                         <!-- Date layout string must follow the components listed here:
                                         https://gohugo.io/methods/time/format/#layout-string -->
                                         <p class="card-text">
                                             <small class="text-muted font-monospace">
                                                 {{ .Date.Format "2 Jan 2006" }}
                                             </small>
+                                            {{ if .Params.pinned }}
+                                                <span class="badge text-bg-primary m-2 d-inline-block d-md-none">
+                                                    Ongoing
+                                                </span>
+                                            {{ end }}
                                         </p>
                                     </div>
                                 </div>
@@ -64,6 +70,22 @@
 
         #pageList hr {
             color: var(--bs-secondary-bg);
+        }
+
+        .post-card {
+            height: 13rem;
+        }
+
+        /* `sm` applies to x-small devices (portrait phones, less than 576px) */
+        @media (max-width: 767.98px) {
+            .post-card {
+                height: initial;
+            }
+
+            #pageList, .text-center {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     </style>
 

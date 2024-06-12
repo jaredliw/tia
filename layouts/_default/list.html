@@ -16,8 +16,8 @@
                                 <div class="card mb-3 px-0 flex-row border-0" style="height: 13rem;">
                                     {{ if .Params.pinned }}
                                         <span class="position-absolute top-0 start-0 badge text-bg-primary m-2">
-                                        Ongoing
-                                    </span>
+                                            Ongoing
+                                        </span>
                                     {{ end }}
                                     <img class="col-4 card-img-left" src="{{ .Params.coverImage }}"
                                          alt="{{ .Params.coverCaption }}">
@@ -28,8 +28,10 @@
                                         <p class="card-text text-start clamp-2 me-3">{{ .Summary }}</p>
                                         <!-- Date layout string must follow the components listed here:
                                         https://gohugo.io/methods/time/format/#layout-string -->
-                                        <p class="card-text"><small
-                                                class="text-muted font-monospace">{{ .Date.Format "2 Jan 2006" }}</small>
+                                        <p class="card-text">
+                                            <small class="text-muted font-monospace">
+                                                {{ .Date.Format "2 Jan 2006" }}
+                                            </small>
                                         </p>
                                     </div>
                                 </div>

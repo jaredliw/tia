@@ -1,6 +1,7 @@
 baseURL = 'https://tutors-in-action.org/'
-languageCode = 'en-us'
+languageCode = 'en-my'
 title = 'Tutors In Action Malaysia (TIA)'
+disableKinds = ["taxonomy", "term"]
 
 [params]
 subtitle = 'Persatuan Pelajar Bantu Pelajar Malaysia (PPBPM)'
@@ -42,6 +43,10 @@ url = "/about"
 weight = 2
 
 [module]
+[[module.mounts]]
+source = "static"
+target = "static"
+
 [[module.mounts]]
 source = "node_modules/countup.js/dist"
 target = "static/countup"

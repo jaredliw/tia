@@ -1,0 +1,14 @@
+{{- define "main" -}}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
+
+    <div class="row justify-content-center page-section px-3 px-md-5" style="padding-top: 6.5rem;">
+        <h2 class="text-center text-primary fw-lighter">
+            <span class="fw-bold">Privacy</span> policy.
+        </h2>
+        <hr class="divider my-4"/>
+
+        <p class="text-start">{{ .Content }}</p>
+    </div>
+
+    {{ partial "footer.html" }}
+{{- end -}}

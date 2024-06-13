@@ -6,7 +6,9 @@
         <h5 class="text-primary fst-italic">{{ .Params.subtitle }}</h5>
         <!-- Date layout string must follow the components listed here:
         https://gohugo.io/methods/time/format/#layout-string -->
-        <p class="font-monospace mb-3"> {{ .Date.Format "2 Jan 2006" }} | {{ .WordCount }} words</p>
+        <p class="font-monospace mb-3">
+            {{ .Date.Format "2 Jan 2006" }} | {{ .WordCount }} words | Written by {{ .Params.author }}
+        </p>
         <hr>
 
         <figure class="d-flex flex-column justify-content-center mb-3">
@@ -42,8 +44,8 @@
             max-width: 33%;
         }
 
-        .post-nav > a {
-            max-width: calc(100% - 2ch);
+        #readingArea h2 {
+            margin-top: 1.5rem;
         }
 
         /* Small devices (landscape phones, 576px and up) */
@@ -95,7 +97,7 @@
                 const altText = img.attr('alt');
 
                 img.addClass('img-fluid')
-                    .wrapAll('<figure class="d-flex flex-column justify-content-center mb-2"></figure>');
+                    .wrapAll('<figure class="d-flex flex-column justify-content-center mb-2 mx-4"></figure>');
 
                 if (altText) {
                     img.after('<figcaption class="figure-caption text-center">' + altText + '</figcaption>');

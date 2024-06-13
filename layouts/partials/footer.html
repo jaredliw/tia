@@ -17,16 +17,16 @@
     </div>
     <div class="d-flex justify-content-center gap-2 gap-sm-3 mb-1">
         {{ range site.Params.socials }}
-            <a class="text-body-secondary" href="{{ index . 1 }}">
+            <a class="text-body-secondary" href="{{ absURL (index . 1) }}">
                 <div class="d-flex justify-content-center align-items-center border-1 social-btn">
-                    <img src="{{ index . 0 }}" alt="icon">
+                    <img src="{{ absURL (index . 0) }}" alt="icon">
                 </div>
             </a>
         {{ end }}
     </div>
     <div id="copyrightNotice" class="text-center px-lg-3" style="font-size: 0.9rem;">
         Persatuan Pelajar Bantu Pelajar Malaysia (PPM-007-14-12102022) © 2024 - All rights reserved. |
-        <a href="/privacy-policy" style="font-size: 0.9rem;">Privacy Policy</a>.
+        <a href="{{ absURL "privacy-policy" }}" style="font-size: 0.9rem;">Privacy Policy</a>.
     </div>
 </footer>
 

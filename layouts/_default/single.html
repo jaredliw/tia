@@ -12,7 +12,7 @@
         <hr>
 
         <figure class="d-flex flex-column justify-content-center mb-3">
-            <img src="{{ .Params.coverImage }}" class="img-fluid" alt="Cover image">
+            <img src="{{ absURL .Params.coverImage }}" class="img-fluid" alt="Cover image">
             <figcaption class="figure-caption text-center">{{ .Params.coverCaption }}</figcaption>
         </figure>
 
@@ -22,7 +22,7 @@
             {{ with .PrevInSection }}
                 <span class="post-nav d-flex justify-content-start">
             &#129168;&nbsp;
-            <a href="{{ .RelPermalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
+            <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
         </span>
             {{ else }}
                 <span class="post-nav d-flex justify-content-start"></span>
@@ -30,7 +30,7 @@
 
             {{ with .NextInSection }}
                 <span class="post-nav d-flex justify-content-end">
-            <a href="{{ .RelPermalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
+            <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
             &nbsp;&#129170;
         </span>
             {{ end }}

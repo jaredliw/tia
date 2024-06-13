@@ -12,7 +12,7 @@
                     {{ $i := . }}
                     {{ range $.Pages }}
                         {{ if or (and (not $i) .Params.pinned) (and $i (not .Params.pinned)) }}
-                            <a href="{{ .RelPermalink }}" style="text-decoration: inherit;">
+                            <a href="{{ .Permalink }}" style="text-decoration: inherit;">
                                 <div class="card mb-3 px-0 flex-row border-0 post-card">
                                     {{ if .Params.pinned }}
                                         <span class="d-none d-md-block position-absolute top-0 start-0 badge text-bg-primary m-2">
@@ -20,7 +20,7 @@
                                         </span>
                                     {{ end }}
                                     <img class="d-none d-md-block col-4 card-img-left rounded-0"
-                                         src="{{ .Params.coverImage }}"
+                                         src="{{ absURL .Params.coverImage }}"
                                          alt="{{ .Params.coverCaption }}">
                                     <div class="col-12 col-md-8 card-body d-flex flex-column justify-content-center align-items-start pe-md-3">
                                         <h4 class="card-title text-start text-truncate" style="width: 80%;">
@@ -53,6 +53,7 @@
         </div>
     </div>
 
+    <!--suppress CssNonIntegerLengthInPixels -->
     <style>
         .card-img-left {
             border-top-left-radius: var(--bs-card-inner-border-radius);

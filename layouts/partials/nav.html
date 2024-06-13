@@ -3,10 +3,10 @@
     <div class="container py-0 py-sm-1">
         <a class="navbar-brand" href="/">
             <!--suppress CheckImageSize -->
-            <img src="/logo.png" width="50" height="50" alt="logo">
+            <img src="{{ absURL "logo.png"}}" width="50" height="50" alt="logo">
         </a>
 
-        <a class="d-none d-xl-block navbar-brand lh-sm text-white text-center text-xl-start" href="/">
+        <a class="d-none d-xl-block navbar-brand lh-sm text-white text-center text-xl-start" href="{{ absURL "" }}">
             <span style="font-size: 1.3em">{{ site.Title }}</span><br>
             {{ site.Params.subtitle }}
         </a>
@@ -21,7 +21,8 @@
         <div class="d-flex d-md-none offcanvas offcanvas-end" id="offcanvasNavbar">
             <div class="offcanvas-header d-flex flex-column">
                 <button type="button" class="btn-close me-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                <a class="navbar-brand offcanvas-navbar-brand lh-sm text-center mt-3 me-0 flex-wrap" href="/">
+                <a class="navbar-brand offcanvas-navbar-brand lh-sm text-center mt-3 me-0 flex-wrap"
+                   href="{{ absURL "" }}">
                     <span style="font-size: 1.1rem">{{ site.Title }}</span><br>
                     {{ site.Params.subtitle }}
                 </a>
@@ -32,7 +33,7 @@
                     {{ range site.Params.pages }}
                         <li class="nav-item">
                             <a class="nav-link text-uppercase py-1 text-center"
-                               href="{{ index . 1 }}">
+                               href="{{ absURL (index . 1) }}">
                                 {{ index . 0 }}
                             </a>
                         </li>
@@ -56,7 +57,7 @@
         <ul class="d-none d-md-flex navbar-nav flex-row ms-auto">
             {{ range site.Params.pages }}
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase text-white text-start" href="{{ index . 1 }}">
+                    <a class="nav-link text-uppercase text-white text-start" href="{{ absURL (index . 1) }}">
                         {{ index . 0 }}
                     </a>
                 </li>
@@ -200,8 +201,7 @@
     }
 </style>
 
-<!--suppress HtmlUnknownTarget -->
-<script src="/jquery/jquery.min.js"></script>
+<script src="{{ absURL "jquery/jquery.min.js"}}"></script>
 
 <script type="application/javascript">
     "use strict";

@@ -23,7 +23,7 @@
                     <div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
                         {{ range .members }}
                             <div class="pb-3">
-                                <img src="{{ .avatar }}" alt="avatar" class="avatar my-3">
+                                <img src="{{ absURL .avatar }}" alt="avatar" class="avatar my-3">
                                 <p style="letter-spacing: 1px;" class=" mb-0 fw-lighter">{{ .name }}</p>
                                 <small class="text-primary text-uppercase fw-bold">{{ .role }}</small>
                             </div>

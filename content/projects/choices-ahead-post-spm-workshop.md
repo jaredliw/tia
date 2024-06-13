@@ -2,7 +2,7 @@
 date: 2024-05-12
 title: Choices Ahead! 2.0 Post-SPM Workshop
 subtitle: Introduce SPM graduates to various pathways and scholarships available in Malaysia.
-coverImage: /ca2.0/cover.png
+coverImage: ca2.0/cover.png
 author: Leow Zi Syuen, Farhan
 ---
 
@@ -63,18 +63,18 @@ Two powerful mediums, Google Meet, YouTube Live, and Slido (Q&A sessions) came t
 workshops a seamless and interactive experience. Participants were able to interact with the speakers after each
 session.
 
-![A series of YouTube live streams.](/ca2.0/ytb-live.png)
+![A series of YouTube live streams.]({{< rel "ca2.0/ytb-live.png" >}})
 
-![Group photo during the event.](/ca2.0/group-photo.png)
+![Group photo during the event.]({{< rel "ca2.0/group-photo.png" >}})
 
 ## Feedback
 
 The feedback from ‘Choices Ahead! 2.0’ workshop has been overwhelmingly positive. Participants have praised the 
 beneficial content, knowledgeable speakers, and interactive sessions. Below is some of the feedback that we received:
 
-![](/ca2.0/feedback-1.png)
-![](/ca2.0/feedback-2.png)
-![](/ca2.0/feedback-3.png)
+![]({{< rel "ca2.0/feedback-1.png" >}})
+![]({{< rel "ca2.0/feedback-2.png" >}})
+![]({{< rel "ca2.0/feedback-3.png" >}})
 
 ## Event Summary
 
@@ -97,6 +97,6 @@ taking this project as inspiration and motivation to move forward.
 
 ## Gallery
 
-![](/ca2.0/gallery-1.png)
-![](/ca2.0/gallery-2.png)
-![](/ca2.0/gallery-3.png)
+![]({{< rel "ca2.0/gallery-1.png" >}})
+![]({{< rel "ca2.0/gallery-2.png" >}})
+![]({{< rel "ca2.0/gallery-3.png" >}})

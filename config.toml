@@ -4,15 +4,16 @@ title = 'Tutors In Action Malaysia (TIA)'
 disableKinds = ["taxonomy", "term"]
 
 [params]
+baseDir = ''
 subtitle = 'Persatuan Pelajar Bantu Pelajar Malaysia (PPBPM)'
 description = 'We are a team of Malaysian youths hoping to help SPM students achieve their best.'
 inspiration = 'Exacerbated by class disruptions during the pandemic, we realised that not everyone had the privilege of receiving one-to-one guidance from teachers on topics they may struggle with.'
 aim = 'We aim to assist struggling Malaysian youth who lack academic support primarily through specialised online one-to-one or group tutoring by our own team of bright and accomplished volunteer tutors. Furthermore, we plan to use our platform to expand our reach by means of collaborations, fundraisers and more.'
 pages = [
-    ['Home', '/'],
-    ['Projects', '/projects'],
-    ['Resources', '/'],
-    ['About', '/about']
+    ['Home', ''],
+    ['Projects', 'projects'],
+    ['Resources', ''],
+    ['About', 'about']
 ]
 impacts = [
     [1462, "tutors recruited"],
@@ -20,27 +21,14 @@ impacts = [
     [4228, "hours of tutoring"]
 ]
 socials = [
-    ["/svgs/facebook.svg", "https://www.facebook.com/tutors.in.action.malaysia"],
-    ["/svgs/instagram.svg", "https://www.instagram.com/tutors.in.action/"],
-    ["/svgs/telegram.svg", "https://t.me/TIA_helpbot"],
-    ["/svgs/youtube.svg", "https://www.youtube.com/@tutorsinactionmalaysia"],
-    ["/svgs/discord.svg", "https://discord.com/invite/7AE6cGVg2Y"],
-    ["/svgs/linkedin.svg", "https://www.linkedin.com/company/tutors-in-action-malaysia/"],
-    ["/svgs/xiaohongshu.svg", "https://www.xiaohongshu.com/user/profile/62f653c1000000001f005342"]
+    ["svg/facebook.svg", "https://www.facebook.com/tutors.in.action.malaysia"],
+    ["svg/instagram.svg", "https://www.instagram.com/tutors.in.action/"],
+    ["svg/telegram.svg", "https://t.me/TIA_helpbot"],
+    ["svg/youtube.svg", "https://www.youtube.com/@tutorsinactionmalaysia"],
+    ["svg/discord.svg", "https://discord.com/invite/7AE6cGVg2Y"],
+    ["svg/linkedin.svg", "https://www.linkedin.com/company/tutors-in-action-malaysia/"],
+    ["svg/xiaohongshu.svg", "https://www.xiaohongshu.com/user/profile/62f653c1000000001f005342"]
 ]
-
-[menu]
-[[menu.main]]
-identifier = "projects"
-name = "Projects"
-url = "/projects"
-weight = 3
-
-[[menu.main]]
-identifier = "about"
-name = "About"
-url = "/about"
-weight = 2
 
 [module]
 [[module.mounts]]

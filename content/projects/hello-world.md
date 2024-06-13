@@ -129,7 +129,7 @@ term/definition pair to spread things out more.)
 
 Images can be specified like so:
 
-![Example image.](/masthead.png)
+![Example image.]({{< rel "masthead.png" >}})
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.

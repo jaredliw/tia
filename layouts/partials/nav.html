@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-md fixed-top py-2 py-sm-0 {{ if .nav_white -}} navbar-scrolled {{- end -}}"
      id="mainNav">
     <div class="container py-0 py-sm-1">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="{{ absURL "" }}">
             <!--suppress CheckImageSize -->
-            <img src="{{ absURL "logo.png"}}" width="50" height="50" alt="logo">
+            <img src="{{ absURL "logo.png" }}" width="50" height="50" alt="logo">
         </a>
 
         <a class="d-none d-xl-block navbar-brand lh-sm text-white text-center text-xl-start" href="{{ absURL "" }}">
@@ -201,7 +201,7 @@
     }
 </style>
 
-<script src="{{ absURL "jquery/jquery.min.js"}}"></script>
+<script src="{{ absURL "jquery/jquery.min.js" }}"></script>
 
 <script type="application/javascript">
     "use strict";

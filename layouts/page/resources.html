@@ -1,0 +1,74 @@
+{{- define "main" -}}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
+
+    <div class="row justify-content-center page-section px-3 px-md-5" style="padding-top: 6.5rem;">
+        <h2 class="text-center text-primary fw-lighter">
+            Study <span class="fw-bold">resources</span>.
+        </h2>
+        <hr class="divider my-4"/>
+
+        <ul id="resourceNav" class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane container fade active" id="home">
+                <div class="d-grid gap-4 py-4" style="grid-template-columns: repeat(6, minmax(0, 1fr))">
+                    {{ range seq 13 }}
+                        <div class="col">
+                            <a style="text-decoration: inherit;" href="https://example.com">
+                                <div class="card border-1 rounded-0">
+                                    <div class="card-body d-flex flex-column justify-content center align-items-center">
+                                        <div class="text-center thumbnail" style="height: 70%;"></div>
+                                        <div class="mt-4" style="height: 30%;">
+                                            <h6 class="card-subtitle text-body-secondary">
+                                                Lorem Ipsum Dolar Sit Amet
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="menu1">...</div>
+            <div class="tab-pane container fade" id="menu2">...</div>
+        </div>
+    </div>
+
+    <style>
+        #resourceNav *.active {
+            color: var(--bs-primary) !important;
+            font-weight: 600;
+        }
+
+        .thumbnail {
+            width: 75%;
+            box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.45);
+            background: url("https://res.cloudinary.com/demo/image/upload/w_200,h_300,c_fill/sample_document.docx.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+
+        .card-body {
+            height: 230px;
+            background: linear-gradient(to bottom, var(--bs-secondary-bg) 0 40%, #fff 40% 100%);
+        }
+
+        .card:hover, .card:focus {
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    {{ partial "footer.html" }}
+{{- end -}}

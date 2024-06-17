@@ -1,0 +1,33 @@
+name: Download thumbnails
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - data/
+      - spider.py
+  schedule:
+    - cron: '0 0 * * FRI'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Install requirements
+        run: pip3 install -r requirements.txt
+      - name: Run script
+        run: python3 spider.py
+        with:
+          IS_RUNNING_ON_CLOUD: true
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update thumbnails

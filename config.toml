@@ -1,7 +1,8 @@
-baseURL = 'https://tutors-in-action.org/'
+baseURL = 'https://tutors-in-action.org/tia/'
 languageCode = 'en-my'
 title = 'Tutors In Action Malaysia (TIA)'
 disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
 
 [params]
 subtitle = 'Persatuan Pelajar Bantu Pelajar Malaysia (PPBPM)'

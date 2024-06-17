@@ -10,3 +10,6 @@ node_modules/
 
 # IntelliJ IDEA files
 .idea/
+
+# Python environment
+venv/

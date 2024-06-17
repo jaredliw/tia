@@ -26,17 +26,17 @@
             {{ $fileLink := "https://drive.google.com/file/d/%s/view?usp=drive_link" }}
             {{ $firstTab := true }}
             {{ range site.Data.resources }}
-                <div class="tab-pane container fade {{ if $firstTab -}} show active {{- end -}}"
+                <div class="tab-pane container px-0 fade {{ if $firstTab -}} show active {{- end -}}"
                      id="{{ crypto.MD5 .section_name }}">
                     {{ $firstGroup := true }}
                     {{ range .groups }}
-                        <div class="d-flex justify-content-between pt-4">
-                            <h6 class="text-uppercase">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 pb-1 mb-2">
+                            <h6 class="text-uppercase mb-0 mb-sm-2">
                                 - {{ .group_name }} -
                             </h6>
-                            <a href="{{ .folder_link }}" target="_blank" class="text-muted">View more...</a>
+                            <a href="{{ .folder_link }}" target="_blank" class="text-muted ms-auto">View more...</a>
                         </div>
-                        <div class="d-grid gap-4 pb-2" style="grid-template-columns: repeat(6, minmax(0, 1fr))">
+                        <div class="d-grid gap-4 pb-2 gallery-grid">
                             {{ range .file_ids }}
                                 {{ $filename := index site.Data._resources_mapping . }}
                                 {{ $randomHue := mod (int (printf "0x%s" (substr (crypto.MD5 .) 0 5))) 360 }}
@@ -68,10 +68,16 @@
         </div>
     </div>
 
+    <!--suppress CssNonIntegerLengthInPixels -->
     <style>
         #resourceNav *.active {
             color: var(--bs-primary) !important;
             font-weight: 600;
+        }
+
+        .gallery-grid {
+            --col: 2;
+            grid-template-columns: repeat(var(--col), minmax(0, 1fr));
         }
 
         .thumbnail {
@@ -91,6 +97,66 @@
 
         .card:hover, .card:focus {
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        /* Extra breakpoints */
+        @media (max-width: 399.98px) {
+            .gallery-grid {
+                --col: 1;
+            }
+
+            .gallery-grid .card {
+                height: 260px;
+                margin-left: min(1rem, 18px);
+                margin-right: min(1rem, 18px);
+            }
+
+            .thumbnail {
+                width: 55%;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            .gallery-grid {
+                --col: 3;
+            }
+
+            .thumbnail {
+                width: 80%;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            .gallery-grid {
+                --col: 4;
+            }
+
+            .thumbnail {
+                width: 82%;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            .gallery-grid {
+                --col: 5;
+            }
+        }
+
+        /* X-Large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .gallery-grid {
+                --col: 6;
+            }
+        }
+
+        /* XX-Large devices (larger desktops, 1400px and up) */
+        @media (min-width: 1400px) {
+            .gallery-grid {
+                --col: 7;
+            }
         }
     </style>
     {{ partial "footer.html" }}

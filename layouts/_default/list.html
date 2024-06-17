@@ -26,7 +26,10 @@
                                         <h4 class="card-title text-start text-truncate" style="width: 80%;">
                                             {{ .LinkTitle }}
                                         </h4>
-                                        <p class="card-text text-start clamp-2 me-0 me-md-3">{{ .Summary }}</p>
+                                        <p class="card-text text-start clamp me-0 me-md-3"
+                                           style="--clamp: 2;">
+                                            {{ .Summary }}
+                                        </p>
                                         <!-- Date layout string must follow the components listed here:
                                         https://gohugo.io/methods/time/format/#layout-string -->
                                         <p class="card-text">
@@ -59,14 +62,6 @@
             border-top-left-radius: var(--bs-card-inner-border-radius);
             border-bottom-left-radius: var(--bs-card-inner-border-radius);
             object-fit: cover;
-        }
-
-        .clamp-2 {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
         }
 
         #pageList hr {

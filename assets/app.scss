@@ -79,6 +79,15 @@ a:hover {
   margin-right: 0 !important;
 }
 
+.clamp {
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--clamp);
+  line-clamp: var(--clamp);
+  -webkit-box-orient: vertical;
+}
+
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
   p, a {

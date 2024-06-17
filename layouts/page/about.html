@@ -18,8 +18,9 @@
             <div class="container container-fluid px-5">
                 {{ $first := true }}
                 {{ range site.Data.team }}
-                    <h6 class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}">- {{ .department }}
-                        -</h6>
+                    <h6 class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}">
+                        -&nbsp;{{- .department -}}&nbsp;-
+                    </h6>
                     <div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
                         {{ range .members }}
                             <div class="pb-3">

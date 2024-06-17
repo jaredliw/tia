@@ -30,8 +30,8 @@
                      id="{{ crypto.MD5 .section_name }}">
                     {{ $firstGroup := true }}
                     {{ range .groups }}
-                        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 pb-1 mb-2">
-                            <h6 class="text-uppercase mb-0 mb-sm-2">
+                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 pb-1 mb-2">
+                            <h6 class="text-uppercase mb-0">
                                 -&nbsp;{{- .group_name -}}&nbsp;-
                             </h6>
                             <a href="{{ .folder_link }}" target="_blank" class="text-muted ms-auto">View more...</a>

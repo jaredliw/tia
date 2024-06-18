@@ -38,12 +38,7 @@
 
     {{ partial "footer.html" }}
 
-    <style>
-        .avatar {
-            vertical-align: middle;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-        }
-    </style>
+    {{ with resources.Get "about.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}">
+    {{ end }}
 {{- end -}}

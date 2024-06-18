@@ -39,55 +39,10 @@
 
     {{ partial "footer.html" }}
 
-    <style>
-        .post-nav {
-            max-width: 33%;
-        }
+    {{ with resources.Get "single.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}">
+    {{ end }}
 
-        #readingArea h2 {
-            margin-top: 1.5rem;
-        }
-
-        /* Small devices (landscape phones, 576px and up) */
-        @media (min-width: 576px) {
-            #readingArea {
-                margin-left: 3rem !important;
-                margin-right: 3rem !important;
-            }
-        }
-
-        /* Medium devices (tablets, 768px and up) */
-        @media (min-width: 768px) {
-            #readingArea {
-                margin-left: 6rem !important;
-                margin-right: 6rem !important;
-            }
-        }
-
-        /* Large devices (desktops, 992px and up) */
-        @media (min-width: 992px) {
-            #readingArea {
-                margin-left: 11rem !important;
-                margin-right: 11rem !important;
-            }
-        }
-
-        /* X-Large devices (large desktops, 1200px and up) */
-        @media (min-width: 1200px) {
-            #readingArea {
-                margin-left: 15rem !important;
-                margin-right: 15rem !important;
-            }
-        }
-
-        /* XX-Large devices (larger desktops, 1400px and up) */
-        @media (min-width: 1400px) {
-            #readingArea {
-                margin-left: 17rem !important;
-                margin-right: 17rem !important;
-            }
-        }
-    </style>
     <script>
         $(document).ready(function () {
             $('article table').wrapAll('<p class="table-responsive"></p>');

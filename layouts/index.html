@@ -1,5 +1,5 @@
 {{- define "main" -}}
-    <header class="masthead">
+    <header class="masthead" style="--bg: url('{{ absURL "masthead.png" }}');">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center pb-5">
                 <div class="col-12 col-lg-10 align-self-end">
@@ -76,39 +76,13 @@
         {{- partial "footer.html" -}}
     </div>
 
-    <!--suppress CssUnusedSymbol, CssNonIntegerLengthInPixels -->
-    <style>
-        header.masthead {
-            padding-top: 5rem;
-            padding-bottom: calc(10rem - 4.5rem);
-            background: linear-gradient(to bottom, rgba(66, 92, 85, 0.8) 0%, rgba(66, 92, 85, 0.8) 100%), url("{{ absURL "masthead.png" }}");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            background-size: cover;
-        }
-
-        .masthead p {
-            color: var(--bs-gray-300);
-        }
-
-        .accordion-button:not(.collapsed) {
-            font-weight: 500;
-        }
-
-        /* Small devices (landscape phones, less than 768px) */
-        @media (max-width: 767.78px) {
-            #logo {
-                width: 35%;
-                height: 35%;
-                max-width: 120px;
-            }
-        }
-    </style>
+    {{ with resources.Get "index.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}">
+    {{ end }}
 
     <script type="module">
         "use strict";
-        import {CountUp} from {{ absURL "countup/countUp.js" }};
+        import {CountUp} from '{{ absURL "countup/countUp.js" }}';
 
         {{ range site.Params.impacts }}
         new CountUp('{{ crypto.MD5 (index . 1) }}', {{ index . 0 }}, {

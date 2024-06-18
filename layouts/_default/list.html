@@ -56,34 +56,9 @@
         </div>
     </div>
 
-    <!--suppress CssNonIntegerLengthInPixels -->
-    <style>
-        .card-img-left {
-            border-top-left-radius: var(--bs-card-inner-border-radius);
-            border-bottom-left-radius: var(--bs-card-inner-border-radius);
-            object-fit: cover;
-        }
-
-        #pageList hr {
-            color: var(--bs-secondary-bg);
-        }
-
-        .post-card {
-            height: 13rem;
-        }
-
-        /* `sm` applies to x-small devices (portrait phones, less than 576px) */
-        @media (max-width: 767.98px) {
-            .post-card {
-                height: initial;
-            }
-
-            #pageList, .text-center {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-    </style>
-
     {{ partial "footer.html" }}
+
+    {{ with resources.Get "list.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}">
+    {{ end }}
 {{- end -}}

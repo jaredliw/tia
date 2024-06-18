@@ -30,35 +30,6 @@
     </div>
 </footer>
 
-<style>
-    .social-btn {
-        border-style: solid;
-        border-radius: 50%;
-        height: 30px;
-        width: 30px;
-    }
-
-    .social-btn:hover, .social-btn:focus {
-        background-color: var(--bs-gray-300);
-    }
-
-    img[alt=icon] {
-        opacity: 0.7;
-    }
-
-    /* XX-Large devices (larger desktops, 1400px and up) */
-    @media (min-width: 1400px) {
-        #copyrightNotice, #copyrightNotice > . {
-            font-size: 1rem;
-        }
-
-        .social-btn {
-            height: 50px;
-            width: 50px;
-        }
-
-        img[alt=icon] {
-            width: 50%;
-        }
-    }
-</style>
+{{ with resources.Get "footer.css" | postCSS | minify }}
+    <link rel="stylesheet" href="{{ .Permalink }}">
+{{ end }}

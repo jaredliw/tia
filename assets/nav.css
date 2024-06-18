@@ -1,0 +1,121 @@
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 0.85rem !important;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    padding: 0 1rem;
+}
+
+#mainNav .navbar-nav .nav-item:last-child .nav-link {
+    padding-right: 0;
+}
+
+#mainNav li {
+    display: flex;
+    align-items: center;
+}
+
+#mainNav {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+#mainNav.navbar-scrolled {
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+/* .shadow is added by javascript */
+/* noinspection ALL */
+#mainNav.navbar-scrolled.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand:not(.offcanvas-navbar-brand) {
+    opacity: 0;
+}
+
+#mainNav.navbar-scrolled .navbar-brand:not(.offcanvas-navbar-brand) {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+#mainNav.navbar-scrolled .nav-link:not(:hover) {
+    color: inherit !important;
+}
+
+a.nav-link:hover, a.nav-link:focus {
+    color: var(--bs-gray-400) !important;
+}
+
+.offcanvas-navbar-brand,
+#mainNav.navbar-scrolled a.nav-link:hover,
+#mainNav.navbar-scrolled a.nav-link:focus,
+#mainNav.navbar-scrolled a.navbar-brand {
+    color: var(--bs-primary) !important;
+}
+
+.donate-btn {
+    background-color: white;
+    border-color: white;
+}
+
+.donate-btn:hover, .donate-btn:focus {
+    color: var(--bs-primary);
+    background-color: var(--bs-gray-300);
+}
+
+#offcanvasNavbar .donate-btn,
+#mainNav.navbar-scrolled .donate-btn {
+    border-color: var(--bs-primary);
+}
+
+#mainNav.navbar-scrolled .donate-btn:hover, #mainNav.navbar-scrolled .donate-btn:focus {
+    color: var(--bs-primary);
+    /* `var(--bs-primary)` color, not able to specify `a` without knowing its RGB */
+    background-color: rgba(9, 114, 118, 0.08);
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+@media (max-width: 575.98px) {
+    img[alt=logo] {
+        width: 42px;
+        height: 42px;
+    }
+}

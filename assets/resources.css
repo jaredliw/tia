@@ -1,0 +1,114 @@
+#resourceNav *.active {
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+}
+
+.gallery-grid {
+    --col: 3;
+    grid-template-columns: repeat(var(--col), minmax(0, 1fr));
+}
+
+.thumbnail {
+    --thumbnail: '';
+    --default-thumbnail: '';
+
+    width: 75%;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.45);
+    background: var(--thumbnail), var(--default-thumbnail);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.card-body {
+    height: 230px;
+    background: linear-gradient(to bottom, hsl(var(--hue), 40%, 90%) 0 40%, #fff 40% 100%);
+}
+
+.card:hover, .card:focus {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Extra breakpoints */
+/*noinspection CssNonIntegerLengthInPixels*/
+@media (max-width: 529.98px) {
+    .gallery-grid {
+        --col: 2;
+    }
+
+    .gallery-grid .card {
+        height: 260px;
+        margin-left: min(1rem, 15px);
+        margin-right: min(1rem, 15px);
+    }
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+@media (max-width: 454.98px) {
+    .gallery-grid .card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+@media (max-width: 399.98px) {
+    .gallery-grid {
+        --col: 1;
+    }
+
+    .gallery-grid .card {
+        height: 300px;
+        width: 215px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .thumbnail {
+        width: max(55%, 130px);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .gallery-grid {
+        --col: 3;
+    }
+
+    .thumbnail {
+        width: 80%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .gallery-grid {
+        --col: 4;
+    }
+
+    .thumbnail {
+        width: 82%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .gallery-grid {
+        --col: 5;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .gallery-grid {
+        --col: 6;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .gallery-grid {
+        --col: 7;
+    }
+}

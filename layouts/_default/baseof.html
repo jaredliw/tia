@@ -24,7 +24,7 @@
     <meta name="theme-color" content="#c3e1d7">
 
     {{ $options := (dict "targetPath" "app.css" "includePaths" (slice "node_modules")) -}}
-    {{ $css := resources.Get "app.scss" | resources.ToCSS $options -}}
+    {{ $css := resources.Get "app.scss" | toCSS $options | postCSS | minify -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}"/>
 </head>
 

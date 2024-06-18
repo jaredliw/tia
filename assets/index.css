@@ -1,0 +1,30 @@
+/*noinspection CssReplaceWithShorthandSafely*/
+header.masthead {
+    --bg: '';
+
+    padding-top: 5rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(to bottom, rgba(66, 92, 85, 0.8) 0%, rgba(66, 92, 85, 0.8) 100%), var(--bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.masthead p {
+    color: var(--bs-gray-300);
+}
+
+.accordion-button:not(.collapsed) {
+    font-weight: 500;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+/*noinspection CssNonIntegerLengthInPixels*/
+@media (max-width: 767.78px) {
+    #logo {
+        width: 35%;
+        height: 35%;
+        max-width: 120px;
+    }
+}

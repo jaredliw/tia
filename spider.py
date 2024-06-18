@@ -13,7 +13,16 @@ import requests
 import yaml
 from PIL import Image
 
-IS_RUNNING_ON_CLOUD = environ.get('IS_ON_CLOUD', 'False').lower() == 'true'
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.StreamHandler()]
+)
+logger = logging.getLogger(__name__)
+
+flag = environ.get('IS_RUNNING_ON_CLOUD', 'false')
+logger.info(f'Environment variable "IS_RUNNING_ON_CLOUD" is set to "{flag}"')
+IS_RUNNING_ON_CLOUD = flag.lower() == 'true'
 API_KEY = environ['GOOGLE_API_KEY']
 API_URL = 'https://www.googleapis.com/drive/v3/files/'
 BASE_FOLDER_PATH = Path(__file__).parent.resolve()
@@ -27,12 +36,6 @@ FILE_DOWNLOAD_PARAMS = {
     'alt': 'media',
     'key': API_KEY
 }
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.StreamHandler()]
-)
-logger = logging.getLogger(__name__)
 id_name_mapping = {}
 
 logger.info('Started')
@@ -72,13 +75,13 @@ for section in raw:
                     logger.info('Script is not running locally, skip this file id')
                     continue
 
+                logger.info('Downloading the file')
                 file_req = requests.get(API_URL + file_id, params=FILE_DOWNLOAD_PARAMS)
                 file_req.raise_for_status()
                 if file_req.headers.get('Content-Type', '').lower() != 'application/pdf':
                     logger.info('Not a pdf file, skip this file id')
                     continue
 
-                logger.info('Downloading the pdf file')
                 pdf_reader = fitz.open(stream=file_req.content, filetype="pdf")
                 cover_pixmap = pdf_reader.load_page(0).get_pixmap()
                 cover_img = Image.open(BytesIO(cover_pixmap.tobytes()))

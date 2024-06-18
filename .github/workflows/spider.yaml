@@ -24,7 +24,7 @@ jobs:
         run: pip3 install -r requirements.txt
       - name: Run script
         run: python3 spider.py
-        with:
+        env:
           IS_RUNNING_ON_CLOUD: true
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       - name: Commit changes

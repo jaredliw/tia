@@ -9,6 +9,8 @@ subtitle = 'Persatuan Pelajar Bantu Pelajar Malaysia (PPBPM)'
 description = 'We are a team of Malaysian youths hoping to help SPM students achieve their best.'
 inspiration = 'Exacerbated by class disruptions during the pandemic, we realised that not everyone had the privilege of receiving one-to-one guidance from teachers on topics they may struggle with.'
 aim = 'We aim to assist struggling Malaysian youth who lack academic support primarily through specialised online one-to-one or group tutoring by our own team of bright and accomplished volunteer tutors. Furthermore, we plan to use our platform to expand our reach by means of collaborations, fundraisers and more.'
+tutorSignUpLink = 'https://docs.google.com/forms/d/e/1FAIpQLSf6AkKHe-03225EL0eMiKribR0APFzCh8aykc1IB509oC9LZg/viewform?usp=sharing'
+tuteeSignUpLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfpkixo2t9NKedNYlEChe2UvtnuVN9hTkMM6NcrkPNSIPv5SQ/viewform?usp=sharing'
 pages = [
     ['Home', ''],
     ['About', 'about'],

@@ -72,39 +72,6 @@
         </div>
     </div>
 
-    <!--<div class="row justify-content-center page-section px-5">-->
-    <!--    <div class="text-center">-->
-    <!--        <h2 class="mt-0 text-primary fw-lighter"><span class="fw-bold">FAQ</span>s.</h2>-->
-    <!--        <hr class="divider my-4"/>-->
-
-    <!--        {{ range site.Data.faqs }}-->
-    <!--        <h6 class="text-uppercase pt-4">- {{ .section }} -</h6>-->
-    <!--        {{ $sectionHash := crypto.MD5 .section }}-->
-    <!--        <div class="accordion accordion-flush" id="faqAccordion-{{ $sectionHash }}">-->
-        <!--            {{ range .qna }}-->
-    <!--            {{ $hash := crypto.MD5 (print (index . 0) (index . 1)) }}-->
-    <!--            <div class="accordion-item">-->
-    <!--                <h2 class="accordion-header" id="accordionHeader-{{ $hash }}">-->
-    <!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"-->
-    <!--                            data-bs-target="#accordionCollapse-{{ $hash }}" aria-expanded="false"-->
-    <!--                            aria-controls="accordionCollapse-{{ $hash }}">-->
-    <!--                        {{ index . 0 | markdownify }}-->
-    <!--                    </button>-->
-    <!--                </h2>-->
-    <!--                <div id="accordionCollapse-{{ $hash }}" class="accordion-collapse collapse"-->
-    <!--                     aria-labelledby="accordionHeader-{{ $hash }}"-->
-    <!--                     data-bs-parent="#faqAccordion-{{ $sectionHash }}">-->
-    <!--                    <div class="accordion-body text-start py-0 pb-2">-->
-    <!--                        <p>{{ index . 1 | markdownify }}</p>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            {{ end }}-->
-    <!--        </div>-->
-    <!--        {{ end }}-->
-    <!--    </div>-->
-    <!--</div>-->
-
     <div class="row">
         {{- partial "footer.html" -}}
     </div>

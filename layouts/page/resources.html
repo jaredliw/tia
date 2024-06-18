@@ -36,7 +36,7 @@
                             </h6>
                             <a href="{{ .folder_link }}" target="_blank" class="text-muted ms-auto">View more...</a>
                         </div>
-                        <div class="d-grid gap-4 pb-2 gallery-grid">
+                        <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
                             {{ range .file_ids }}
                                 {{ $filename := index site.Data._resources_mapping . }}
                                 {{ $randomHue := mod (int (printf "0x%s" (substr (crypto.MD5 .) 0 5))) 360 }}
@@ -76,7 +76,7 @@
         }
 
         .gallery-grid {
-            --col: 2;
+            --col: 3;
             grid-template-columns: repeat(var(--col), minmax(0, 1fr));
         }
 
@@ -100,19 +100,39 @@
         }
 
         /* Extra breakpoints */
+        @media (max-width: 529.98px) {
+            .gallery-grid {
+                --col: 2;
+            }
+
+            .gallery-grid .card {
+                height: 260px;
+                margin-left: min(1rem, 15px);
+                margin-right: min(1rem, 15px);
+            }
+        }
+
+        @media (max-width: 454.98px) {
+            .gallery-grid .card {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
         @media (max-width: 399.98px) {
             .gallery-grid {
                 --col: 1;
             }
 
             .gallery-grid .card {
-                height: 260px;
-                margin-left: min(1rem, 18px);
-                margin-right: min(1rem, 18px);
+                height: 300px;
+                width: 215px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .thumbnail {
-                width: 55%;
+                width: max(55%, 130px);
             }
         }
 

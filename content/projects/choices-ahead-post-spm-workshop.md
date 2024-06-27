@@ -63,18 +63,18 @@ Two powerful mediums, Google Meet, YouTube Live, and Slido (Q&A sessions) came t
 workshops a seamless and interactive experience. Participants were able to interact with the speakers after each
 session.
 
-![A series of YouTube live streams.]({{< rel "ca2.0/ytb-live.png" >}})
+![A series of YouTube live streams.]({{< absURL "ca2.0/ytb-live.png" >}})
 
-![Group photo during the event.]({{< rel "ca2.0/group-photo.png" >}})
+![Group photo during the event.]({{< absURL "ca2.0/group-photo.png" >}})
 
 ## Feedback
 
 The feedback from ‘Choices Ahead! 2.0’ workshop has been overwhelmingly positive. Participants have praised the 
 beneficial content, knowledgeable speakers, and interactive sessions. Below is some of the feedback that we received:
 
-![]({{< rel "ca2.0/feedback-1.png" >}})
-![]({{< rel "ca2.0/feedback-2.png" >}})
-![]({{< rel "ca2.0/feedback-3.png" >}})
+![]({{< absURL "ca2.0/feedback-1.png" >}})
+![]({{< absURL "ca2.0/feedback-2.png" >}})
+![]({{< absURL "ca2.0/feedback-3.png" >}})
 
 ## Event Summary
 
@@ -97,6 +97,6 @@ taking this project as inspiration and motivation to move forward.
 
 ## Gallery
 
-![]({{< rel "ca2.0/gallery-1.png" >}})
-![]({{< rel "ca2.0/gallery-2.png" >}})
-![]({{< rel "ca2.0/gallery-3.png" >}})
+![]({{< absURL "ca2.0/gallery-1.png" >}})
+![]({{< absURL "ca2.0/gallery-2.png" >}})
+![]({{< absURL "ca2.0/gallery-3.png" >}})

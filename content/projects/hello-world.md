@@ -97,9 +97,7 @@ Now a nested list:
 Notice again how text always lines up on 4-space indents (including
 that last line which continues item 3 above).
 
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
+Here's a link to [a website](http://foo.bar). Here's a footnote [^1].
 
 [^1]: Footnote text goes here.
 
@@ -129,7 +127,7 @@ term/definition pair to spread things out more.)
 
 Images can be specified like so:
 
-![Example image.]({{< rel "masthead.png" >}})
+![Example image.]({{< absURL "masthead.png" >}})
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.

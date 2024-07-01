@@ -1,0 +1,110 @@
+{{- define "main" -}}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
+    {{ $guideline := .Site.Data.guideline }}
+
+    <section style="padding-top: 6.5rem;">
+        <h2>Know each department</h2>
+        <p>
+            Find out more about the mission and general tasks of each
+            departments
+        </p>
+    </section>
+
+    <section>
+        <div>
+            <div>
+                {{ range $guideline }}
+                     <div>
+                         <p>
+                             {{ .department }}
+                         </p>
+                     </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            {{ range $guideline }}
+                <div>
+                    <img
+                        src="{{ absURL .icon }}"
+                        alt="{{ .department }} Icon"
+                        width="300"
+                    />
+                    <div class="dropdown d-block">
+                        <button
+                            class="dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-display="static"
+                            aria-expanded="false"
+                        >
+                            {{ .department }}
+                        </button>
+                        <div class="dropdown-menu">
+                            <div>
+                                <span>Mission</span>
+                                <ul>
+                                    {{ range .mission }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                            <div>
+                                <span>General Task</span>
+                                <ul>
+                                    {{ range .generalTask }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+
+    {{ partial "footer.html" }}
+
+
+    {{/*  Reference to external css files  */}}
+    {{ with resources.Get "guideline.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}" />
+    {{ end }}
+
+
+    <script>
+        
+        // Javascript is used to modify the dropdown's default behavior
+        //  -> Default: Bootstrap's dropdown will open downward, but it will open upward if there is not enough space at the bottom. 
+        //     Modify: Dropdown menu only opens downward, even if there is not enough space at the bottom
+        //  -> Default: Bootstrap's dropdown collapses when an item inside the menu is clicked. 
+        //     Modify: Dropdown only collapses when clicking outside of it.
+      
+
+        $(document).ready(function () {
+            // Prevent the dropdown from closing when clicking inside it
+            $(".dropdown-menu").on("click", function (event) {
+                event.stopPropagation();
+            });
+
+            // Close the dropdown when clicking outside of it
+            $(document).on("click", function (event) {
+                let target = $(event.target);
+                if (!target.closest(".dropdown").length) {
+                    $(".dropdown-menu").removeClass("show");
+                }
+            });
+
+            // Open the dropdown when clicking the button
+            $("#dropdownMenuButton").on("click", function (event) {
+                let dropdownMenu = $(this).next(".dropdown-menu");
+                dropdownMenu.toggleClass("show");
+            });
+        });
+    </script>
+{{- end -}}

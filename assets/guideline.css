@@ -1,3 +1,13 @@
-h6 {
-  display: block;
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.dropdown-toggle {
+  opacity: 1;
+  transition: 0.15s;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:active, .dropdown-toggle:focus {
+  opacity: 0.8;
 }

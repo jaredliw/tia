@@ -1,7 +1,7 @@
 [
   {
     "department": "Executive director",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/executive-director.svg",
     "mission": [
       "Oversee the organisation's overall strategic direction.",
       "Ensure the achievement of TIA's mission.",
@@ -17,7 +17,7 @@
   },
   {
     "department": "Operations Department",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/operations-department.svg",
     "mission": [
       "To monitor the applications of volunteers and students.",
       "To arrange the pairing of volunteers and tutees based on their application form."
@@ -32,7 +32,7 @@
   },
   {
     "department": "Outreach Department",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/outreach-department.svg",
     "mission": [
       "To grow the quality of our services and reach more students through establishing connections with other organisations."
     ],
@@ -45,7 +45,7 @@
   },
   {
     "department": "Publicity Department",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/publicity-department.svg",
     "mission": [
       "To attract more volunteers and participation using social media as a medium of communication.",
       "To design promotional materials for TIA."
@@ -58,7 +58,7 @@
   },
   {
     "department": "Resource Department",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/resource-department.svg",
     "mission": [
       "To compile various resources (notes, xercises, worksheets, state papers, YouTube video links, etc.) to assist tutors in preparing for their tutoring session."
     ],
@@ -72,7 +72,7 @@
   },
   {
     "department": "Technical Department",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/tech-department.svg",
     "mission": [
       "To provide an automation alternative solution.",
       "Develop, maintain and execute technologies and its task."
@@ -85,7 +85,7 @@
   },
   {
     "department": "Welfare Department",
-    "icon": "/tia/svg/guideline-icons/placeholder.svg",
+    "icon": "/tia/svg/guideline-icons/welfare-department.svg",
     "mission": [
       "To liaise between tutors and tutees regarding communicating issues.",
       "To keep track of tutors' and tutees' progress each week."

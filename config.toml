@@ -15,7 +15,8 @@ pages = [
     ['Home', ''],
     ['About', 'about'],
     ['Projects', 'projects'],
-    ['Resources', 'resources']
+    ['Resources', 'resources'],
+    ['Guideline', 'guideline']
 ]
 impacts = [
     [1462, "tutors recruited"],

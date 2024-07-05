@@ -2,40 +2,81 @@
     {{ partial "nav.html" (dict "nav_white" 1) }}
     {{ $guideline := .Site.Data.guideline }}
 
-    <section style="padding-top: 6.5rem;">
-        <h2>Know each department</h2>
-        <p>
-            Find out more about the mission and general tasks of each
-            departments
-        </p>
+    <section style="padding-top: 6.5rem;" class="mb-4">
+        <div class="container">
+            <div class="d-flex row justify-content-between align-items-center">
+                <!-- Left Image -->
+                <div class="col-md-2 text-center d-none d-md-block ms-1 me-0 mb-0 px-0 py-0" style="width:15%">
+                    <img style="max-width: 100%;" src="{{ absURL "svg/guideline-icons/side-img-1.svg" }}">
+                </div>
+                <!-- Center Content -->
+                <div class="col-md-8">
+                    <h2 class="text-center text-primary fw-lighter">
+                        Know each <span class="fw-bold">departments.</span>
+                    </h2>
+                    <hr class="divider my-4"/>
+                    <p class="text-center">
+                        Find out more about the mission and general tasks of each
+                        department.
+                    </p>
+                </div>
+                <!-- Right Image -->
+                <div class="col-md-2 text-center d-none d-md-block me-1 px-3" style="width: 15%">
+                    <img style="max-width: 100%;" src="{{ absURL "svg/guideline-icons/side-img-2.svg" }}">
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section>
-        <div>
-            <div>
-                {{ range $guideline }}
-                     <div>
-                         <p>
-                             {{ .department }}
-                         </p>
-                     </div>
-                {{ end }}
+    
+    <!--list of departments-->
+    <section class="mb-5">
+        <div class="container-fluid mt-2 bg-body-secondary py-3">
+            <!-- Executive Director row -->
+            <div class="row justify-content-center mb-1 mt-3">
+                <div class="col-12 col-md-4 mb-3"  style="width: 250px;">
+                    <div class="bg-secondary py-2 px-2 text-center w-100" style="border-radius: 20px;">
+                        <p class="text-primary" style="font-weight: 600;">
+                            Executive Director
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Department rows -->
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex flex-wrap justify-content-center">
+                    {{ range $index, $element := $guideline }}
+                    {{ if gt $index 0 }}
+                        <div class="col-6 col-sm-6 col-md-4 mb-1 py-3 px-4" style="width: 290px;">
+                            <div class="bg-secondary py-2 px-4 text-center mx-auto w-100" style="border-radius: 20px;">
+                                <p class="text-primary" style="font-weight: 600;">
+                                    {{ .department }}
+                                </p>
+                            </div>
+                        </div>
+                    {{ end }}
+                    {{ end }}
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div>
+    <!--info of each departments-->
+    <section class="mt-1 mb-3">
+        <div class="d-flex justify-content-around align-items-center flex-wrap gap-1 gap-lg-2 gap-xxl-3">
             {{ range $guideline }}
-                <div>
+                <div class="bg-body-secondary mb-2 border-0" style="border-radius: 20px; height: 290px;">
+                    <!--image-->
                     <img
+                        class="px-0 pt-4"
                         src="{{ absURL .icon }}"
                         alt="{{ .department }} Icon"
                         width="300"
                     />
-                    <div class="dropdown d-block">
+                    <!--dropdown button-->
+                    <div class="dropdown d-block text-center mt-3 mb-5">
                         <button
-                            class="dropdown-toggle"
+                            style="width: 90%; border-radius: 20px;"
+                            class="dropdown-toggle text-primary border-0 bg-secondary py-2 fw-bold"
                             type="button"
                             data-bs-toggle="dropdown"
                             data-bs-display="static"
@@ -43,20 +84,21 @@
                         >
                             {{ .department }}
                         </button>
-                        <div class="dropdown-menu">
-                            <div>
-                                <span>Mission</span>
+                        <!--dropdown menu (mission & general tasks)-->
+                        <div class="dropdown-menu mt-2 bg-secondary" style="border-radius: 20px; border: none;">
+                            <div class="px-3 pt-2">
+                                <span class="text-primary fw-bold">Mission</span>
                                 <ul>
                                     {{ range .mission }}
-                                        <li>{{ . }}</li>
+                                        <li class="px-2 justify-content-center" class="text-primary">{{ . }}</li>
                                     {{ end }}
                                 </ul>
                             </div>
-                            <div>
-                                <span>General Task</span>
+                            <div class="px-3 pt-2 pd-3 mx-2">
+                                <span class="text-primary fw-bold">General Task</span>
                                 <ul>
                                     {{ range .generalTask }}
-                                        <li>{{ . }}</li>
+                                        <li class="px-2 justify-content-center">{{ . }}</li>
                                     {{ end }}
                                 </ul>
                             </div>
@@ -66,6 +108,8 @@
             {{ end }}
         </div>
     </section>
+
+
 
 
     {{ partial "footer.html" }}
@@ -95,7 +139,7 @@
             // Close the dropdown when clicking outside of it
             $(document).on("click", function (event) {
                 let target = $(event.target);
-                if (!target.closest(".dropdown").length) {
+                if (!target.closest(".dropdown, .dropdown-toggle").length) {
                     $(".dropdown-menu").removeClass("show");
                 }
             });

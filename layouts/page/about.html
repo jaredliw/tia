@@ -1,44 +1,68 @@
-{{- define "main" -}}
-    {{ partial "nav.html" (dict "nav_white" 1) }}
+{{- define "main" -}} {{ partial "nav.html" (dict "nav_white" 1) }}
 
-    <div class="row justify-content-center page-section px-3 px-md-5" style="padding-top: 6.5rem;">
-        <h2 class="text-center text-primary fw-lighter">
-            Our <span class="fw-bold">story</span>.
-        </h2>
-        <hr class="divider my-4"/>
+<div
+	class="row justify-content-center page-section px-3 px-md-5"
+	style="padding-top: 6.5rem"
+>
+	<h2 class="text-center text-primary fw-lighter">
+		Our <span class="fw-bold">story</span>.
+	</h2>
+	<hr class="divider my-4" />
 
-        {{ .Content }}
-    </div>
+	{{ .Content }}
+</div>
 
-    <div class="row justify-content-center bg-body-secondary page-section px-3 pb-5">
-        <div class="text-center">
-            <h2 class="text-primary fw-lighter">Meet the <span class="fw-bold">team</span>.</h2>
-            <hr class="divider my-4"/>
+<div
+	class="row justify-content-center bg-body-secondary page-section px-3 pb-5"
+>
+	<div class="text-center">
+		<h2 class="text-primary fw-lighter">
+			Meet the <span class="fw-bold">team</span>.
+		</h2>
+		<hr class="divider my-4" />
 
-            <div class="container container-fluid px-5">
-                {{ $first := true }}
-                {{ range site.Data.team }}
-                    <h6 class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}">
-                        -&nbsp;{{- .department -}}&nbsp;-
-                    </h6>
-                    <div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
-                        {{ range .members }}
-                            <div class="pb-3">
-                                <img src="{{ absURL .avatar }}" alt="avatar" class="avatar my-3">
-                                <p style="letter-spacing: 1px;" class=" mb-0 fw-lighter">{{ .name }}</p>
-                                <small class="text-primary text-uppercase fw-bold">{{ .role }}</small>
-                            </div>
-                        {{ end }}
-                    </div>
-                    {{ $first = false }}
-                {{ end }}
+		<div class="container container-fluid px-5">
+			{{ $first := true }} {{ range site.Data.team }}
+			<h6
+				class="text-uppercase {{ if $first -}} pt-0 {{- else -}} pt-5 {{- end -}}"
+			>
+				-&nbsp;{{- .department -}}&nbsp;-
+			</h6>
+			<div
+				class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5"
+			>
+				{{ $Director := 0 }} 
+                
+                {{ range .members }} 
+                {{ if and (not (strings.Contains .role "Director")) (eq $Director 0)}} 
+                {{/*  Creates new row for non-director roles  */}}
             </div>
-        </div>
-    </div>
+			<div class="d-flex justify-content-around align-items-center flex-wrap gap-2 gap-lg-4 gap-xxl-5">
+                {{ $Director = 1}} 
+                {{ end }} 
+                
+                
+				<div class="pb-3">
+					<img
+						src="{{ absURL .avatar }}"
+						alt="avatar"
+						class="avatar my-3"
+					/>
+					<p style="letter-spacing: 1px" class="mb-0 fw-lighter">
+						{{ .name }}
+					</p>
+					<small class="text-primary text-uppercase fw-bold"
+						>{{ .role }}</small
+					>
+				</div>
+				{{ end }}
+			</div>
+			{{ $first = false }} {{ end }}
+		</div>
+	</div>
+</div>
 
-    {{ partial "footer.html" }}
-
-    {{ with resources.Get "about.css" | postCSS | minify }}
-        <link rel="stylesheet" href="{{ .Permalink }}">
-    {{ end }}
-{{- end -}}
+{{ partial "footer.html" }} {{ with resources.Get "about.css" | postCSS | minify
+}}
+<link rel="stylesheet" href="{{ .Permalink }}" />
+{{ end }} {{- end -}}

@@ -12,83 +12,85 @@
       "Provide a healthy working environment for committees.",
       "Oversee all aspects of the TIA's operations.",
       "Represent TIA in public forums, including speaking engagements, media interviews, and community events Develop and implement strategic plans to achieve TIA's mission and goals.",
+      "Develop and implement strategic plans to achieve TIA's mission and goals.",
       "Establish and maintain relationships with community partners."
     ]
   },
   {
-    "department": "Operations Department",
+    "department": "Secretarial Department",
     "icon": "/tia/guideline/guideline-icons/operations-department.svg",
     "mission": [
-      "To monitor the applications of volunteers and students.",
-      "To arrange the pairing of volunteers and tutees based on their application form."
+      "To contribute to the success of TIA by providing reliable and efficient administrative support."
+    ],
+    "generalTask": [
+      "Manage and organise administrative tasks.",
+      "Prepare agendas, take minutes, and maintain records of meetings.",
+      "Assist in organising events and activities for the organisation.",
+      "Handles recruitment applications."
+    ]
+  },
+  {
+    "department": "Treasury Department",
+    "icon": "/tia/guideline/guideline-icons/outreach-department.svg",
+    "mission": [
+      "To manage the financial resources of TIA, supporting TIA to achieve its mission and goals over the long term."
+    ],
+    "generalTask": [
+      "Manage financial matters of TIA.",
+      "Maintain accurate records of income and expenses.",
+      "Manage TIA's budget.",
+      "Prepare financial reports and statements.",
+      "Coordinate fundraising efforts and donation collection."
+    ]
+  },
+  {
+    "department": "Public Relations Department",
+    "icon": "/tia/guideline/guideline-icons/welfare-department.svg",
+    "mission": [
+      "To promote and maintain a positive public image.",
+      "To attract more volunteers and participation using social media as a medium of communication.",
+      "To design promotional materials for TIA."
+    ],
+    "generalTask": [
+      "Develop and execute social media strategy.",
+      "Design and post material onto TIA’s social media pages based on an established monthly timeline.",
+      "Create engaging video and post content for target audience.",
+      "Monitor and optimize social media metrics for improved engagement rates.",
+      "Continuously improve organization's social media presence for maximum impact and reach."
+    ]
+  },
+  {
+    "department": "Outreach Department",
+    "icon": "/tia/guideline/guideline-icons/publicity-department.svg",
+    "mission": [
+      "To maintain and expand our reach to the general public, external organisations and like-minded bodies by establishing connections and enhancing our online presence.",
+      "To elevate our organisation to a professional standard."
+    ],
+    "generalTask": [
+      "Scout for potential collaborations and opportunities for TIA to grow.",
+      "Respond to emails or messages on collaborating with other organisations.",
+      "Maintain mutual benefiting collaborations by extending help to other organisations where possible.",
+      "Communicate with and promote other organisations of a similar purpose to establish friendly relations.",
+      "Manage TIA’s LinkedIn account."
+    ]
+  },
+  {
+    "department": "Welfare-operations Department",
+    "icon": "/tia/guideline/guideline-icons/resource-department.svg",
+    "mission": [
+      "To liaise between tutors and tutees regarding communicating issues.",
+      "To keep track of tutors’ and tutees’ progress each week."
     ],
     "generalTask": [
       "Analyze the application form of tutors and tutees and pair them up based on their preference.",
       "Compile the pairings according to the subject and language used.",
       "Contact and confirm the pairing with the tutors and tutees to minimize the ghosting issues.",
-      "Convey the pairing details to tutors and tutees.",
-      "Help to update the personal information of tutors or tutees when necessary."
-    ]
-  },
-  {
-    "department": "Outreach Department",
-    "icon": "/tia/guideline/guideline-icons/outreach-department.svg",
-    "mission": [
-      "To grow the quality of our services and reach more students through establishing connections with other organisations."
-    ],
-    "generalTask": [
-      "Identify areas of the TIA initiative that can be improved / expanded.",
-      "Scout for potential collaborations and opportunities for TIA to grow.",
-      "Respond to emails or messages on collaborating with other organisations.",
-      "Maintain mutual benefiting collaborations by extending help to other organisations where possible."
-    ]
-  },
-  {
-    "department": "Welfare Department",
-    "icon": "/tia/guideline/guideline-icons/welfare-department.svg",
-    "mission": [
-      "To liaise between tutors and tutees regarding communicating issues.",
-      "To keep track of tutors' and tutees' progress each week."
-    ],
-    "generalTask": [
-      "Promote tutor and tutee registration through various channels.",
-      "Check on the status of tutors and tutees regularly by polls or virtual check in session.",
-      "Update tutor and tutee namelist from time to time Check feedback given from time to time.",
-      "Update number of lessons of each tutor based on class screenshot form.",
       "Issue e-certificates to tutors who are eligible.",
-      "Contact tutors and tutees personally whenever required.",
       "Deal with issues reported by tutors and tutees."
     ]
   },
   {
-    "department": "Publicity Department",
-    "icon": "/tia/guideline/guideline-icons/publicity-department.svg",
-    "mission": [
-      "To attract more volunteers and participation using social media as a medium of communication.",
-      "To design promotional materials for TIA."
-    ],
-    "generalTask": [
-      "Design and post material onto TIA’s social media pages based on an established monthly timeline.",
-      "Design anything requested by other departments including but not limited to posters, banners and department-specific project material.",
-      "Communicate with and promote other organisations of a similar purpose to establish friendly relations."
-    ]
-  },
-  {
-    "department": "Resource Department",
-    "icon": "/tia/guideline/guideline-icons/resource-department.svg",
-    "mission": [
-      "To compile various resources (notes, xercises, worksheets, state papers, YouTube video links, etc.) to assist tutors in preparing for their tutoring session."
-    ],
-    "generalTask": [
-      "Search for all kinds of online resources available in the internet and compile them in the TIA Resources Drive.",
-      "Review the feedback of tutors and tutees forwarded by the Welfare Team to constantly improve the Resources Drive.",
-      "Assist tutees in finding materials for self studying.",
-      "Create daily quizzes for various core subjects and post them in the Tutee Study Group (Telegram) for tutees to answer.",
-      "Liaise with tutors who would like to share their own notes with TIA."
-    ]
-  },
-  {
-    "department": "Technical Department",
+    "department": "Tech Department",
     "icon": "/tia/guideline/guideline-icons/tech-department.svg",
     "mission": [
       "To provide an automation alternative solution.",
@@ -97,7 +99,21 @@
     "generalTask": [
       "Develop and maintain the organization's website.",
       "Research for automation possibilities within the organization's structure.",
-      "Collaborate with other departments to solve technical problems."
+      "Collaborate with other departments to solve technical problems.",
+      "Manage the organization’s data, ensuring that it is accurately displayed."
+    ]
+  },
+  {
+    "department": "Resource Department",
+    "icon": "/tia/guideline/guideline-icons/tech-department.svg",
+    "mission": [
+      "To compile various resources (notes, exercises, worksheets, state papers, YouTube video links, etc.) to assist tutors in preparing for their tutoring sessions."
+    ],
+    "generalTask": [
+      "Search for all kinds of online resources available in the internet and compile them in the TIA Resources Drive.",
+      "Assist tutees in finding materials for self studying.",
+      "Interact with tutees in the Tutee Study Group (Telegram) to create a conducive study environment and a safe space for them to chat with one another.",
+      "Liaise with tutors who would like to share their own notes with TIA."
     ]
   }
 ]

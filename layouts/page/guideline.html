@@ -55,12 +55,22 @@
                         </p>
                     </div>
                 </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <div
+                        style="border-radius: 20px;"
+                        class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center"
+                    >
+                        <p class="text-primary" style="font-weight: 600">
+                            Secretarial Director
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Department rows -->
             <div class="row justify-content-center g-3">
                 {{ range $index, $element := $guideline }}
-                    {{ if gt $index 0 }}
+                    {{ if gt $index 1 }}
                         <div class="col-md-4">
                             <div
                                 style="border-radius: 20px;"

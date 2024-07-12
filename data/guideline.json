@@ -18,7 +18,7 @@
   },
   {
     "department": "Secretarial Department",
-    "icon": "/tia/guideline/guideline-icons/operations-department.svg",
+    "icon": "/tia/guideline/guideline-icons/secretarial-department.svg",
     "mission": [
       "To contribute to the success of TIA by providing reliable and efficient administrative support."
     ],
@@ -31,7 +31,7 @@
   },
   {
     "department": "Treasury Department",
-    "icon": "/tia/guideline/guideline-icons/outreach-department.svg",
+    "icon": "/tia/guideline/guideline-icons/treasury-department.svg",
     "mission": [
       "To manage the financial resources of TIA, supporting TIA to achieve its mission and goals over the long term."
     ],
@@ -45,7 +45,7 @@
   },
   {
     "department": "Public Relations Department",
-    "icon": "/tia/guideline/guideline-icons/welfare-department.svg",
+    "icon": "/tia/guideline/guideline-icons/public-relations-department.svg",
     "mission": [
       "To promote and maintain a positive public image.",
       "To attract more volunteers and participation using social media as a medium of communication.",
@@ -61,7 +61,7 @@
   },
   {
     "department": "Outreach Department",
-    "icon": "/tia/guideline/guideline-icons/publicity-department.svg",
+    "icon": "/tia/guideline/guideline-icons/outreach-department.svg",
     "mission": [
       "To maintain and expand our reach to the general public, external organisations and like-minded bodies by establishing connections and enhancing our online presence.",
       "To elevate our organisation to a professional standard."
@@ -76,7 +76,7 @@
   },
   {
     "department": "Welfare-operations Department",
-    "icon": "/tia/guideline/guideline-icons/resource-department.svg",
+    "icon": "/tia/guideline/guideline-icons/welfare-operations-department.svg",
     "mission": [
       "To liaise between tutors and tutees regarding communicating issues.",
       "To keep track of tutors’ and tutees’ progress each week."
@@ -105,7 +105,7 @@
   },
   {
     "department": "Resource Department",
-    "icon": "/tia/guideline/guideline-icons/tech-department.svg",
+    "icon": "/tia/guideline/guideline-icons/resource-department.svg",
     "mission": [
       "To compile various resources (notes, exercises, worksheets, state papers, YouTube video links, etc.) to assist tutors in preparing for their tutoring sessions."
     ],

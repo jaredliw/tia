@@ -3,6 +3,15 @@ p {
   margin-bottom: 0;
 }
 
+@media (max-width: 575.98px) { 
+  .dropdown-toggle {
+    width: 100%;
+    white-space: normal; 
+    word-break: break-word; 
+    text-align: center; 
+  }
+}
+
 .dropdown-toggle {
   transition: 0.15s;
   background-color: #f1f7d7;

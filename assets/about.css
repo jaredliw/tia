@@ -3,4 +3,18 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+/* .dir {
+    max-width: 80%;
+    
+} */
+
+.margin-50 {
+    margin: 50px;
+}
+
+.exe {
+    
 }

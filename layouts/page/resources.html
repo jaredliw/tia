@@ -36,6 +36,46 @@
                             </h6>
                             <a href="{{ .folder_link }}" target="_blank" class="text-muted ms-auto">View more...</a>
                         </div>
+
+                        {{ if .has_subsection }}
+                            {{ $firstSubSection := true }}
+                            <div class="d-grid pb-2">
+                                {{ range .subsection }}
+                                    <div class="{{- if not $firstSubSection -}} my-3 {{- end -}}">
+
+                                        <h6>{{ .subsection_name }}</h6>
+                                        <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
+                                            {{ range .file_ids }}
+                                                {{ $filename := index site.Data._resources_mapping . }}
+                                                {{ $randomHue := mod (int (printf "0x%s" (substr (crypto.MD5 .) 0 5))) 360 }}
+                                                <div class="col">
+                                                    <a class="text-decoration-none" href="{{ printf $fileLink . }}" target="_blank">
+                                                        <div class="card border-1 rounded-0">
+                                                            <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                                                                style="--hue: {{ $randomHue }};">
+                                                                <div class="text-center thumbnail"
+                                                                    style="height: 70%; --thumbnail: url('{{ absURL (printf "resources/%s.png" .) }}'); --default-thumbnail: url('{{ absURL "default-thumbnail.png" }}');">
+                                                                </div>
+                                                                <div class="mt-4" style="height: 30%;">
+                                                                    <h6 class="card-subtitle text-body-secondary clamp"
+                                                                        style="--clamp: 3;" title="{{ $filename }}">
+                                                                        {{ $filename }}
+                                                                    </h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            {{ end }}
+                                        </div>
+                                        {{ $firstSubSection = false}}
+
+                                    </div>
+                                {{ end }}
+                            </div>
+                        {{ else }}
+
+
                         <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
                             {{ range .file_ids }}
                                 {{ $filename := index site.Data._resources_mapping . }}
@@ -60,6 +100,9 @@
                                 </div>
                             {{ end }}
                         </div>
+
+                        {{ end }}
+
                         {{ $firstGroup = false }}
                     {{ end }}
                 </div>

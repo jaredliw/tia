@@ -18,9 +18,9 @@ pages = [
     ['Resources', 'resources']
 ]
 impacts = [
-    [1462, "tutors recruited"],
-    [2254, "tutees impacted"],
-    [4228, "hours of tutoring"]
+    [1494, "tutors recruited"],
+    [2273, "tutees impacted"],
+    [4425, "hours of tutoring"]
 ]
 socials = [
     ["svg/facebook.svg", "https://www.facebook.com/tutors.in.action.malaysia"],

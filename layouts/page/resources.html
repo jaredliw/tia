@@ -39,10 +39,13 @@
                     </div>
                         {{ $group_name := .group_name }}
                         
+                        <!-- Handling subjects where there are smaller NAMED categories inside (subsections) -->
+                        <!-- Refer to yaml file for clarity in categorized and non-categorized subject sections  -->
                         {{ if .has_subsection }}
-                            {{ $firstSubSection := true }}
                             <div class="d-grid pb-2">
                                 {{ range .subsection }}
+                                    <!-- Each category in a subject is a dropdown menu (accordion component) by it self -->
+                                    <!-- Each dropdown ust have unique id, even in different tabs -->
                                     <div class="accordion">
                                         <div class="accordion-item" id={{ $accordianCounter }}>
                                             <h2 class="accordion-header" id={{ print "heading-" $accordianCounter }}>
@@ -52,6 +55,7 @@
                                             </h2>
                                             <div id={{ print "body-" $accordianCounter }} class="accordion-collapse collapse" aria-labelledby={{ print "heading-" $accordianCounter }} data-bs-parent={{ print "#" $accordianCounter }}>
                                                 <div class="accordion-body">
+                                                    <!-- Gallery component inside the accordian body -->
                                                     <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
                                                         {{ range .file_ids }}
                                                             {{ $filename := index site.Data._resources_mapping . }}
@@ -79,7 +83,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    {{ $firstSubSection = false}}
                                     {{ $accordianCounter = add $accordianCounter 1 }}
                                     </div>
                                 {{ end }}

@@ -25,41 +25,95 @@
         <div class="tab-content">
             {{ $fileLink := "https://drive.google.com/file/d/%s/view?usp=drive_link" }}
             {{ $firstTab := true }}
+            {{ $accordianCounter := 1 }}
             {{ range site.Data.resources }}
                 <div class="tab-pane container px-0 fade {{ if $firstTab -}} show active {{- end -}}"
                      id="{{ crypto.MD5 .section_name }}">
                     {{ $firstGroup := true }}
                     {{ range .groups }}
-                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 pb-1 mb-2">
-                            <h6 class="text-uppercase mb-0">
-                                -&nbsp;{{- .group_name -}}&nbsp;-
-                            </h6>
-                            <a href="{{ .folder_link }}" target="_blank" class="text-muted ms-auto">View more...</a>
-                        </div>
-                        <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
-                            {{ range .file_ids }}
-                                {{ $filename := index site.Data._resources_mapping . }}
-                                {{ $randomHue := mod (int (printf "0x%s" (substr (crypto.MD5 .) 0 5))) 360 }}
-                                <div class="col">
-                                    <a class="text-decoration-none" href="{{ printf $fileLink . }}" target="_blank">
-                                        <div class="card border-1 rounded-0">
-                                            <div class="card-body d-flex flex-column justify-content-center align-items-center"
-                                                 style="--hue: {{ $randomHue }};">
-                                                <div class="text-center thumbnail"
-                                                     style="height: 70%; --thumbnail: url('{{ absURL (printf "resources/%s.png" .) }}'); --default-thumbnail: url('{{ absURL "default-thumbnail.png" }}');">
-                                                </div>
-                                                <div class="mt-4" style="height: 30%;">
-                                                    <h6 class="card-subtitle text-body-secondary clamp"
-                                                        style="--clamp: 3;" title="{{ $filename }}">
-                                                        {{ $filename }}
-                                                    </h6>
+                    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 pb-1 mb-2">
+                        <h6 class="text-uppercase mb-0">
+                            -&nbsp;{{- .group_name -}}&nbsp;-
+                        </h6>
+                        <a href="{{ .folder_link }}" target="_blank" class="text-muted ms-auto">View more...</a>
+                    </div>
+                        {{ $group_name := .group_name }}
+                        
+                        {{ if .has_subsection }}
+                            {{ $firstSubSection := true }}
+                            <div class="d-grid pb-2">
+                                {{ range .subsection }}
+                                    <div class="accordion">
+                                        <div class="accordion-item" id={{ $accordianCounter }}>
+                                            <h2 class="accordion-header" id={{ print "heading-" $accordianCounter }}>
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={{ print "#body-" $accordianCounter }} aria-expanded="true" aria-controls={{ print "body-" $accordianCounter }}>
+                                                    {{ .subsection_name }}
+                                                </button>
+                                            </h2>
+                                            <div id={{ print "body-" $accordianCounter }} class="accordion-collapse collapse" aria-labelledby={{ print "heading-" $accordianCounter }} data-bs-parent={{ print "#" $accordianCounter }}>
+                                                <div class="accordion-body">
+                                                    <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
+                                                        {{ range .file_ids }}
+                                                            {{ $filename := index site.Data._resources_mapping . }}
+                                                            {{ $randomHue := mod (int (printf "0x%s" (substr (crypto.MD5 .) 0 5))) 360 }}
+                                                            <div class="col">
+                                                                <a class="text-decoration-none" href="{{ printf $fileLink . }}" target="_blank">
+                                                                    <div class="card border-1 rounded-0">
+                                                                        <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                                                                            style="--hue: {{ $randomHue }};">
+                                                                            <div class="text-center thumbnail"
+                                                                                style="height: 70%; --thumbnail: url('{{ absURL (printf "resources/%s.png" .) }}'); --default-thumbnail: url('{{ absURL "default-thumbnail.png" }}');">
+                                                                            </div>
+                                                                            <div class="mt-4" style="height: 30%;">
+                                                                                <h6 class="card-subtitle text-body-secondary clamp"
+                                                                                    style="--clamp: 3;" title="{{ $filename }}">
+                                                                                    {{ $filename }}
+                                                                                </h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        {{ end }}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
-                            {{ end }}
-                        </div>
+                                    {{ $firstSubSection = false}}
+                                    {{ $accordianCounter = add $accordianCounter 1 }}
+                                    </div>
+                                {{ end }}
+                            </div>
+
+                        {{ else }}
+
+                            <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
+                                {{ range .file_ids }}
+                                    {{ $filename := index site.Data._resources_mapping . }}
+                                    {{ $randomHue := mod (int (printf "0x%s" (substr (crypto.MD5 .) 0 5))) 360 }}
+                                    <div class="col">
+                                        <a class="text-decoration-none" href="{{ printf $fileLink . }}" target="_blank">
+                                            <div class="card border-1 rounded-0">
+                                                <div class="card-body d-flex flex-column justify-content-center align-items-center"
+                                                     style="--hue: {{ $randomHue }};">
+                                                    <div class="text-center thumbnail"
+                                                         style="height: 70%; --thumbnail: url('{{ absURL (printf "resources/%s.png" .) }}'); --default-thumbnail: url('{{ absURL "default-thumbnail.png" }}');">
+                                                    </div>
+                                                    <div class="mt-4" style="height: 30%;">
+                                                        <h6 class="card-subtitle text-body-secondary clamp"
+                                                            style="--clamp: 3;" title="{{ $filename }}">
+                                                            {{ $filename }}
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {{ end }}
+                            </div>
+
+                        {{ end }}
+
                         {{ $firstGroup = false }}
                     {{ end }}
                 </div>

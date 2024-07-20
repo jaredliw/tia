@@ -2,24 +2,17 @@
     {{ partial "nav.html" (dict "nav_white" 1) }}
     {{ $guideline := .Site.Data.guideline }}
 
-
     <section style="padding-top: 6.5rem" class="mb-5">
         <div class="container">
             <div class="d-flex row justify-content-between align-items-center">
                 <!-- Left Image -->
-                <div
-                    class="col-md-2 text-center d-none d-md-block ms-1 me-0 mb-0 px-0 py-0"
-                    style="width: 15%"
-                >
-                    <img
-                        style="max-width: 100%;"
-                        src="{{ absURL "guideline/side-img-1.png" }}"
-                    />
+                <div class="col-md-2 text-center d-none d-md-block ms-1 me-0 mb-0 px-0 py-0" style="width: 15%">
+                    <img style="max-width: 100%;" src='{{ absURL "guideline/side-img-1.png" }}'/>
                 </div>
                 <!-- Center Content -->
                 <div class="col-md-8">
                     <h2 class="text-center text-primary fw-lighter">
-                        Know each <span class="fw-bold">department</span>
+                        Know each <span class="fw-bold">department</span>.
                     </h2>
                     <p class="text-center">
                         Find out more about the mission and general tasks of
@@ -27,14 +20,8 @@
                     </p>
                 </div>
                 <!-- Right Image -->
-                <div
-                    class="col-md-2 text-center d-none d-md-block me-1 px-3"
-                    style="width: 15%"
-                >
-                    <img
-                        style="max-width: 100%;"
-                        src="{{ absURL "guideline/side-img-2.png" }}"
-                    />
+                <div class="col-md-2 text-center d-none d-md-block me-1 px-3" style="width: 15%">
+                    <img style="max-width: 100%;" src='{{ absURL "guideline/side-img-2.png" }}' />
                 </div>
             </div>
         </div>
@@ -45,26 +32,16 @@
         <div class="container mt-2 py-5">
             <!-- Executive Director row -->
             <div class="row justify-content-center">
-                <div class="col-12 col-md-4 mb-3">
-                    <div
-                        style="border-radius: 20px;"
-                        class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center"
-                    >
-                        <p class="text-primary" style="font-weight: 600">
-                            Executive Director
-                        </p>
+                {{ $depFirstRow := slice "Executive Director" "Secretarial Director" }}
+                {{ range $depFirstRow }}
+                    <div class="col-12 col-md-4 mb-3">
+                        <div style="border-radius: 15px;" class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center">
+                            <p class="text-primary" style="font-weight: 600;">
+                                {{ . }}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-3">
-                    <div
-                        style="border-radius: 20px;"
-                        class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center"
-                    >
-                        <p class="text-primary" style="font-weight: 600">
-                            Secretarial Director
-                        </p>
-                    </div>
-                </div>
+                {{ end }}
             </div>
 
             <!-- Department rows -->
@@ -72,14 +49,8 @@
                 {{ range $index, $element := $guideline }}
                     {{ if gt $index 1 }}
                         <div class="col-md-4">
-                            <div
-                                style="border-radius: 20px;"
-                                class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center"
-                            >
-                                <p
-                                    class="text-center mb-0 text-primary"
-                                    style="font-weight: 600;"
-                                >
+                            <div style="border-radius: 15px;" class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center">
+                                <p class="text-center mb-0 text-primary" style="font-weight: 600;">
                                     {{ .department }}
                                 </p>
                             </div>
@@ -95,60 +66,40 @@
         <div class="py-5 row g-3 justify-content-center">
             {{ range $guideline }}
                 <div class="col-md-6">
-                    <div
-                        class="bg-body-secondary mb-2 border-0 px-4 py-3"
-                        style="border-radius: 15px"
-                    >
+                    <div class="bg-body-secondary mb-2 border-0 px-3 py-3" style="border-radius: 15px">
                         <!--image-->
                         <div class="d-flex justify-content-center mb-3">
-                            <img
-                                src="{{ absURL .icon }}"
-                                alt="{{ .department }} Icon"
-                                class="img-fluid"
-                            />
+                            <img src="{{ absURL .icon }}" alt="{{ .department }} Icon" class="img-fluid"/>
                         </div>
 
                         <!--dropdown button-->
                         <div class="dropdown d-block text-center">
-                            <button
+                            <button 
                                 style="border-radius: 10px; width: 100%"
                                 class="dropdown-toggle py-2 px-3 text-primary border-0 fw-bold text-wrap"
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 data-bs-display="static"
+                                data-bs-auto-close="outside"
                                 aria-expanded="false"
                             >
                                 {{ .department }}
                             </button>
                             <!--dropdown menu (mission & general tasks)-->
-                            <div
-                                class="dropdown-menu mt-2 bg-secondary px-3 pt-3"
-                                style="border-radius: 20px; border: none;"
-                            >
+                            <div class="dropdown-menu mt-2 bg-secondary px-3 pt-3" style="border-radius: 20px; border: none;">
                                 <div>
-                                    <span class="text-primary fw-bold"
-                                        >Mission</span
-                                    >
+                                    <span class="text-primary fw-bold">Mission</span>
                                     <ul>
                                         {{ range .mission }}
-                                            <li
-                                                class="px-2 justify-content-center"
-                                                class="text-primary"
-                                            >
-                                                {{ . }}
-                                            </li>
+                                            <li class="px-2 justify-content-center text-primary">{{ . }}</li>
                                         {{ end }}
                                     </ul>
                                 </div>
                                 <div>
-                                    <span class="text-primary fw-bold"
-                                        >General Task</span
-                                    >
+                                    <span class="text-primary fw-bold">General Task</span>
                                     <ul>
                                         {{ range .generalTask }}
-                                            <li
-                                                class="px-2 justify-content-center"
-                                            >
+                                            <li class="px-2 justify-content-center">
                                                 {{ . }}
                                             </li>
                                         {{ end }}
@@ -164,42 +115,31 @@
 
     <section class="bg-body-secondary">
         <div class="container" style="padding: 4em 1em;">
-            <div class="text-center" style="padding: 0 1em 4em 1em;">
-                <h2 class="fw-bold text-primary" style="font-size: 3rem;">Join us!</h2>
-                <p style="font-weight: 500; font-size: 1.1rem;">
-                    Together, we can make a meaningful impact.
-                </p>
-            </div>
             <div class="slider">
                 <div class="slider-inner">
-                    <div class="slider-item">
-                        <div
-                            class="box"
-                            style='--bg: url("{{ absURL "guideline/joinus.jpg" }}");'
-                        ></div>
-                    </div>
-                    <div class="slider-item">
-                        <div
-                            class="box"
-                            style='--bg: url("{{ absURL "guideline/joinus-2.jpg" }}");'
-                        ></div>
-                    </div>
-                    <div class="slider-item">
-                        <div
-                            class="box"
-                            style='--bg: url("{{ absURL "guideline/joinus-3.jpg" }}");'
-                        ></div>
-                    </div>
-                    <div class="slider-item">
-                        <div
-                            class="box"
-                            style='--bg: url("{{ absURL "guideline/joinus-4.jpg" }}");'
-                        ></div>
-                    </div>
+                    {{ range .Site.Params.joinusImages }}
+                        <div class="slider-item">
+                            <div class="box" style='--bg: url("{{ absURL . }}");'></div>
+                        </div>
+                    {{ end }}
                 </div>
                 <div class="control">
-                    <button id="prev"><span>&ltrif;</span></button>
-                    <button id="next"><span>&rtrif;</span></button>
+                    <button id="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                    <path fill="white" d="M7.94 13.06a1.5 1.5 0 0 1 0-2.12l5.656-5.658a1.5 1.5 0 1 1 2.121 2.122L11.122 12l4.596 4.596a1.5 1.5 0 1 1-2.12 2.122l-5.66-5.658Z" />
+                                </g>
+                            </svg>
+                    </button>
+                    <button id="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                    <path fill="white" d="M16.06 10.94a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 1 1-2.121-2.122L12.879 12L8.283 7.404a1.5 1.5 0 0 1 2.12-2.122l5.658 5.657Z" />
+                                </g>
+                            </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -214,35 +154,7 @@
 
 
     <script>
-        // Javascript is used to modify the dropdown's default behavior
-        //  -> Default: Bootstrap's dropdown will open downward, but it will open upward if there is not enough space at the bottom.
-        //     Modify: Dropdown menu only opens downward, even if there is not enough space at the bottom
-        //  -> Default: Bootstrap's dropdown collapses when an item inside the menu is clicked.
-        //     Modify: Dropdown only collapses when clicking outside of it.
-
-        $(document).ready(function () {
-            // Prevent the dropdown from closing when clicking inside it
-            $(".dropdown-menu").on("click", function (event) {
-                event.stopPropagation();
-            });
-
-            // Close the dropdown when clicking outside of it
-            $(document).on("click", function (event) {
-                let target = $(event.target);
-                if (!target.closest(".dropdown, .dropdown-toggle").length) {
-                    $(".dropdown-menu").removeClass("show");
-                }
-            });
-
-            // Open the dropdown when clicking the button
-            $("#dropdownMenuButton").on("click", function (event) {
-                let dropdownMenu = $(this).next(".dropdown-menu");
-                dropdownMenu.toggleClass("show");
-            });
-        });
-
-        // Image carousel 
-
+        // Image carousel
         var $ = document;
 
         $.addEventListener("DOMContentLoaded", function () {

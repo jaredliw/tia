@@ -31,6 +31,12 @@ socials = [
     ["svg/linkedin.svg", "https://www.linkedin.com/company/tutors-in-action-malaysia/"],
     ["svg/xiaohongshu.svg", "https://www.xiaohongshu.com/user/profile/62f653c1000000001f005342"]
 ]
+joinusImages = [
+    "guideline/joinus.jpg",
+    "guideline/joinus-2.jpg",
+    "guideline/joinus-3.jpg",
+    "guideline/joinus-4.jpg"
+]
 
 [module]
 [[module.mounts]]

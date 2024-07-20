@@ -47,7 +47,8 @@
 	</div>
 </div>
 
-{{ partial "footer.html" }} {{ with resources.Get "about.css" | postCSS | minify
-}}
-<link rel="stylesheet" href="{{ .Permalink }}" />
-{{ end }} {{- end -}}
+{{ partial "footer.html" }}
+{{ with resources.Get "about.css" | postCSS | minify }}
+  <link rel="stylesheet" href="{{ .Permalink }}" />
+{{ end }}
+{{- end -}}

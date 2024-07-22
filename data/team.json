@@ -3,19 +3,29 @@
     "department": "Executive",
     "members": [
       {
-        "name": "John Doe",
-        "role": "Director",
-        "avatar": "https://i.pravatar.cc/300?img=48"
+        "name": "Chiang Ru",
+        "role": "Executive Director",
+        "avatar": "about/exco-cr.jpg"
       },
       {
-        "name": "Lorem Ipsum",
-        "role": "Secretary",
-        "avatar": "https://i.pravatar.cc/300?img=43"
+        "name": "Alyqa",
+        "role": "Internal & External Affairs Officer",
+        "avatar": "about/exco-alyqa.jpg"
       },
       {
-        "name": "Dolor Sit",
-        "role": "Treasurer",
-        "avatar": "https://i.pravatar.cc/300?img=32"
+        "name": "Farah Hana Sophia",
+        "role": "Internal & External Affairs Officer",
+        "avatar": "about/exco-sophia.png"
+      },
+      {
+        "name": "Hsien Loong",
+        "role": "Head of Secretarial-Treasury",
+        "avatar": "about/exco-hsien-loong.jpg"
+      },
+      {
+        "name": "Wong Kai Qing",
+        "role": "Assistant of Secretarial-Treasury",
+        "avatar": "about/exco-kai-qing.jpg"
       }
     ]
   },
@@ -23,49 +33,39 @@
     "department": "Welfare-Operations",
     "members": [
       {
-        "name": "Jane Doe",
+        "name": "Steven Yee",
         "role": "Director",
-        "avatar": "https://i.pravatar.cc/300?img=25"
+        "avatar": "about/wops-steven.jpg"
       },
       {
-        "name": "Ipsum Lorem",
+        "name": "Jocelyn Wong",
         "role": "Deputy Director",
-        "avatar": "https://i.pravatar.cc/300?img=14"
+        "avatar": "about/wops-jocelyn.jpg"
       },
       {
-        "name": "Ipsum Lorem",
+        "name": "Jason Chong",
         "role": "Deputy Director",
-        "avatar": "https://i.pravatar.cc/300?img=12"
+        "avatar": "about/wops-jason.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Teo Jia Sing",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=6"
+        "avatar": "about/wops-jia-sing.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Fatin Amni",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=5"
+        "avatar": "about/wops-fatin-amni.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Dawn Lee",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=4"
+        "avatar": "about/wops-dawn.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Isleha Francis",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=3"
-      },
-      {
-        "name": "Dolor Sit",
-        "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=2"
-      },
-      {
-        "name": "Dolor Sit",
-        "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=1"
+        "avatar": "about/wops-isleha.jpg"
       }
     ]
   },
@@ -73,34 +73,39 @@
     "department": "Public Relations",
     "members": [
       {
-        "name": "Jane Doe",
-        "role": "Director",
-        "avatar": "https://i.pravatar.cc/300?img=56"
+        "name": "Zi Yee",
+        "role": " Director",
+        "avatar": "about/pr-zi-yee.png"
       },
       {
-        "name": "Ipsum Lorem",
+        "name": "Zixuan",
         "role": "Deputy Director",
-        "avatar": "https://i.pravatar.cc/300?img=57"
+        "avatar": "about/pr-zixuan.jpg"
       },
       {
-        "name": "Dolor Sit",
-        "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=62"
+        "name": "Xin Yue",
+        "role": "Deputy Director",
+        "avatar": "about/pr-xin-yue.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Aqyf Mohd Ghazali",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=58"
+        "avatar": "about/pr-aqyf.png"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Jeriel Fam",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=48"
+        "avatar": "about/pr-jeriel.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Bahiah Chek Peei",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=37"
+        "avatar": "about/pr-bahiah.jpg"
+      },
+      {
+        "name": "Priscilla Tang",
+        "role": "Executive",
+        "avatar": "about/pr-priscilla.jpg"
       }
     ]
   },
@@ -108,24 +113,29 @@
     "department": "Tech",
     "members": [
       {
-        "name": "Jane Doe",
+        "name": "Raihanah Husna",
         "role": "Director",
-        "avatar": "https://i.pravatar.cc/300?img=3"
+        "avatar": "about/tech-raihanah.jpg"
       },
       {
-        "name": "Ipsum Lorem",
+        "name": "Lynn Goh",
         "role": "Deputy Director",
-        "avatar": "https://i.pravatar.cc/300?img=1"
+        "avatar": "about/tech-lynn.jpeg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Aidil Iskandar",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=2"
+        "avatar": "about/tech-aidil.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Aqil Amani",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=70"
+        "avatar": "about/tech-aqil.jpg"
+      },
+      {
+        "name": "Khong Yirou",
+        "role": "Executive",
+        "avatar": "about/tech-yirou.jpg"
       }
     ]
   },
@@ -133,29 +143,29 @@
     "department": "Outreach",
     "members": [
       {
-        "name": "Jane Doe",
+        "name": "Alyssa Lee",
         "role": "Director",
-        "avatar": "https://i.pravatar.cc/300?img=54"
+        "avatar": "about/outreach-alyssa.jpg"
       },
       {
-        "name": "Ipsum Lorem",
+        "name": "Jaymie Liew",
         "role": "Deputy Director",
-        "avatar": "https://i.pravatar.cc/300?img=13"
+        "avatar": "about/outreach-jaymie.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Ashley Ann",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=22"
+        "avatar": "about/outreach-shley.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Chia Hui En",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=20"
+        "avatar": "about/outreach-hui-en.jpeg"
       },
       {
-        "name": "Amet Consectetur",
+        "name": "Jeff Ng",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=15"
+        "avatar": "about/outreach-jeff.jpg"
       }
     ]
   },
@@ -163,29 +173,34 @@
     "department": "Resource",
     "members": [
       {
-        "name": "Jane Doe",
+        "name": "Abigail Maya Surin",
         "role": "Director",
-        "avatar": "https://i.pravatar.cc/300?img=43"
+        "avatar": "about/resource-abigail.jpg"
       },
       {
-        "name": "Ipsum Lorem",
+        "name": "Eng Zhen Shen",
         "role": "Deputy Director",
-        "avatar": "https://i.pravatar.cc/300?img=42"
+        "avatar": "about/resource-zhen-shen.jpg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Leong Khoi Yern",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=28"
+        "avatar": "about/resource-khoi-yern.jpeg"
       },
       {
-        "name": "Dolor Sit",
+        "name": "Vivashdheeran",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=30"
+        "avatar": "about/resource-vivashdheeran.jpg"
       },
       {
-        "name": "Amet Consectetur",
+        "name": "Lee Jia Yi (Cheryl)",
         "role": "Executive",
-        "avatar": "https://i.pravatar.cc/300?img=25"
+        "avatar": "about/resource-cheryl.jpg"
+      },
+      {
+        "name": "Lim Cheng Hong",
+        "role": "Executive",
+        "avatar": "about/resource-cheng-hong.jpeg"
       }
     ]
   }

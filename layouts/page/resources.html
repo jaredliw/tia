@@ -45,15 +45,16 @@
                             <div class="d-grid pb-2">
                                 {{ range .subsection }}
                                     <!-- Each category in a subject is a dropdown menu (accordion component) by itself -->
+                                    {{ $accordionID := crypto.MD5 (print $group_name .subsection_name) }}
                                     <!-- Each dropdown must have unique id, even in different tabs -->
                                     <div class="accordion accordion-flush">
-                                        <div class="accordion-item" id={{ $accordionCounter }}>
-                                            <h2 class="accordion-header" id={{ print "heading-" $accordionCounter }}>
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={{ print "#body-" $accordionCounter }} aria-expanded="true" aria-controls={{ print "body-" $accordionCounter }}>
+                                        <div class="accordion-item" id="resourcesAccordion-{{ $accordionID }}">
+                                            <h2 class="accordion-header" id="heading-{{ $accordionID }}">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#body-{{ $accordionID }}" aria-expanded="true" aria-controls="body-{{ $accordionID }}">
                                                     {{ .subsection_name }}
                                                 </button>
                                             </h2>
-                                            <div id={{ print "body-" $accordionCounter }} class="accordion-collapse collapse" aria-labelledby={{ print "heading-" $accordionCounter }} data-bs-parent={{ print "#" $accordionCounter }}>
+                                            <div id="body-{{ $accordionID }}" class="accordion-collapse collapse" aria-labelledby="heading-{{ $accordionID }}" data-bs-parent="#faqAccordion-{{ $accordionID }}">
                                                 <div class="accordion-body">
                                                     <!-- Gallery component inside the accordion body -->
                                                     <div class="d-grid gap-2 gap-sm-4 pb-2 gallery-grid">
@@ -83,7 +84,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    {{ $accordionCounter = add $accordionCounter 1 }}
                                     </div>
                                 {{ end }}
                             </div>

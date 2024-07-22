@@ -1,14 +1,8 @@
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 @media (max-width: 575.98px) {
   .dropdown-toggle {
     width: 100%;
     white-space: normal;
     word-break: break-word;
-    text-align: center;
   }
 }
 
@@ -26,34 +20,25 @@ p {
 }
 
 .slider {
-  position: relative;
-  width: 100%;
   overflow: hidden;
 }
 
 .slider-inner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  position: relative;
-  right: 0%;
   transition: right 0.5s;
-  padding: 10px 0px;
 }
 
 .slider-item {
   flex-basis: 33.33%;
   flex-shrink: 0;
-  display: block;
 }
 
-@media (max-width: 768.98px) {
+@media (max-width: 767.98px) {
   .slider-item {
     flex-basis: 50%;
   }
 }
 
-@media (max-width: 567.98px) {
+@media (max-width: 575.98px) {
   .slider-item {
     flex-basis: 100%;
   }
@@ -68,16 +53,11 @@ p {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  margin-right: 10px;
-  margin-left: 10px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .control {
-  display: flex;
-  position: absolute;
-  justify-content: space-between;
   left: 15px;
   right: 15px;
   top: 45%;
@@ -97,5 +77,4 @@ p {
   outline: none;
   background-color: transparent;
   font-size: 30px;
-  border: 0px;
 }

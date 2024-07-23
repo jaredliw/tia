@@ -19,10 +19,6 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.slider {
-  overflow: hidden;
-}
-
 .slider-inner {
   transition: right 0.5s;
 }
@@ -53,7 +49,6 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -69,7 +64,7 @@
 }
 
 .control button svg:hover {
-  opacity: 80%;;
+  opacity: 80%;
 }
 
 #next,

@@ -6,7 +6,7 @@
         <div class="container">
             <div class="d-flex row justify-content-between align-items-center">
                 <!-- Left Image -->
-                <div class="col-md-2 text-center d-none d-md-block ms-1 me-0 mb-0 px-0 py-0" style="width: 15%">
+                <div class="col-md-2 text-center d-none d-md-block ms-1 me-0 mb-0 p-0" style="width: 15%">
                     <img style="max-width: 100%;" src='{{ absURL "guideline/side-img-1.png" }}'/>
                 </div>
                 <!-- Center Content -->
@@ -30,13 +30,13 @@
     <!--list of departments-->
     <section class="bg-body-secondary mb-5">
         <div class="container mt-2 py-5">
-            <!-- Executive Director row -->
+            <!-- Executive Director & Secretarial Department row -->
             <div class="row justify-content-center">
-                {{ $depFirstRow := slice "Executive Director" "Secretarial Director" }}
+                {{ $depFirstRow := slice "Executive Director" "Secretarial Department" }}
                 {{ range $depFirstRow }}
                     <div class="col-12 col-md-4 mb-3">
-                        <div style="border-radius: 15px;" class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center">
-                            <p class="text-primary mb-0" style="font-weight: 600;">
+                        <div class="col bg-secondary rounded-3 py-3 px-3 d-flex align-items-center justify-content-center">
+                            <p class="text-primary mb-0 fw-semibold">
                                 {{ . }}
                             </p>
                         </div>
@@ -49,8 +49,8 @@
                 {{ range $index, $element := $guideline }}
                     {{ if gt $index 1 }}
                         <div class="col-md-4">
-                            <div style="border-radius: 15px;" class="col bg-secondary py-3 px-3 d-flex align-items-center justify-content-center">
-                                <p class="text-center mb-0 text-primary" style="font-weight: 600;">
+                            <div class="col bg-secondary rounded-3 py-3 px-3 d-flex align-items-center justify-content-center">
+                                <p class="text-center mb-0 text-primary fw-semibold">
                                     {{ .department }}
                                 </p>
                             </div>
@@ -66,7 +66,7 @@
         <div class="py-5 row g-3 justify-content-center">
             {{ range $guideline }}
                 <div class="col-md-6">
-                    <div class="bg-body-secondary mb-2 border-0 px-3 py-3" style="border-radius: 15px">
+                    <div class="bg-body-secondary mb-2 border-0 px-3 py-3 rounded-4">
                         <!--image-->
                         <div class="d-flex justify-content-center mb-3">
                             <img src="{{ absURL .icon }}" alt="{{ .department }} Icon" class="img-fluid"/>
@@ -75,8 +75,8 @@
                         <!--dropdown button-->
                         <div class="dropdown d-block text-center">
                             <button 
-                                style="border-radius: 10px; width: 100%"
-                                class="dropdown-toggle py-2 px-3 text-primary text-center border-0 fw-bold text-wrap"
+                                style="width: 100%"
+                                class="dropdown-toggle py-2 px-3 text-primary text-center border-0 rounded-2 fw-bold text-wrap"
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 data-bs-display="static"
@@ -86,7 +86,7 @@
                                 {{ .department -}}&nbsp;
                             </button>
                             <!--dropdown menu (mission & general tasks)-->
-                            <div class="dropdown-menu mt-2 bg-secondary px-3 pt-3" style="border-radius: 20px; border: none;">
+                            <div class="dropdown-menu mt-2 bg-secondary px-3 pt-3 border-0 rounded-3">
                                 <div>
                                     <span class="text-primary fw-bold">Mission</span>
                                     <ul>
@@ -115,11 +115,11 @@
 
     <section class="bg-body-secondary">
         <div class="container" style="padding: 4em 1em;">
-            <div class="slider position-relative w-100">
+            <div class="slider position-relative w-100 overflow-hidden">
                 <div class="slider-inner py-3 px-0 d-flex flex-nowrap position-relative">
                     {{ range .Site.Params.joinUsImages }}
                         <div class="slider-item d-block">
-                            <div class="box  mx-2" style='--bg: url("{{ absURL . }}");'></div>
+                            <div class="box rounded-4 mx-2" style='--bg: url("{{ absURL . }}");'></div>
                         </div>
                     {{ end }}
                 </div>

@@ -12,10 +12,10 @@ aim = 'We aim to assist struggling Malaysian youth who lack academic support pri
 tutorSignUpLink = 'https://docs.google.com/forms/d/e/1FAIpQLSf6AkKHe-03225EL0eMiKribR0APFzCh8aykc1IB509oC9LZg/viewform?usp=sharing'
 tuteeSignUpLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfpkixo2t9NKedNYlEChe2UvtnuVN9hTkMM6NcrkPNSIPv5SQ/viewform?usp=sharing'
 pages = [
-    ['Home', ''],
     ['About', 'about'],
     ['Projects', 'projects'],
-    ['Resources', 'resources']
+    ['Resources', 'resources'],
+    ['Guideline', 'guideline']
 ]
 impacts = [
     [1462, "tutors recruited"],
@@ -30,6 +30,12 @@ socials = [
     ["svg/discord.svg", "https://discord.com/invite/7AE6cGVg2Y"],
     ["svg/linkedin.svg", "https://www.linkedin.com/company/tutors-in-action-malaysia/"],
     ["svg/xiaohongshu.svg", "https://www.xiaohongshu.com/user/profile/62f653c1000000001f005342"]
+]
+joinUsImages = [
+    "guideline/joinus.jpg",
+    "guideline/joinus-2.jpg",
+    "guideline/joinus-3.jpg",
+    "guideline/joinus-4.jpg"
 ]
 
 [module]

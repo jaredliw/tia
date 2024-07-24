@@ -1,6 +1,6 @@
 ---
 date : 2023-04-10
-title : Joy For Angels Event Report
+title : Joy For Angels
 subtitle : Aiding neglected, abused, abandoned and financially-constraint children in pursuing education.
 coverImage : projects-assets/jfa/cover.jpg
 author : Alyssa Lee Xin Yi, Oh Chiang Ru

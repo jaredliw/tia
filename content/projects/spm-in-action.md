@@ -32,7 +32,6 @@ Mode: Hybrid
 3. Establish and uphold an efficient, organised and structured committee.
 
 ![]({{< absURL "projects-assets/sia/objective3.png" >}})
-![]({{< absURL "projects-assets/sia/objective3.5.png" >}})
 
 ## Collaborations
 

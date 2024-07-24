@@ -1,0 +1,40 @@
+.project-filter {
+  width: max-content;
+  border: 1px solid var(--bs-primary);
+  box-shadow: rgba(99,99,99,.2)0 2px 8px;
+}
+
+.cover-image {
+  --bg: "";
+  background-image: var(--bg);
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-card {
+  background-color: #ecf2f5;
+  border-radius: 10px; 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.status {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.2rem;
+  background-color: var(--bs-secondary);
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  color: var(--bs-primary);
+  font-size: 0.8rem;
+  border: 1px solid var(--bs-primary);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.learn-more-project {
+  border-radius: 5px; 
+  width: max-content; 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

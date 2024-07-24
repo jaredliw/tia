@@ -1,0 +1,67 @@
+{{- define "main" -}}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
+
+    <section style="padding-top: 6.5rem" class="mb-5">
+        <div class="container">
+            <h2 class="text-center text-primary fw-lighter">Our <span class="fw-bold">projects</span>.</h2>
+        </div>
+    </section>
+
+    {{/* Filter projects base on status (Ongoing/complete) - disabled since there arent many projects yet.
+    <section class="container">
+      <div class="d-flex justify-content-center mb-4">
+          <select class="form-select project-filter text-primary" id="category-filter">
+              <option value="all">All</option>
+              <option value="Completed">Completed</option>
+              <option value="Ongoing">Ongoing</option>
+          </select>
+      </div>
+    </section>  
+    */}}
+
+    <section class="container mb-5">
+        <div class="row justify-content-center g-3">
+            {{ range .Pages }}
+                <div id="project" data-category="{{ .Params.status }}" class="position-relative col col-12 col-md-6 col-lg-4">
+                    <span class="status">{{.Params.status}}</span>
+                    <div class="project-card">
+                        <div class="d-flex justify-content-center cover-image" style='--bg: url("{{ absURL .Params.coverImage  }}");'></div>
+                        <div class="p-4">
+                            <div class="mb-4">
+                                <p>{{ .Date.Format "2 Jan 2006" }}</p>
+                                <h2 class="fw-bold" style="font-size: 1.6rem">{{.Title}}</h2>
+                                <p>{{.Params.subtitle}}</p>
+                            </div>
+                            <div>
+                                <a class="learn-more-project btn btn-primary text-white px-4 py-2" type="button" href="{{ absURL .Permalink }}">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    {{ partial "footer.html" }} {{ with resources.Get "projects.css" | postCSS | minify }}
+    <link rel="stylesheet" href="{{ .Permalink }}" />
+    {{ end }}
+
+    <script>
+        {{/*  Filter projects base on status (Ongoing/complete) - disabled since there arent many projects yet.
+        document.getElementById("category-filter").addEventListener("change", function () {
+            let selectedStatus = this.value;
+            let projects = document.querySelectorAll("#project");
+          
+            projects.forEach(function (project) {
+                if (selectedStatus === "all" || project.getAttribute("data-category") === selectedStatus) {
+                    project.style.display = "";
+                } else {
+                    project.style.display = "none";
+                }
+            });
+        });  
+        */}}
+    </script>
+{{- end -}}

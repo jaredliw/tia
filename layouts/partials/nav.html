@@ -70,49 +70,31 @@
                   
                   <!-- Donate Modal -->
                 <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="donateModalLabel">Donate Now!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- donation content here --> 
-                    <p style="font-size: 18px;">Thank you for considering a donation. <br>
-                        Please transfer to:</p> 
-                    <p style="line-height: 1.2; margin-bottom: 0; font-size: 21px;" >
-                        3233325318<br>
-                        PPBP MALAYSIA<br>
-                        PUBLIC BANK
-                    </p>
-                    <img src="{{ absURL "TIAPaymentQR.jpeg" }}" alt="QR Code" style="width: 100%; height: auto; margin-top: 20px;">
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        
-                    </div>
+                    <div class="modal-fullscreen modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="donateModalLabel">Donation Details:</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                    <!-- donation content here --> 
+                                <h6>Thank you for considering a donation.<br>
+                                    Please transfer to:</h6> 
+
+                                <h6 class="text-center" >
+                                    <strong>3233325318</strong><br>
+                                    <strong>PPBP MALAYSIA</strong><br>
+                                    <strong>PUBLIC BANK</strong>
+                                </h6>       
+
+                            <img src="{{ absURL "TIAPaymentQR.jpeg" }}" alt="QR Code" width="240" class="d-block mx-auto">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-                  
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                 <a class="btn btn-primary text-white text-uppercase px-4 rounded-0 ms-2" type="button"
                    style="font-size: 0.9rem;" href="{{ absURL "join-us" }}">
                     Join Us

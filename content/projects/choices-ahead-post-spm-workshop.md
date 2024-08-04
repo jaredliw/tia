@@ -2,8 +2,9 @@
 date: 2024-05-12
 title: Choices Ahead! 2.0 Post-SPM Workshop
 subtitle: Introduce SPM graduates to various pathways and scholarships available in Malaysia.
-coverImage: ca2.0/cover.png
+coverImage: projects-assets/ca2.0/cover.png
 author: Leow Zi Syuen, Farhan
+status: Completed
 ---
 
 ## Introduction
@@ -24,35 +25,7 @@ project. Specifically, 10 speakers for Workshop 1 and 17 speakers for Workshop 2
 crafted informative slides to present their experiences from either pre-university or scholarship backgrounds. You can 
 find a comprehensive list of our speakers below:
 
-| Speakers                                 | Pre-university programmes / scholarship bodies                  |
-|------------------------------------------|-----------------------------------------------------------------|
-| Muhammad Nabil bin Mohd Suhaimi          | Association of Chartered Certified Accountants (ACCA)           |
-| Alecea Loke Wen Qi                       | American Degree Transfer Program (ADTP)                         |
-| Mohamed Tariq Ziyad bin Mohamed Jahangir | Asasi Pintar (ASPI)                                             |
-| Natalie Chan Rui Yan                     | Australian Matriculation (AUSMAT)                               |
-| Lee Ru Xin                               | Foundation                                                      |
-| Joyton Fu Hung Li                        | General Certificate of Education (GCE) Advanced Level           |
-| Lin Xiang                                | Institute of Chartered Accountants in England and Wales (ICAEW) |
-| Sharifah Nurdania binti Syed Zulizhar    | International Baccalaureate (IB)                                |
-| Lina Syazana Putri binti Hashim          | Matriculation                                                   |
-| Yong Moong Ti                            | Sijil Tinggi Persekolahan Malaysia (STPM)                       |
-| Nur Iffah Raihanah binti Mohd Kasim      | Great Eastern Supremacy Scholarship                             |
-| Syed Azli bin Syed Putra                 | IJM Scholarship                                                 |
-| Muhammad Fathul Fahmy bin Mohd Nizam     | MARA Young Talent Development Programme (YTP)                   |
-| Aida Fatini Adri Kamal                   | Malaysian National Reinsurance Berhad (MNRB) Scholarship Fund   |
-| Lau Hui Geng                             | Yayasan Tunku Abdul Rahman (YTAR)                               |
-| Lee Siew Wern                            | Petronas Education Sponsorship Programme (PESP)                 |
-| Shannie Fu Jia Qi                        | Maybank Group Scholarship                                       |
-| Nadiah Nasirah binti Afkar Lotfi         | Maxis Women in Tech Scholarship                                 |
-| Hiew Tzy Hwan                            | Maxis Young Leaders Scholarship                                 |
-| Gan Shing Ning                           | Yayasan KLK                                                     |
-| Emily Law Yi Shi                         | Sin Chew Education Fund                                         |
-| Vennessa Kuek Weng Yan                   | Gamuda Scholarship                                              |
-| Lim Yu Xuan                              | Yayasan Sime Darby Excellence Scholarship Programme             |
-| Martin Luke a/l Michael Benedict         | Hong Leong Foundation Scholarship                               |
-| Leann Lim Mei-Wern                       | OCBC Scholarship                                                |
-| Lee Yung Ming                            | Wilmar Scholarship Kuok Foundation Berhad                       |
-| Muhammad Fadhil bin Zulkifli             | Wilmar Scholarship Kuok Foundation Berhad                       |
+![]({{< absURL "projects-assets/ca2.0/table1.png" >}})
 
 ## Medium of Workshop
 
@@ -63,18 +36,18 @@ Two powerful mediums, Google Meet, YouTube Live, and Slido (Q&A sessions) came t
 workshops a seamless and interactive experience. Participants were able to interact with the speakers after each
 session.
 
-![A series of YouTube live streams.]({{< absURL "ca2.0/ytb-live.png" >}})
+![A series of YouTube live streams.]({{< absURL "projects-assets/ca2.0/ytb-live.png" >}})
 
-![Group photo during the event.]({{< absURL "ca2.0/group-photo.png" >}})
+![Group photo during the event.]({{< absURL "projects-assets/ca2.0/group-photo.png" >}})
 
 ## Feedback
 
 The feedback from ‘Choices Ahead! 2.0’ workshop has been overwhelmingly positive. Participants have praised the 
 beneficial content, knowledgeable speakers, and interactive sessions. Below is some of the feedback that we received:
 
-![]({{< absURL "ca2.0/feedback-1.png" >}})
-![]({{< absURL "ca2.0/feedback-2.png" >}})
-![]({{< absURL "ca2.0/feedback-3.png" >}})
+![]({{< absURL "projects-assets/ca2.0/feedback-1.png" >}})
+![]({{< absURL "projects-assets/ca2.0/feedback-2.png" >}})
+![]({{< absURL "projects-assets/ca2.0/feedback-3.png" >}})
 
 ## Event Summary
 
@@ -97,6 +70,6 @@ taking this project as inspiration and motivation to move forward.
 
 ## Gallery
 
-![]({{< absURL "ca2.0/gallery-1.png" >}})
-![]({{< absURL "ca2.0/gallery-2.png" >}})
-![]({{< absURL "ca2.0/gallery-3.png" >}})
+![]({{< absURL "projects-assets/ca2.0/gallery-1.png" >}})
+![]({{< absURL "projects-assets/ca2.0/gallery-2.png" >}})
+![]({{< absURL "projects-assets/ca2.0/gallery-3.png" >}})

@@ -1,0 +1,19 @@
+#readingArea h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+#readingArea figure img {
+    margin-top: 1em;
+    border-radius: 5px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .project-metadata {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+}
+

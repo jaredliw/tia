@@ -1,17 +1,3 @@
-#readingArea {
-    max-width: 50rem;
-    margin: 6.5rem auto;
-}
-
-#readingArea .hr-project-header {
-    margin: 2em 0 1em 0;
-    width: 95%;
-}
-
-#readingArea .post-nav {
-    max-width: 33%;
-}
-
 #readingArea h2 {
     margin-top: 2rem;
     margin-bottom: 0.6rem;

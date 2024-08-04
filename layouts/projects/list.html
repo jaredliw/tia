@@ -6,6 +6,7 @@
             <h2 class="text-center text-primary fw-lighter">Our <span class="fw-bold">projects</span>.</h2>
         </div>
     </section>
+    <hr class="divider my-4"/>
 
     {{/* Filter projects base on status (Ongoing/complete) - disabled since there arent many projects yet.
     <section class="container">
@@ -23,17 +24,17 @@
         <div class="row justify-content-center g-3">
             {{ range .Pages }}
                 <div id="project" data-category="{{ .Params.status }}" class="position-relative col col-12 col-md-6 col-lg-4">
-                    <span class="status">{{.Params.status}}</span>
-                    <div class="project-card">
-                        <div class="d-flex justify-content-center cover-image" style='--bg: url("{{ absURL .Params.coverImage  }}");'></div>
+                    <span class="position-absolute ml-auto px-1 py-1 rounded border-1 fs-6 status" style="top: 0.75rem; right: 1.2rem;">{{ .Params.status }}</span>
+                    <div class="rounded" style="background-color: #ecf2f5; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        <div class="d-flex justify-content-center cover-image rounded-top" style='height: 200px; background-image: url("{{ absURL .Params.coverImage  }}");'></div>
                         <div class="p-4">
                             <div class="mb-4">
                                 <p>{{ .Date.Format "2 Jan 2006" }}</p>
-                                <h2 class="fw-bold" style="font-size: 1.6rem">{{.Title}}</h2>
-                                <p>{{.Params.subtitle}}</p>
+                                <h2 class="fw-bold" style="font-size: 1.6rem">{{ .Title }}</h2>
+                                <p>{{ .Params.subtitle }}</p>
                             </div>
                             <div>
-                                <a class="learn-more-project btn btn-primary text-white px-4 py-2" type="button" href="{{ absURL .Permalink }}">
+                                <a class="btn btn-primary rounded text-white px-4 py-2" type="button" href="{{ absURL .Permalink }}" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                     Learn More
                                 </a>
                             </div>
@@ -44,8 +45,9 @@
         </div>
     </section>
 
-    {{ partial "footer.html" }} {{ with resources.Get "projects.css" | postCSS | minify }}
-    <link rel="stylesheet" href="{{ .Permalink }}" />
+    {{ partial "footer.html" }}
+    {{ with resources.Get "projects.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}" />
     {{ end }}
 
     <script>

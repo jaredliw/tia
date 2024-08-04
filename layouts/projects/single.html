@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ partial "nav.html" (dict "nav_white" 1) }}
 
-    <div id="readingArea" class="px-4">
+    <div id="readingArea" class="px-3 px-sm-4 mx-auto" style="max-width: 50rem;">
         <h1 class="fw-bold text-break" style="max-width: 100%;">{{ .Title }}</h1>
         <h5 class="text-primary fst-italic mb-3">{{ .Params.subtitle }}</h5>
         <!-- Date layout string must follow the components listed here:
@@ -14,7 +14,7 @@
                         <path fill="#343a40" d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7zm-5-9a1 1 0 0 1 1 1v1h2a2 2 0 0 1 2 2v3H3V7a2 2 0 0 1 2-2h2V4a1 1 0 0 1 2 0v1h6V4a1 1 0 0 1 1-1" />
                     </g>
                 </svg>
-                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                <time>{{ .Date.Format "2 Jan 2006" }}</time>
             </span>
             <span class="d-flex align-items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
@@ -34,19 +34,19 @@
 
         <div class="d-flex justify-content-between my-4">
             {{ with .PrevInSection }}
-                <span class="post-nav d-flex justify-content-start">
-            &#129168;&nbsp;
-            <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
-        </span>
+                <span class="post-nav d-flex justify-content-start" style="max-width: 33%;">
+                    &#129168;&nbsp;
+                    <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
+                </span>
             {{ else }}
-                <span class="post-nav d-flex justify-content-start"></span>
+                <span class="post-nav d-flex justify-content-start" style="max-width: 33%;"></span>
             {{ end }}
 
             {{ with .NextInSection }}
-                <span class="post-nav d-flex justify-content-end">
-            <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
-            &nbsp;&#129170;
-        </span>
+                <span class="post-nav d-flex justify-content-end" style="max-width: 33%;">
+                    <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
+                    &nbsp;&#129170;
+                </span>
             {{ end }}
         </div>
     </div>

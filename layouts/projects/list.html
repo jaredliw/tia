@@ -1,6 +1,8 @@
 {{- define "main" -}}
     {{ partial "nav.html" (dict "nav_white" 1) }}
 
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
     <section style="padding-top: 6.5rem" class="mb-5">
         <div class="container">
             <h2 class="text-center text-primary fw-lighter">Our <span class="fw-bold">projects</span>.</h2>
@@ -21,22 +23,26 @@
     */}}
 
     <section class="container mb-5">
-        <div class="row justify-content-center g-3">
+        <div class="row" data-masonry='{"percentPosition": true }' style="position: relative">
             {{ range .Pages }}
-                <div id="project" data-category="{{ .Params.status }}" class="position-relative col col-12 col-md-6 col-lg-4">
-                    <span class="position-absolute ml-auto px-1 py-1 rounded border-1 fs-6 status" style="top: 0.75rem; right: 1.2rem;">{{ .Params.status }}</span>
-                    <div class="rounded" style="background-color: #ecf2f5; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                        <div class="d-flex justify-content-center cover-image rounded-top" style='height: 200px; background-image: url("{{ absURL .Params.coverImage  }}");'></div>
-                        <div class="p-4">
-                            <div class="mb-4">
-                                <p>{{ .Date.Format "2 Jan 2006" }}</p>
-                                <h2 class="fw-bold" style="font-size: 1.6rem">{{ .Title }}</h2>
-                                <p>{{ .Params.subtitle }}</p>
-                            </div>
-                            <div>
-                                <a class="btn btn-primary rounded text-white px-4 py-2" type="button" href="{{ absURL .Permalink }}" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                                    Learn More
-                                </a>
+                <div class="col col-12 col-md-6 col-lg-4">
+                    <div class="card mb-4">
+                        <div id="project" data-category="{{ .Params.status }}">
+                            <span class="position-absolute ml-auto px-1 py-1 rounded border-1 fs-6 status" style="top: 0.75rem; right: 1.2rem;">{{ .Params.status }}</span>
+                            <div class="rounded" style="background-color: #ecf2f5; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                <div class="d-flex justify-content-center cover-image rounded-top" style='height: 200px; background-image: url("{{ absURL .Params.coverImage  }}");'></div>
+                                <div class="p-4">
+                                    <div class="mb-4">
+                                        <p>{{ .Date.Format "2 Jan 2006" }}</p>
+                                        <h2 class="fw-bold" style="font-size: 1.6rem">{{ .Title }}</h2>
+                                        <p>{{ .Params.subtitle }}</p>
+                                    </div>
+                                    <div>
+                                        <a class="btn btn-primary rounded text-white px-4 py-2" type="button" href="{{ absURL .Permalink }}" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

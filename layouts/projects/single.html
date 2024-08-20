@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ partial "nav.html" (dict "nav_white" 1) }}
 
-    <div id="readingArea" class="px-3 px-sm-4 mx-auto" style="max-width: 50rem;">
+    <div id="readingArea" class="px-3 px-sm-4 mx-auto" style="max-width: 50rem; padding-top: 6.5rem;">
         <h1 class="fw-bold text-break" style="max-width: 100%;">{{ .Title }}</h1>
         <h5 class="text-primary fst-italic mb-3">{{ .Params.subtitle }}</h5>
         <!-- Date layout string must follow the components listed here:

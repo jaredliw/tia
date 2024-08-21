@@ -33,20 +33,21 @@
         <article>{{ .Content }}</article>
 
         <div class="d-flex justify-content-between my-4">
-            {{ with .PrevInSection }}
-                <span class="post-nav d-flex justify-content-start" style="max-width: 33%;">
+            {{ with .NextInSection }}
+                <span class="post-nav d-flex justify-content-end" style="max-width: 33%;">
                     &#129168;&nbsp;
                     <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
                 </span>
-            {{ else }}
-                <span class="post-nav d-flex justify-content-start" style="max-width: 33%;"></span>
             {{ end }}
 
-            {{ with .NextInSection }}
-                <span class="post-nav d-flex justify-content-end" style="max-width: 33%;">
+
+            {{ with .PrevInSection }}
+                <span class="post-nav d-flex justify-content-start" style="max-width: 33%;">
                     <a href="{{ .Permalink }}" class="d-inline-block text-truncate">{{- .LinkTitle -}}</a>
                     &nbsp;&#129170;
                 </span>
+            {{ else }}
+                <span class="post-nav d-flex justify-content-start" style="max-width: 33%;"></span>
             {{ end }}
         </div>
     </div>

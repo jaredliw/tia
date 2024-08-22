@@ -58,3 +58,7 @@ target = "static/jquery"
 [[module.mounts]]
 source = "node_modules/jquery.easing"
 target = "static/jquery.easing"
+
+[[module.mounts]]
+source = "node_modules/masonry-layout/dist"
+target = "static/masonry-layout"

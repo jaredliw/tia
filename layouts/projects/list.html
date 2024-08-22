@@ -28,9 +28,9 @@
                 <div class="col col-12 col-md-6 col-lg-4">
                     <div class="card mb-4">
                         <div id="project" data-category="{{ .Params.status }}">
-                            <span class="position-absolute ml-auto px-1 py-1 rounded border-1 fs-6 status" style="top: 0.75rem; right: 1.2rem;">{{ .Params.status }}</span>
+                            <span class="position-absolute ml-auto px-1 py-1 border rounded border-1 border-primary bg-secondary fs-6 primary" style="top: 0.75rem; right: 1.2rem; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">{{ .Params.status }}</span>
                             <div class="rounded" style="background-color: #ecf2f5; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                                <div class="d-flex justify-content-center cover-image rounded-top" style='height: 200px; background-image: url("{{ absURL .Params.coverImage  }}");'></div>
+                                <div class="d-flex justify-content-center rounded-top" style='height: 200px; background-image: url("{{ absURL .Params.coverImage  }}"); background-position: center; background-repeat: no-repeat; background-size: cover;'></div>
                                 <div class="p-4">
                                     <div class="mb-4">
                                         <p>{{ .Date.Format "2 Jan 2006" }}</p>

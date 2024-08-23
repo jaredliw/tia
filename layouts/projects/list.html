@@ -1,7 +1,9 @@
 {{- define "main" -}}
     {{ partial "nav.html" (dict "nav_white" 1) }}
 
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+            async></script>
 
     <section style="padding-top: 6.5rem" class="mb-5">
         <div class="container">
@@ -11,22 +13,26 @@
     <hr class="divider my-4"/>
 
     <section class="container mb-5">
-        <div class="row" data-masonry='{"percentPosition": true }' style="position: relative">
+        <div class="row position-relative" data-masonry='{"percentPosition": true }'>
             {{ range .Pages }}
                 <div class="col col-12 col-md-6 col-lg-4">
                     <div class="card mb-4">
                         <div id="project" data-category="{{ .Params.status }}">
-                            <span class="position-absolute ml-auto px-1 py-1 border rounded border-1 border-primary bg-secondary fs-6 primary" style="top: 0.75rem; right: 1.2rem; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">{{ .Params.status }}</span>
-                            <div class="rounded" style="background-color: #ecf2f5; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                                <div class="d-flex justify-content-center rounded-top" style='height: 200px; background-image: url("{{ absURL .Params.coverImage  }}"); background-position: center; background-repeat: no-repeat; background-size: cover;'></div>
+                            <span class="project-tag position-absolute ml-auto px-1 py-1 border rounded border-1 border-primary bg-secondary fs-6 text-primary shadow-sm">
+                                {{ .Params.status }}
+                            </span>
+                            <div class="project-card rounded shadow-sm">
+                                <div class="project-cover d-flex justify-content-center rounded-top"
+                                     style="background-image: url('{{ absURL .Params.coverImage }}');"></div>
                                 <div class="p-4">
                                     <div class="mb-4">
                                         <p>{{ .Date.Format "2 Jan 2006" }}</p>
-                                        <h2 class="fw-bold" style="font-size: 1.6rem">{{ .Title }}</h2>
+                                        <h2 class="fw-bold" style="font-size: 1.3rem">{{ .Title }}</h2>
                                         <p>{{ .Params.subtitle }}</p>
                                     </div>
                                     <div>
-                                        <a class="btn btn-primary rounded text-white px-4 py-2" type="button" href="{{ absURL .Permalink }}" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                        <a class="btn btn-primary rounded text-white px-3 py-2 shadow-sm" type="button"
+                                           href="{{ absURL .Permalink }}">
                                             Learn More
                                         </a>
                                     </div>
@@ -41,6 +47,6 @@
 
     {{ partial "footer.html" }}
     {{ with resources.Get "projects.css" | postCSS | minify }}
-        <link rel="stylesheet" href="{{ .Permalink }}" />
+        <link rel="stylesheet" href="{{ .Permalink }}"/>
     {{ end }}
 {{- end -}}

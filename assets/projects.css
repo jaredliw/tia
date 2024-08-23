@@ -1,6 +1,15 @@
-/* For filter function; Not implemented yet */
-.project-filter {
-    width: max-content;
-    border: 1px solid var(--bs-primary);
-    box-shadow: rgba(99, 99, 99, .2) 0 2px 8px;
+.project-tag {
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
+.project-card {
+    background-color: #ecf2f5;
+}
+
+.project-cover {
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

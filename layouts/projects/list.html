@@ -1,16 +1,12 @@
 {{- define "main" -}}
     {{ partial "nav.html" (dict "nav_white" 1) }}
 
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-            async></script>
-
     <section style="padding-top: 6.5rem" class="mb-5">
         <div class="container">
             <h2 class="text-center text-primary fw-lighter">Our <span class="fw-bold">projects</span>.</h2>
         </div>
+        <hr class="divider my-4"/>
     </section>
-    <hr class="divider my-4"/>
 
     <section class="container mb-5">
         <div class="row position-relative" data-masonry='{"percentPosition": true }'>
@@ -46,7 +42,9 @@
     </section>
 
     {{ partial "footer.html" }}
+
     {{ with resources.Get "projects.css" | postCSS | minify }}
         <link rel="stylesheet" href="{{ .Permalink }}"/>
     {{ end }}
+    <script src="{{ absURL "masonry-layout/masonry.pkgd.min.js" }}"></script>
 {{- end -}}

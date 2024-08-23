@@ -1,0 +1,50 @@
+{{- define "main" -}}
+    {{ partial "nav.html" (dict "nav_white" 1) }}
+
+    <section style="padding-top: 6.5rem" class="mb-5">
+        <div class="container">
+            <h2 class="text-center text-primary fw-lighter">Our <span class="fw-bold">projects</span>.</h2>
+        </div>
+        <hr class="divider my-4"/>
+    </section>
+
+    <section class="container mb-5">
+        <div class="row position-relative" data-masonry='{"percentPosition": true }'>
+            {{ range .Pages }}
+                <div class="col col-12 col-md-6 col-lg-4">
+                    <div class="card mb-4">
+                        <div id="project" data-category="{{ .Params.status }}">
+                            <span class="project-tag position-absolute ml-auto px-1 py-1 border rounded border-1 border-primary bg-secondary fs-6 text-primary shadow-sm">
+                                {{ .Params.status }}
+                            </span>
+                            <div class="project-card rounded shadow-sm">
+                                <div class="project-cover d-flex justify-content-center rounded-top"
+                                     style="background-image: url('{{ absURL .Params.coverImage }}');"></div>
+                                <div class="p-4">
+                                    <div class="mb-4">
+                                        <p>{{ .Date.Format "2 Jan 2006" }}</p>
+                                        <h2 class="fw-bold" style="font-size: 1.3rem">{{ .Title }}</h2>
+                                        <p>{{ .Params.subtitle }}</p>
+                                    </div>
+                                    <div>
+                                        <a class="btn btn-primary rounded text-white px-3 py-2 shadow-sm" type="button"
+                                           href="{{ absURL .Permalink }}">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    {{ partial "footer.html" }}
+
+    {{ with resources.Get "projects.css" | postCSS | minify }}
+        <link rel="stylesheet" href="{{ .Permalink }}"/>
+    {{ end }}
+    <script src="{{ absURL "masonry-layout/masonry.pkgd.min.js" }}"></script>
+{{- end -}}

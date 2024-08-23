@@ -1,75 +1,75 @@
 @media (max-width: 575.98px) {
-  .dropdown-toggle {
-    width: 100%;
-    white-space: normal;
-    word-break: break-word;
-  }
+    .dropdown-toggle {
+        width: 100%;
+        white-space: normal;
+        word-break: break-word;
+    }
 }
 
 .dropdown-toggle {
-  transition: 0.15s;
-  background-color: var(--bs-secondary);
+    transition: 0.15s;
+    background-color: var(--bs-secondary);
 }
 
 .dropdown-toggle:hover {
-  background-color: #ecf5c2;
+    background-color: #ecf5c2;
 }
 
 .dropdown-menu {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 .slider-inner {
-  transition: right 0.5s;
+    transition: right 0.5s;
 }
 
 .slider-item {
-  flex-basis: 33.33%;
-  flex-shrink: 0;
+    flex-basis: 33.33%;
+    flex-shrink: 0;
 }
 
 @media (max-width: 767.98px) {
-  .slider-item {
-    flex-basis: 50%;
-  }
+    .slider-item {
+        flex-basis: 50%;
+    }
 }
 
 @media (max-width: 575.98px) {
-  .slider-item {
-    flex-basis: 100%;
-  }
+    .slider-item {
+        flex-basis: 100%;
+    }
 }
 
 .box {
-  --bg: "";
-  background: linear-gradient(to bottom, rgba(46, 46, 46, 0.3) 0%, rgba(46, 46, 46, 0.3) 100%),
+    --bg: "";
+    background: linear-gradient(to bottom, rgba(46, 46, 46, 0.3) 0%, rgba(46, 46, 46, 0.3) 100%),
     var(--bg);
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
 .control {
-  left: 15px;
-  right: 15px;
-  top: 45%;
+    left: 15px;
+    right: 15px;
+    top: 45%;
 }
 
 .control button svg {
-  cursor: pointer;
-  transition: 0.15s;
+    cursor: pointer;
+    transition: 0.15s;
 }
 
 .control button svg:hover {
-  opacity: 80%;
+    opacity: 80%;
 }
 
 #next,
 #prev {
-  outline: none;
-  background-color: transparent;
-  font-size: 30px;
+    outline: none;
+    background-color: transparent;
+    font-size: 30px;
 }

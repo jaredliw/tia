@@ -28,36 +28,10 @@
             {{ end }}
 
             <li class="ms-2">
-                <button class="btn donate-btn btn-outline-primary text-uppercase px-4 rounded-0" type="button" data-bs-toggle="modal" data-bs-target="#donateModal" style="font-size: 0.9rem;">
+                <button class="btn donate-btn btn-outline-primary text-uppercase px-4 rounded-0" type="button"
+                        data-bs-toggle="modal" data-bs-target="#donateModal" style="font-size: 0.9rem;">
                     Donate
-                  </button>
-                  
-                  <!-- Donate Modal -->
-                <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
-                    <div class="modal-fullscreen modal-dialog modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="donateModalLabel">Donation Details:</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-
-                            <div class="modal-body">
-                                    <!-- donation content here --> 
-                                <h6>Thank you for considering a donation.<br>
-                                    Please transfer to:</h6> 
-
-                                <h6 class="text-center" >
-                                    <strong>3233325318</strong><br>
-                                    <strong>PPBP MALAYSIA</strong><br>
-                                    <strong>PUBLIC BANK</strong>
-                                </h6>       
-
-                            <img src="{{ absURL "TIAPaymentQR.jpeg" }}" alt="QR Code" width="240" class="d-block mx-auto">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </button>
 
                 <a class="btn btn-primary text-white text-uppercase px-4 rounded-0 ms-2" type="button"
                    style="font-size: 0.9rem;" href="{{ absURL "join-us" }}">
@@ -65,6 +39,34 @@
                 </a>
             </li>
         </ul>
+    </div>
+
+    <!-- Donate Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel"
+         aria-hidden="true">
+        <div class="modal-fullscreen-sm-down modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donateModalLabel">Donation Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body mb-2">
+                    <h6 class="fw-normal">Thank you for considering a donation.<br>
+                        Please transfer to:</h6>
+
+                    <h6 class="text-center mt-3 mb-2">
+                        <strong>3233325318</strong><br>
+                        <strong>PPBP MALAYSIA</strong><br>
+                        <strong>PUBLIC BANK</strong>
+                    </h6>
+
+                    <img src="{{ absURL "TIAPaymentQR.jpeg" }}" alt="QR Code" width="240"
+                         class="d-block mx-auto">
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- For sm screen and down -->
@@ -91,7 +93,8 @@
 
                 <li class="ms-2 pt-4">
                     <button class="btn donate-btn btn-outline-primary text-uppercase px-3 rounded-0"
-                            type="button" style="font-size: 0.9rem;">
+                            type="button" style="font-size: 0.9rem;" data-bs-toggle="modal"
+                            data-bs-target="#donateModal">
                         Donate
                     </button>
                     <a class="btn btn-primary text-white text-uppercase px-3 rounded-0 ms-2" type="button"

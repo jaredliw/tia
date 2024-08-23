@@ -23,7 +23,7 @@ We are proud to share the highlights of our recent SPM event, where we had the h
 
 ## Medium of Workshop
 1. Google Meet
-2. Youtube Live 
+2. YouTube Live 
     - Sculpt Your Personal Merit (S.P.M) Session 1
     - Sculpt Your Personal Merit (S.P.M) Session 2
 
@@ -35,12 +35,12 @@ We also utilised Slido as an interactive platform. Through Slido, participants c
 
 We've received a lot of feedback after the S.P.M workshop, and we're thrilled that over 80% of our participants have given us high ratings, averaging above 4 out of 5. They've praised the relevance of our content, the effectiveness of our speakers, and the smooth time management during the sessions. Here's a glimpse into what our participants had to say:
 
-> "I really enjoyed today's session because I get to learn the different types of volunteering since I've always thought that volunteering is just like helping out a community but it's actually more of it! Besides that, I also get to learn how to build an actual, effective and simple resume since I just finished my SPM last month and I hope to create a better resume for further application ^^.”
+> "I really enjoyed today's session because I get to learn the different types of volunteering since I've always thought that volunteering is just like helping out a community but it's actually more of it! Besides that, I also get to learn how to build an actual, effective and simple resume since I just finished my SPM last month and I hope to create a better resume for further application ^^."
 > 
 >  — <cite>Session 1 (Volunteering Opportunities, Resume Building)</cite>
 
 
-> "I am more exposed to the true definition of professionalism as it is not always about your etiquettes and attire. I will surely practice all the qualities and skills that have been elaborated by the presenter in the future. This session has also boosted my confidence level as it encourages me to be involved in more activities and programmes in the future as I can apply what I had learnt today effectively."
+> "I am more exposed to the true definition of professionalism as it is not always about your etiquette and attire. I will surely practice all the qualities and skills that have been elaborated by the presenter in the future. This session has also boosted my confidence level as it encourages me to be involved in more activities and programmes in the future as I can apply what I had learnt today effectively."
 > 
 > — <cite>Session 2 (Professional Etiquette, LinkedIn Profile Building)</cite>
 

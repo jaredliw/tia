@@ -54,19 +54,16 @@
 
     {{ partial "footer.html" }}
 
-    {{ with resources.Get "projects-single.css" | postCSS | minify }}
-        <link rel="stylesheet" href="{{ .Permalink }}">
-    {{ end }}
-
     <script>
         $(document).ready(function () {
+            $('article h2').addClass('mt-4 mb-2');
             $('article table').wrapAll('<p class="table-responsive"></p>');
 
             $('article p > img').each(function () {
                 const img = $(this);
                 const altText = img.attr('alt');
 
-                img.addClass('img-fluid')
+                img.addClass('img-fluid mt-3 rounded-1')
                     .wrapAll('<figure class="d-flex flex-column justify-content-center mb-2"></figure>');
 
                 if (altText) {

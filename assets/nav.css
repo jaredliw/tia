@@ -112,11 +112,6 @@ a.nav-link:hover, a.nav-link:focus {
     background-color: rgba(9, 114, 118, 0.08);
 }
 
-.modal-body img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 /*noinspection CssNonIntegerLengthInPixels*/
 @media (max-width: 575.98px) {
     img[alt=logo] {

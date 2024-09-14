@@ -52,7 +52,7 @@
     </div>
 
     <!-- Complaint form -->
-    <div class="row justify-content-center page-section px-5 bg-body-secondary">
+    <div class="row justify-content-center page-section px-3 px-md-4 bg-body-secondary">
       <div class="container px-3 px-sm-4 mx-auto pb-3" style="max-width: 50rem;">
         <h2 class="text-center text-primary fw-lighter">
           <span class="fw-bold">Complaint</span> Form.
@@ -62,117 +62,100 @@
           This complaint form (“this form”) serves as an official platform for tutors and/or tutees registered under Tutors In Action Malaysia (TIA) via the Tutor Registration Form and/or Tutee Registration Form to raise any problems faced whilst providing and/or receiving tutoring lessons under TIA.
         </p>
         <br>
-        <form method="POST" name="complaint-form" id="form">
-          <div class="row gap-3">
-            <div class="mb-3 col px-0">
-              <label class="full-name mb-3">Full Name</label>
-              <input type="text" class="form-control" id="full-name" name="Full Name" required>
+        <form method="POST" name="complaint-form" id="form" class="px-0">
+          <div class="container px-0">
+            <div class="row">
+              <div class="mb-3 col-md-6 px-1">
+                <label class="full-name mb-3">Full Name</label>
+                <input type="text" class="form-control" id="full-name" name="Full Name" required>
+              </div>
+              <div class="mb-3 col-md-6 px-1">
+                <label class="form-label mb-3">Phone number</label>
+                <input type="tel" class="form-control" id="phone-number" name="Phone Number" required>
+              </div>
             </div>
-            <div class="mb-3 col px-0">
-              <label class="form-label mb-3">Phone number</label>
-              <input type="tel" class="form-control" id="phone-number" name="Phone Number" required>
+            <br>
+            <div class="mb-3 col px-1">
+              <label class="form-label mb-3">Email address</label>
+              <input type="email" class="form-control" id="email" name="Email" required>
             </div>
-          </div>
-          <br>
-  
-          <div class="mb-3 ">
-            <label class="form-label mb-3">Email address</label>
-            <input type="email" class="form-control" id="email" name="Email" required>
-          </div>
-          <br>
-  
-          <div class="d-flex gap-3">
-            <label class="form-label">Acting Role:</label>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="Role" id="role-tutor" value="tutor">
-              <label class="form-check-label text-primary px-3" for="role-tutor">
-                Tutor
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="Role" id="role-tutee" value="tutee">
-              <label class="form-check-label text-primary px-3" for="role-tutee">
-                Tutee
-              </label>
+            <br>
+    
+            <div class="row">
+              <div class="d-flex flex-wrap flex-md-nowrap gap-3 px-1">
+                <label class="form-label">Acting Role:</label>
+                <div class="d-flex flex-wrap flex-md-nowrap">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Role" id="role-tutor" value="tutor">
+                    <label class="form-check-label text-primary px-3" for="role-tutor">
+                      Tutor
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Role" id="role-tutee" value="tutee">
+                    <label class="form-check-label text-primary px-3" for="role-tutee">
+                      Tutee
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <br>
   
           <!-- Fields for Tutor role -->
-          <div id="tutor-fields" class="d-none">
+          <div id="tutor-fields" class="d-none px-1">
             <div class="mb-3">
               <label for="tutee-name" class="form-label">Tutee Name</label>
               <p> Please provide us with the tutee whom you are lodging this complaint against. Kindly do not list all the tutees you teach.</p>
               <input type="text" class="form-control" id="tutee-name" name="Tutee Name">
             </div>
-            <br>            
-            <div class="mb-3">
-              <label for="subjects-tutor" class="form-label">Subjects</label>
-              <p> Please state the subject you teach the tutee you are lodging this complaint against. Kindly do not list all the subjects you teach.</p>
-              <input type="text" class="form-control" id="subjects-tutor" name="Subjects">
-            </div>
-            <br>
-            <div class="mb-3">
-              <label for="details-complaint-tutor" class="form-label">Details of the Complaint</label>
-              <p>Max. 1000 characters</p>
-              <textarea maxlength="1000" id="details-complaint-tutor" class="w-100" name="Details of complaint"></textarea>
-            </div>
-            <br>
-            <div class="d-flex gap-3">
-              <label class="form-label">Have you ever reported this?</label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="Reported" id="reported-yes-tutor" value="yes">
-                <label class="form-check-label" for="reported-yes-tutor">Yes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="Reported" id="reported-no-tutor" value="no">
-                <label class="form-check-label" for="reported-no-tutor">No</label>
-              </div>
-            </div>
-            <br>
           </div> 
-          <br>
-  
           <!-- Fields for Tutee role -->
-          <div id="tutee-fields" class="d-none">
+          <div id="tutee-fields" class="d-none px-1">
             <div class="mb-3">
-              <label for="tutee-name" class="form-label">Tutor Name</label>
+              <label for="tutor-name" class="form-label">Tutor Name</label>
               <p>Please provide us with the tutor whom you are lodging this complaint against.</p>
-              <input type="text" class="form-control" id="tutee-name" name="Tutor Name">
+              <input type="text" class="form-control" id="tutor-name" name="Tutor Name">
             </div>
-            <br>          
-            <div class="mb-3">
-              <label for="subjects-tutee" class="form-label">Subjects</label>
-              <p>Please state the subject taught by your tutor you are lodging this complaint against or the subject of the lesson you share with your fellow tutee whom you are lodging this complaint against. Kindly do not list all the subjects you have tutoring lessons under TIA.</p>
-              <input type="text" class="form-control" name="Subjects" id="subjects-tutee">
-            </div>
-            <br>
-            <div class="mb-3">
-              <label for="details-complaint-tutee" class="form-label">Details of the Complaint</label>
-              <p>Max. 1000 characters</p>
-              <textarea maxlength="1000" id="details-complaint-tutee" class="w-100" name="Details of complaint"></textarea>
-            </div>
-            <br>
-            <div class="d-flex gap-3">
-              <label class="form-label">Have you ever reported this?</label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="Reported" id="reported-yes-tutee" value="yes">
-                <label class="form-check-label" for="reported-yes-tutee">Yes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="Reported" id="reported-no-tutee" value="no">
-                <label class="form-check-label" for="reported-no-tutee">No</label>
-              </div>
-              <br><br>
-            </div>
-            <br>         
           </div>
 
-          <div id="datemedium" class="d-none mb-3">
+          <div id="tutor-tutee-fields" class="d-none px-1">
+            <br>
+            <div class="mb-3">
+              <label class="form-label">Subjects</label>
+              <p id="tutor-subject" class="d-none"> Please state the subject you teach the tutee you are lodging this complaint against. Kindly do not list all the subjects you teach.</p>
+              <p id="tutee-subject" class="d-none">Please state the subject taught by your tutor you are lodging this complaint against or the subject of the lesson you share with your fellow tutee whom you are lodging this complaint against. Kindly do not list all the subjects you have tutoring lessons under TIA.</p>
+              <input type="text" class="form-control" name="Subjects">
+            </div>
+            <br>
+            <div class="mb-3">
+              <label class="form-label">Details of the Complaint</label>
+              <p>Max. 1000 characters</p>
+              <textarea maxlength="1000" class="w-100" name="Details of complaint"></textarea>
+            </div>
+            <br>
+            <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+              <label class="form-label">Have you ever reported this?</label>
+              <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Reported" id="reported-yes" value="yes">
+                  <label class="form-check-label" for="reported-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Reported" id="reported-no" value="no">
+                  <label class="form-check-label" for="reported-no">No</label>
+                </div>
+              </div>
+            </div>
+            <br>
+          </div>
+
+          <div id="datemedium" class="d-none mb-3 px-1">
             <label class="mb-3">Please provide the date and medium (e.g., Telegram, Email) you used to file the complaint.</label>
             <input type="text" name="Date medium" class="form-control w-100">
           </div>
-          <br><br>
+          <br>
           <p class="fs-6">By submitting this complaint form, you acknowledge that you have read and consented to the following:</p>
             <ul class="fs-6">
                 <li>Upon reviewing your complaint, we will contact you via e-mail or a messaging platform (e.g. Telegram, Whatsapp or Instagram) within 5 working days. In the event you do not receive a response from us about your issue, you are strongly encouraged to immediately reach out to us.</li>
@@ -182,7 +165,7 @@
                 <li>The data provided in this form is subjected to our Privacy Policy.</li>
             </ul>
           <br>
-          <button type="submit" class="btn btn-primary w-100" id="submit-button">Submit</button>
+          <button type="submit" class="btn btn-primary w-100 px-1" id="submit-button">Submit</button>
 
           <div
             id="message"
@@ -197,11 +180,17 @@
         const roleTutee = document.getElementById('role-tutee');
         const tutorFields = document.getElementById('tutor-fields');
         const tuteeFields = document.getElementById('tutee-fields');
+        const tutorTuteeFields = document.getElementById('tutor-tutee-fields');
+        const tutorSubject = document.getElementById('tutor-subject');
+        const tuteeSubject = document.getElementById('tutee-subject');
     
         roleTutor.addEventListener('change', () => {
           if (roleTutor.checked) {
               tutorFields.classList.remove('d-none'); // Show tutor fields
               tuteeFields.classList.add('d-none');    // Hide tutee fields
+              tutorTuteeFields.classList.remove('d-none');
+              tutorSubject.classList.remove('d-none');
+              tuteeSubject.classList.add('d-none');
           } 
         });
       
@@ -209,14 +198,15 @@
             if (roleTutee.checked) {
                 tutorFields.classList.add('d-none');    // Hide tutor fields
                 tuteeFields.classList.remove('d-none'); // Show tutee fields
+                tutorTuteeFields.classList.remove('d-none');
+                tutorSubject.classList.add('d-none');
+                tuteeSubject.classList.remove('d-none');
             }
         });
     
       // Show/hide tutor or tutee date and medium based on past report
-        const reportedYesTutor = document.getElementById('reported-yes-tutor');
-        const reportedNoTutor = document.getElementById('reported-no-tutor');
-        const reportedYesTutee = document.getElementById('reported-yes-tutee');
-        const reportedNoTutee = document.getElementById('reported-no-tutee');
+        const reportedYes = document.getElementById('reported-yes');
+        const reportedNo = document.getElementById('reported-no');
         const datemedium = document.getElementById('datemedium');
 
         function toggleDatemediumDisplay(shouldDisplay) {
@@ -228,13 +218,9 @@
         }
         
         // Add event listeners for both tutor and tutee
-        [reportedYesTutor, reportedYesTutee].forEach(element => {
-            element.addEventListener('change', () => toggleDatemediumDisplay(true));
-        });
+        reportedYes.addEventListener('change', () => toggleDatemediumDisplay(true));
         
-        [reportedNoTutor, reportedNoTutee].forEach(element => {
-            element.addEventListener('change', () => toggleDatemediumDisplay(false));
-        });
+        reportedNo.addEventListener('change', () => toggleDatemediumDisplay(false));
   
       //Link form responses to google sheets
       document.getElementById("form").addEventListener("submit", function (e) {
@@ -257,7 +243,7 @@
   
         // Send a POST request to your Google Apps Script
         fetch(
-          "https://script.google.com/macros/s/AKfycby7l3kRgwgnNgKcr032ZnWTRX0aWz0pY81MTUTE--lN0Chs7Kq_MeWsMwPeeV3MaKA_sg/exec",
+          "https://script.google.com/macros/s/AKfycbzAGjNXXlBQn-lsprXLx25sULgeed88mb3uP_jfXNhc6_fsF32yfXvTvh3S6mAo0ukV/exec",
           {
             redirect: "follow",
             method: "POST",

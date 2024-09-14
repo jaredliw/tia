@@ -1,8 +1,8 @@
 ---
 date: 2024-05-12
-title: Choices Ahead! 2.0 Post-SPM Workshop
+title: Choices Ahead! Post-SPM Workshop
 subtitle: Introduce SPM graduates to various pathways and scholarships available in Malaysia.
-coverImage: projects-assets/ca2.0/cover.png
+coverImage: projects-assets/ca/cover.png
 author: Leow Zi Syuen, Farhan
 status: Completed
 ---
@@ -25,7 +25,7 @@ project. Specifically, 10 speakers for Workshop 1 and 17 speakers for Workshop 2
 crafted informative slides to present their experiences from either pre-university or scholarship backgrounds. You can 
 find a comprehensive list of our speakers below:
 
-![]({{< absURL "projects-assets/ca2.0/table1.png" >}})
+![]({{< absURL "projects-assets/ca/table1.png" >}})
 
 ## Medium of Workshop
 
@@ -42,12 +42,12 @@ session.
 
 ## Feedback
 
-The feedback from ‘Choices Ahead! 2.0’ workshop has been overwhelmingly positive. Participants have praised the 
+The feedback from ‘Choices Ahead!’ workshop has been overwhelmingly positive. Participants have praised the 
 beneficial content, knowledgeable speakers, and interactive sessions. Below is some of the feedback that we received:
 
-![]({{< absURL "projects-assets/ca2.0/feedback-1.png" >}})
-![]({{< absURL "projects-assets/ca2.0/feedback-2.png" >}})
-![]({{< absURL "projects-assets/ca2.0/feedback-3.png" >}})
+![]({{< absURL "projects-assets/ca/feedback-1.png" >}})
+![]({{< absURL "projects-assets/ca/feedback-2.png" >}})
+![]({{< absURL "projects-assets/ca/feedback-3.png" >}})
 
 ## Event Summary
 
@@ -57,19 +57,19 @@ programme, which helped students to better understand the unique advantages and 
 securing financial support for higher education, making education more accessible than ever. We dove deep into the art
 of crafting a compelling scholarship application with practical tips and real success stories.
 
-'Choices Ahead! 2.0' workshop achieved remarkable milestones, with **257 registrations** and over **600 cumulative
+'Choices Ahead!' workshop achieved remarkable milestones, with **257 registrations** and over **600 cumulative
 views** on YouTube Live. This workshop seamlessly blended informative sessions with engaging content, making it a 
 resounding success.
 
 ## Conclusion
 
-‘Choices Ahead! 2.0’ workshop was a huge success! A heartfelt thank you to all our speakers, participants, and committee
+‘Choices Ahead!’ workshop was a huge success! A heartfelt thank you to all our speakers, participants, and committee
 members who made this series a resounding success. Together, we've proven that knowledge is indeed power and that dreams
 are achievable with the right guidance and determination. TIA wishes to create more impacts on students in the future by
 taking this project as inspiration and motivation to move forward.
 
 ## Gallery
 
-![]({{< absURL "projects-assets/ca2.0/gallery-1.png" >}})
-![]({{< absURL "projects-assets/ca2.0/gallery-2.png" >}})
-![]({{< absURL "projects-assets/ca2.0/gallery-3.png" >}})
+![]({{< absURL "projects-assets/ca/gallery-1.png" >}})
+![]({{< absURL "projects-assets/ca/gallery-2.png" >}})
+![]({{< absURL "projects-assets/ca/gallery-3.png" >}})

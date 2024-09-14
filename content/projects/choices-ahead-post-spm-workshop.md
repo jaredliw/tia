@@ -36,9 +36,9 @@ Two powerful mediums, Google Meet, YouTube Live, and Slido (Q&A sessions) came t
 workshops a seamless and interactive experience. Participants were able to interact with the speakers after each
 session.
 
-![A series of YouTube live streams.]({{< absURL "projects-assets/ca2.0/ytb-live.png" >}})
+![A series of YouTube live streams.]({{< absURL "projects-assets/ca/ytb-live.png" >}})
 
-![Group photo during the event.]({{< absURL "projects-assets/ca2.0/group-photo.png" >}})
+![Group photo during the event.]({{< absURL "projects-assets/ca/group-photo.png" >}})
 
 ## Feedback
 

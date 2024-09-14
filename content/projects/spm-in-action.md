@@ -2,7 +2,7 @@
 date : 2023-12-27
 title : SPM In Action
 subtitle : A series of SPM workshops featuring expert teachers for students free of charge.
-coverImage : projects-assets/sia/cover.jpg
+coverImage : projects-assets/sia/cover.png
 author : Amber Chong Wen Xua
 status : Completed
 ---

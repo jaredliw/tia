@@ -33,7 +33,7 @@ We also utilised Slido as an interactive platform. Through Slido, participants c
 
 ## Feedback
 
-We've received a lot of feedback after the S.P.M workshop, and we're thrilled that over 80% of our participants have given us high ratings, averaging above 4 out of 5. They've praised the relevance of our content, the effectiveness of our speakers, and the smooth time management during the sessions. Here's a glimpse into what our participants had to say:
+We've received a lot of feedback after the S.P.M workshop, and we're thrilled that over **80% of our participants have given us high ratings, averaging above 4 out of 5**. They've praised the relevance of our content, the effectiveness of our speakers, and the smooth time management during the sessions. Here's a glimpse into what our participants had to say:
 
 > "I really enjoyed today's session because I get to learn the different types of volunteering since I've always thought that volunteering is just like helping out a community but it's actually more of it! Besides that, I also get to learn how to build an actual, effective and simple resume since I just finished my SPM last month and I hope to create a better resume for further application ^^."
 > 

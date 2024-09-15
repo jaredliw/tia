@@ -1,7 +1,7 @@
 ---
 date: 2024-09-01
 title: Comprehensive Exam Guide
-subtitle: Compiling test-acing resources for SPM students to effectively revise and study for their exams.
+subtitle: Compiling test-acing resources for SPM students to revise and study for their exams.
 coverImage: projects-assets/ceg/cover.png
 author: Abigail Maya Surin
 status: Ongoing
@@ -9,18 +9,18 @@ status: Ongoing
 
 ## Introduction
 
-The project Comprehensive Exam Guide is a project to compile state trial papers from 2017 to 2023 for different subjects chapter by chapter with the respective answer schemes. It allows Form 4 and Form 5 students to drill on challenging state trial questions after learning each chapter. Project details are as follows:
+The project Comprehensive Exam Guide is a project **to compile state trial papers from 2017 to 2023 for different subjects chapter by chapter** with the respective answer schemes. It allows Form 4 and Form 5 students to drill on challenging state trial questions after learning each chapter. Project details are as follows:
 
-Date: April 2023 - Ongoing  
-Mode: Online
+**Date**: April 2023 - Ongoing  
+**Mode**: Online
 
 ## Objectives
 
-The main objective of this project is to assist Form 4 and Form 5 students in consolidating the important facts of each chapter. This would help them become familiar with the format and types of questions that could potentially be asked in an actual exam. At the same time, students could also identify areas where they needed to improve. Furthermore, practising on trial exam papers helps build confidence before the student takes the actual exam.
+The main objective of this project is to assist Form 4 and Form 5 students in **consolidating the important facts of each chapter**. This would help them become familiar with the format and types of questions that could potentially be asked in an actual exam. At the same time, students could also **identify areas where they needed to improve**. Furthermore, practising on trial exam papers helps **build confidence** before the student takes the actual exam.
 
 ## Collaborations
 
-We are honoured to have had the opportunity to work with 3 student-led bodies for this project. Our collaborators each sent a group of volunteers who took time out of their busy schedules to contribute to the compilation of SPM trial papers. Our collaborators and their respective subjects  are listed in the table below: 
+We are honoured to have had the opportunity to work with **3 student-led bodies** for this project. Our collaborators each sent a group of volunteers who took time out of their busy schedules to contribute to the compilation of SPM trial papers. Our collaborators and their respective subjects  are listed in the table below: 
 
 ![]({{< absURL "projects-assets/ceg/collab-table.png" >}})
 

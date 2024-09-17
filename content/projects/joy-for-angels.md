@@ -2,7 +2,7 @@
 date : 2023-04-10
 title : Joy For Angels
 subtitle : Aiding neglected, abused, abandoned and financially-constraint children in pursuing education.
-coverImage : projects-assets/jfa/cover.jpg
+coverImage : projects-assets/jfa/cover.png
 author : Alyssa Lee Xin Yi, Oh Chiang Ru
 status : Completed
 ---
@@ -22,11 +22,11 @@ support for children from our beneficiaries. Additional objectives are as stated
 
 Our beneficiaries are listed as below:
 
-- Angels Children’s Home  
+- **Angels Children’s Home**  
 Address: 126, Jalan Hujan Gerimis 2, Taman Overseas Union, Wilayah Persekutuan, 58200 Kuala Lumpur  
 Reference link: https://www.facebook.com/Angelshomey/
 
-- House of Joy (Puchong)  
+- **House of Joy (Puchong)**  
 Address: 14398, Taman Paik Siong, 47180 Puchong, Selangor  
 Reference link: http://www.joy.org.my/
 
@@ -57,7 +57,7 @@ Supplemented with products from our generous sponsors, we visited the beneficiar
 
 ## Financial Summary
 
-Project ‘Joy for Angels’ successfully raised a total of RM 10,326.82. The detailed breakdown is as follows:
+Project ‘Joy for Angels’ successfully raised a total of **RM 10,326.82**. The detailed breakdown is as follows:
 ![]({{< absURL "projects-assets/jfa/funds-raised.jpg" >}})
 ![]({{< absURL "projects-assets/jfa/funds-breakdown.jpg" >}})
 

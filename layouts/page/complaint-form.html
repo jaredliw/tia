@@ -1,0 +1,343 @@
+{{- define "main" -}} {{ partial "nav.html" (dict "nav_white" 1) }}
+<section style="padding-top: 6.5rem" class="mb-5 px-3">
+    <div class="container">
+        <h2 class="text-center text-primary fw-lighter">
+            Complaint <span class="fw-bold">form</span>.
+        </h2>
+        <hr class="divider my-4" />
+        <div class="text-center">{{ .Content }}</div>
+    </div>
+</section>
+
+<!-- Complaint form -->
+<div class="row justify-content-center page-section px-3 px-md-4 bg-body-secondary">
+    <div class="container px-3 px-sm-4 mx-auto pb-3" style="max-width: 50rem">
+        <form method="POST" name="complaint-form" id="form" class="px-0">
+            <div class="container px-0">
+                <div class="row">
+                    <div class="mb-3 col-md-6 px-1">
+                        <label class="full-name mb-3">Full Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="full-name"
+                            pattern="[A-Za-z\s]+"
+                            name="Full Name"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3 col-md-6 px-1">
+                        <label class="form-label mb-3">Phone number</label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phone-number"
+                            pattern="\d{10,12}"
+                            name="Phone Number"
+                            required
+                        />
+                    </div>
+                </div>
+                <br />
+                <div class="mb-3 col px-1">
+                    <label class="form-label mb-3">Email address</label>
+                    <input type="email" class="form-control" id="email" name="Email" required />
+                </div>
+                <br />
+
+                <div class="row">
+                    <div class="d-flex flex-wrap flex-md-nowrap gap-3 px-1">
+                        <label class="form-label">Acting Role:</label>
+                        <div class="d-flex flex-wrap flex-md-nowrap">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="Role"
+                                    id="role-tutor"
+                                    value="tutor"
+                                />
+                                <label class="form-check-label text-primary px-3" for="role-tutor">
+                                    Tutor
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="Role"
+                                    id="role-tutee"
+                                    value="tutee"
+                                />
+                                <label class="form-check-label text-primary px-3" for="role-tutee">
+                                    Tutee
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- Fields for Tutor role -->
+            <div id="tutor-fields" class="d-none px-1">
+                <div class="mb-3">
+                    <label for="tutee-name" class="form-label">Tutee Name</label>
+                    <p>
+                        Please provide us with the tutee whom you are lodging this complaint
+                        against. Kindly do not list all the tutees you teach.
+                    </p>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="tutee-name"
+                        name="Tutee Name"
+                        pattern="[A-Za-z\s]+"
+                    />
+                </div>
+            </div>
+
+            <!-- Fields for Tutee role -->
+            <div id="tutee-fields" class="d-none px-1">
+                <div class="mb-3">
+                    <label for="tutor-name" class="form-label">Tutor Name</label>
+                    <p>
+                        Please provide us with the tutor whom you are lodging this complaint
+                        against.
+                    </p>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="tutor-name"
+                        name="Tutor Name"
+                        pattern="[A-Za-z\s]+"
+                    />
+                </div>
+            </div>
+
+            <div id="tutor-tutee-fields" class="d-none px-1">
+                <br />
+                <div class="mb-3">
+                    <label class="form-label">Subjects</label>
+                    <p id="tutor-subject" class="d-none">
+                        Please state the subject you teach the tutee you are lodging this complaint
+                        against. Kindly do not list all the subjects you teach.
+                    </p>
+                    <p id="tutee-subject" class="d-none">
+                        Please state the subject taught by your tutor you are lodging this complaint
+                        against or the subject of the lesson you share with your fellow tutee whom
+                        you are lodging this complaint against. Kindly do not list all the subjects
+                        you have tutoring lessons under TIA.
+                    </p>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="Subjects"
+                        pattern="[A-Za-z\s]+"
+                        required
+                    />
+                </div>
+                <br />
+                <div class="mb-3">
+                    <label class="form-label">Details of the Complaint</label>
+                    <p>Max. 1000 characters</p>
+                    <textarea maxlength="1000" class="w-100" name="Details of complaint"></textarea>
+                </div>
+                <br />
+                <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+                    <label class="form-label">Have you ever reported this?</label>
+                    <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="Reported"
+                                id="reported-yes"
+                                value="yes"
+                            />
+                            <label class="form-check-label" for="reported-yes">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="Reported"
+                                id="reported-no"
+                                value="no"
+                            />
+                            <label class="form-check-label" for="reported-no">No</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+
+            <div id="datemedium" class="d-none mb-3 px-1">
+                <label class="mb-3"
+                    >Please provide the date and medium (e.g., Telegram, Email) you used to file the
+                    complaint.</label
+                >
+                <input type="text" name="Date medium" class="form-control w-100" />
+            </div>
+            <br />
+            <p class="fs-6">
+                By submitting this complaint form, you acknowledge that you have read and consented
+                to the following:
+            </p>
+            <ul class="fs-6">
+                <li>
+                    Upon reviewing your complaint, we will contact you via e-mail or a messaging
+                    platform (e.g. Telegram, Whatsapp or Instagram) within 5 working days. In the
+                    event you do not receive a response from us about your issue, you are strongly
+                    encouraged to immediately reach out to us.
+                </li>
+                <li>
+                    TIA will conduct due diligence in verifying all facts, within reason, to
+                    determine whether there is a triable case of if this complaint was untruthful.
+                </li>
+                <li>
+                    TIA reserves the right to act as a third party mediator to resolve the conflict
+                    between yourself and the person(s) whom you are lodging this complaint against.
+                    As such, TIA has the right to commence resolution proceedings and a final
+                    interview stage wherein all parties involved and representatives of TIA will be
+                    in attendance.
+                </li>
+                <li>
+                    If TIA finds that this complaint has been made untruthfully, you will be
+                    blacklisted from being a tutor and/or tutee under TIA.
+                </li>
+                <li>The data provided in this form is subjected to our Privacy Policy.</li>
+            </ul>
+            <br />
+            <button type="submit" class="btn btn-primary w-100 px-1" id="submit-button">
+                Submit
+            </button>
+
+            <div
+                id="message"
+                class="d-none w-100 fw-bold text-primary py-2 my-3 bg-secondary border-primary rounded-3 text-center"
+            ></div>
+        </form>
+    </div>
+</div>
+<script>
+    // Show/hide tutor or tutee fields based on the selected role
+    const roleTutor = document.getElementById("role-tutor");
+    const roleTutee = document.getElementById("role-tutee");
+    const tutorFields = document.getElementById("tutor-fields");
+    const tuteeFields = document.getElementById("tutee-fields");
+    const tutorTuteeFields = document.getElementById("tutor-tutee-fields");
+    const tutorSubject = document.getElementById("tutor-subject");
+    const tuteeSubject = document.getElementById("tutee-subject");
+    const tuteeNameInput = document.getElementById("tutee-name");
+    const tutorNameInput = document.getElementById("tutor-name");
+
+    roleTutor.addEventListener("change", () => {
+        if (roleTutor.checked) {
+            tutorFields.classList.remove("d-none"); // Show tutor fields
+            tuteeFields.classList.add("d-none"); // Hide tutee fields
+            tutorTuteeFields.classList.remove("d-none");
+            tutorSubject.classList.remove("d-none");
+            tuteeSubject.classList.add("d-none");
+
+            // Set Tutee Name as required and remove required from Tutor Name
+            tuteeNameInput.setAttribute("required", true);
+            tutorNameInput.removeAttribute("required");
+        }
+    });
+
+    roleTutee.addEventListener("change", () => {
+        if (roleTutee.checked) {
+            tutorFields.classList.add("d-none"); // Hide tutor fields
+            tuteeFields.classList.remove("d-none"); // Show tutee fields
+            tutorTuteeFields.classList.remove("d-none");
+            tutorSubject.classList.add("d-none");
+            tuteeSubject.classList.remove("d-none");
+
+            // Set Tutor Name as required and remove required from Tutee Name
+            tutorNameInput.setAttribute("required", true);
+            tuteeNameInput.removeAttribute("required");
+        }
+    });
+
+    // Show/hide tutor or tutee date and medium based on past report
+    const reportedYes = document.getElementById("reported-yes");
+    const reportedNo = document.getElementById("reported-no");
+    const datemedium = document.getElementById("datemedium");
+
+    function toggleDatemediumDisplay(shouldDisplay) {
+        if (shouldDisplay) {
+            datemedium.classList.remove("d-none"); // Show the datemedium section
+        } else {
+            datemedium.classList.add("d-none"); // Hide the datemedium section
+        }
+    }
+
+    // Add event listeners for both tutor and tutee
+    reportedYes.addEventListener("change", () => toggleDatemediumDisplay(true));
+    reportedNo.addEventListener("change", () => toggleDatemediumDisplay(false));
+
+    //Link form responses to google sheets
+    document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent form submission if validation fails
+        const messageElement = document.getElementById("message");
+        const submitButton = document.getElementById("submit-button");
+
+        messageElement.textContent = "Submitting..";
+        messageElement.classList.remove("d-none");
+        submitButton.disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+
+        // Encode the keys and values
+        for (var pair of formData.entries()) {
+            const encodedKey = encodeURIComponent(pair[0]);
+            const encodedValue = encodeURIComponent(pair[1]);
+            keyValuePairs.push(`${encodedKey}=${encodedValue}`);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+            "https://script.google.com/macros/s/AKfycbzAGjNXXlBQn-lsprXLx25sULgeed88mb3uP_jfXNhc6_fsF32yfXvTvh3S6mAo0ukV/exec",
+            {
+                redirect: "follow",
+                method: "POST",
+                body: formDataString,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            }
+        )
+            .then(function (response) {
+                // Check if the request was successful
+                if (response) {
+                    return response; // Assuming your script returns JSON response
+                } else {
+                    throw new Error("Failed to submit the form.");
+                }
+            })
+            .then(function (data) {
+                // Display a success message
+                messageElement.textContent = "Submitted successfully.";
+                messageElement.classList.remove("d-none");
+                submitButton.disabled = false;
+                document.getElementById("form").reset();
+
+                setTimeout(function () {
+                    messageElement.textContent = "";
+                    messageElement.classList.add("d-none");
+                }, 2600);
+            })
+            .catch(function (error) {
+                // Handle errors, you can display an error message here
+                console.error(error);
+                messageElement.textContent = "An error occurred while submitting the form.";
+                messageElement.remove("d-none");
+            });
+    });
+</script>
+{{ partial "footer.html" }} {{- end -}}

@@ -1,4 +1,4 @@
-baseURL = 'https://tutors-in-action.org/tia/'
+baseURL = 'https://tutors-in-action.org/'
 languageCode = 'en-my'
 title = 'Tutors In Action Malaysia (TIA)'
 disableKinds = ["taxonomy", "term"]

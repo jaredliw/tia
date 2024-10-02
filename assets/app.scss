@@ -89,12 +89,5 @@ a:hover {
   -webkit-box-orient: vertical;
 }
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
-  p, a {
-    font-size: 1.2rem;
-  }
-}
-
 @import "bootstrap/scss/utilities/api";
 @import "bootstrap/scss/bootstrap";

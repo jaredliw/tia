@@ -50,11 +50,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
           TZ: America/Los_Angeles
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: npm run build
       - name: Write CNAME
         run: cp CNAME ./public/CNAME
       - name: Upload artifact

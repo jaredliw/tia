@@ -11,6 +11,7 @@
 
         <ul id="resourceNav" class="nav nav-tabs mt-2">
             {{ $first := true }}
+            {{ $sectionLink := "" }}
             {{ range site.Data.resources }}
                 <li class="nav-item">
                     <a class="nav-link {{ if $first }} active {{ end }}" data-bs-toggle="tab"
@@ -20,6 +21,10 @@
                 </li>
                 {{ $first = false }}
             {{ end }}
+
+            <li class="nav-item ms-auto">
+                <a class="nav-link text-decoration-underline" href="https://drive.google.com/drive/folders/1rjg6h0bArc4QbKTAdAV6O8mYe5dVYlil?usp=drive_link" target="_blank">Drive Link</a>
+            </li>
         </ul>
 
         <div class="tab-content">
@@ -27,9 +32,16 @@
             {{ $firstTab := true }}
             {{ $accordionCounter := 1 }}
             {{ range site.Data.resources }}
+                {{ $sectionLink = .section_link }}
                 <div class="tab-pane container px-0 fade {{ if $firstTab -}} show active {{- end -}}"
                      id="{{ crypto.MD5 .section_name }}">
                     {{ $firstGroup := true }}
+
+                    <div class="d-flex mt-3" >
+                        <h6 class="font-weight-bold" style="line-height: unset">Google Drive Folder: </h6>
+                        <a class = "mx-2 mt-0" href="{{ .section_link }}" target="_blank">Here</a>
+                    </div>
+
                     {{ range .groups }}
                     <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between pt-4 pb-1 mb-2">
                         <h6 class="text-uppercase mb-0">

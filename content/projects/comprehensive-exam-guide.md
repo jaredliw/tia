@@ -4,7 +4,7 @@ title: Comprehensive Exam Guide
 subtitle: Compiling test-acing resources for SPM students to revise and study for their exams.
 coverImage: projects-assets/ceg/cover.png
 author: Abigail Maya Surin
-status: Ongoing
+status: Completed
 ---
 
 ## Introduction

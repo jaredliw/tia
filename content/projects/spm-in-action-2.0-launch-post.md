@@ -4,7 +4,7 @@ title : Launching SPM In Action 2.0
 subtitle : Returning a classic online workshop series, crash-course style!
 coverImage : projects-assets/sia2.0-launch/cover.png
 author : SPM In Action 2.0 Team
-status : Ongoing
+status : Completed
 ---
 
 ## 🌟 Introducing SIA 2.0: Elevate Your SPM Preparation! 🌟

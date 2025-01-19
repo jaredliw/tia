@@ -3,19 +3,24 @@
     "department": "Executive",
     "members": [
       {
-        "name": "Chiang Ru",
+        "name": "Farah Hana Sophia",
         "role": "Executive Director",
-        "avatar": "about/exco-cr.jpg"
+        "avatar": "about/exco-sophia.png"
       },
       {
         "name": "Alyqa",
-        "role": "Internal & External Affairs Officer",
+        "role": "Executive Director",
         "avatar": "about/exco-alyqa.jpg"
       },
       {
-        "name": "Farah Hana Sophia",
+        "name": "Jason Chong",
         "role": "Internal & External Affairs Officer",
-        "avatar": "about/exco-sophia.png"
+        "avatar": "about/wops-jason.jpg"
+      },
+      {
+        "name": "Abigail Maya Surin",
+        "role": "Internal & External Affairs Officer",
+        "avatar": "about/resource-abigail.jpg"
       },
       {
         "name": "Hsien Loong",

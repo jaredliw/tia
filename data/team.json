@@ -3,19 +3,24 @@
     "department": "Executive",
     "members": [
       {
-        "name": "Chiang Ru",
+        "name": "Farah Hana Sophia",
         "role": "Executive Director",
-        "avatar": "about/exco-cr.jpg"
+        "avatar": "about/exco-sophia.png"
       },
       {
         "name": "Alyqa",
-        "role": "Internal & External Affairs Officer",
+        "role": "Executive Director",
         "avatar": "about/exco-alyqa.jpg"
       },
       {
-        "name": "Farah Hana Sophia",
+        "name": "Jason Chong",
         "role": "Internal & External Affairs Officer",
-        "avatar": "about/exco-sophia.png"
+        "avatar": "about/exco-jason.jpg"
+      },
+      {
+        "name": "Abigail Maya Surin",
+        "role": "Internal & External Affairs Officer",
+        "avatar": "about/exco-abigail.jpg"
       },
       {
         "name": "Hsien Loong",
@@ -33,39 +38,34 @@
     "department": "Welfare-Operations",
     "members": [
       {
-        "name": "Steven Yee",
-        "role": "Director",
-        "avatar": "about/wops-steven.jpg"
-      },
-      {
-        "name": "Jocelyn Wong",
-        "role": "Deputy Director",
-        "avatar": "about/wops-jocelyn.jpg"
-      },
-      {
-        "name": "Jason Chong",
-        "role": "Deputy Director",
-        "avatar": "about/wops-jason.jpg"
-      },
-      {
         "name": "Teo Jia Sing",
-        "role": "Executive",
+        "role": "Director",
         "avatar": "about/wops-jia-sing.jpg"
       },
       {
-        "name": "Fatin Amni",
-        "role": "Executive",
-        "avatar": "about/wops-fatin-amni.jpg"
+        "name": "Aqyf",
+        "role": "Vice Director",
+        "avatar": "about/wops-aqyf.jpg"
       },
       {
-        "name": "Dawn Lee",
+        "name": "Ainin Sofiyah",
         "role": "Executive",
-        "avatar": "about/wops-dawn.jpg"
+        "avatar": "about/wops-sofiyah.jpg"
       },
       {
-        "name": "Isleha Francis",
+        "name": "Gan Kai Yi",
         "role": "Executive",
-        "avatar": "about/wops-isleha.jpg"
+        "avatar": "about/wops-kai-yi.jpg"
+      },
+      {
+        "name": "Shree Pavana",
+        "role": "Executive",
+        "avatar": "about/wops-pavana.jpg"
+      },
+      {
+        "name": "Seah Wen Qi",
+        "role": "Executive",
+        "avatar": "about/wops-wen-qi.jpg"
       }
     ]
   },
@@ -73,34 +73,39 @@
     "department": "Public Relations",
     "members": [
       {
-        "name": "Zi Yee",
+        "name": "Lee Xin Yue",
         "role": " Director",
-        "avatar": "about/pr-zi-yee.png"
+        "avatar": "about/pr-xin-yue.png"
       },
       {
-        "name": "Zixuan",
-        "role": "Deputy Director",
+        "name": "Lee Zixuan",
+        "role": "Vice Director",
         "avatar": "about/pr-zixuan.jpg"
       },
       {
-        "name": "Xin Yue",
-        "role": "Deputy Director",
-        "avatar": "about/pr-xin-yue.jpg"
-      },
-      {
-        "name": "Aqyf Mohd Ghazali",
-        "role": "Executive",
-        "avatar": "about/pr-aqyf.png"
-      },
-      {
-        "name": "Bahiah Chek Peei",
-        "role": "Executive",
-        "avatar": "about/pr-bahiah.jpg"
-      },
-      {
         "name": "Priscilla Tang",
-        "role": "Executive",
+        "role": "Vice Director",
         "avatar": "about/pr-priscilla.jpg"
+      },
+      {
+        "name": "Lee Le Si",
+        "role": "Executive",
+        "avatar": "about/pr-le-si.jpg"
+      },
+      {
+        "name": "Hannah Wong Xiao Xin",
+        "role": "Executive",
+        "avatar": "about/pr-hannah-wong.jpg"
+      },
+      {
+        "name": "Steven Yee",
+        "role": "Executive",
+        "avatar": "about/pr-steven.jpg"
+      },
+      {
+        "name": "Tan Qian Wen",
+        "role": "Executive",
+        "avatar": "about/pr-qian-wen.jpg"
       }
     ]
   },
@@ -108,29 +113,29 @@
     "department": "Tech",
     "members": [
       {
-        "name": "Raihanah Husna",
+        "name": "Chok Weng Hang",
         "role": "Director",
-        "avatar": "about/tech-raihanah.jpg"
+        "avatar": "about/tech-chok.png"
       },
       {
-        "name": "Lynn Goh",
-        "role": "Deputy Director",
-        "avatar": "about/tech-lynn.jpeg"
+        "name": "Tang Ying Jia",
+        "role": "Vice Director",
+        "avatar": "about/tech-ying-jia.jpg"
       },
       {
-        "name": "Aidil Iskandar",
+        "name": "Charlotte Loke",
         "role": "Executive",
-        "avatar": "about/tech-aidil.jpg"
+        "avatar": "about/tech-charlotte.jpg"
       },
       {
-        "name": "Aqil Amani",
+        "name": "Chuah Jia Herng",
         "role": "Executive",
-        "avatar": "about/tech-aqil.jpg"
+        "avatar": "about/tech-jia-herng.jpg"
       },
       {
-        "name": "Khong Yirou",
+        "name": "Sharifah Zamarissa",
         "role": "Executive",
-        "avatar": "about/tech-yirou.jpg"
+        "avatar": "about/tech-sharifah.jpg"
       }
     ]
   },
@@ -138,29 +143,29 @@
     "department": "Outreach",
     "members": [
       {
-        "name": "Alyssa Lee",
+        "name": "Nur Ariana Iman",
         "role": "Director",
-        "avatar": "about/outreach-alyssa.jpg"
+        "avatar": "about/outreach-ariana.jpg"
       },
       {
-        "name": "Jaymie Liew",
-        "role": "Deputy Director",
-        "avatar": "about/outreach-jaymie.jpg"
+        "name": "Anjushree Ratna Kumar",
+        "role": "Vice Director",
+        "avatar": "about/outreach-anjushree.jpg"
       },
       {
-        "name": "Ashley Ann",
+        "name": "Ishika Chakraborty",
         "role": "Executive",
-        "avatar": "about/outreach-shley.jpg"
+        "avatar": "about/outreach-ishika.jpg"
       },
       {
-        "name": "Chia Hui En",
+        "name": "Serene Inulia Kong Kwai Yan",
         "role": "Executive",
-        "avatar": "about/outreach-hui-en.jpeg"
+        "avatar": "about/outreach-serene.jpg"
       },
       {
-        "name": "Jeff Ng",
+        "name": "Lew Yeow Yang",
         "role": "Executive",
-        "avatar": "about/outreach-jeff.jpg"
+        "avatar": "about/outreach-yeow-yang.png"
       }
     ]
   },
@@ -168,29 +173,29 @@
     "department": "Resource",
     "members": [
       {
-        "name": "Abigail Maya Surin",
+        "name": "Vivashdheeran Kalatharan",
         "role": "Director",
-        "avatar": "about/resource-abigail.jpg"
-      },
-      {
-        "name": "Eng Zhen Shen",
-        "role": "Deputy Director",
-        "avatar": "about/resource-zhen-shen.jpg"
-      },
-      {
-        "name": "Leong Khoi Yern",
-        "role": "Executive",
-        "avatar": "about/resource-khoi-yern.jpeg"
-      },
-      {
-        "name": "Vivashdheeran",
-        "role": "Executive",
         "avatar": "about/resource-vivashdheeran.jpg"
       },
       {
-        "name": "Lee Jia Yi (Cheryl)",
+        "name": "Muhammad Faiq Fathullah",
+        "role": "Vice Director",
+        "avatar": "about/resource-faiq.jpg"
+      },
+      {
+        "name": "Hannah Ong Yong Xuan",
         "role": "Executive",
-        "avatar": "about/resource-cheryl.jpg"
+        "avatar": "about/resource-hannah-ong.jpg"
+      },
+      {
+        "name": "Isaac Goh Khai Zhuan",
+        "role": "Executive",
+        "avatar": "about/resource-isaac-goh.jpg"
+      },
+      {
+        "name": "Nur Farzana Hazirah",
+        "role": "Executive",
+        "avatar": "about/resource-farzana.jpg"
       }
     ]
   }

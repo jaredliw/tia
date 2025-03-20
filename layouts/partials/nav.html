@@ -20,11 +20,30 @@
         <!-- For md screen and up -->
         <ul class="d-none d-md-flex navbar-nav flex-row ms-auto">
             {{ range site.Params.pages }}
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase text-white text-start" href="{{ absURL (index . 1) }}">
-                        {{ index . 0 }}
-                    </a>
-                </li>
+                {{ $title := index . 0 }}
+                {{ $url := index . 1 }}
+                {{ $subpages := index . 2 }}
+                <!-- Check if the current navigation item has subpages -->
+                {{ if $subpages }}
+                    <li class="nav-item {{ if $subpages }}dropdown{{ end }}">
+                        <a class="nav-link dropdown-toggle-nav text-uppercase text-white text-start" data-bs-toggle="dropdown">
+                            {{ $title }}
+                        </a>
+                        <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink-{{ $title }}">
+                            {{ range $subpages }}
+                            {{ $subpageTitle := index . 0 }}  
+                            {{ $subpageURL := index . 1 }}
+                                <li><a class="dropdown-item" href="{{ absURL $subpageURL }}">{{ $subpageTitle }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ else }}
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase text-white text-start" href="{{ absURL $url }}">
+                            {{ $title }} 
+                        </a>
+                    </li>
+                {{ end }}
             {{ end }}
 
             <li class="ms-2">
@@ -33,8 +52,8 @@
                     Donate
                 </button>
 
-                <a class="btn btn-primary text-white text-uppercase px-4 rounded-0 ms-2" type="button"
-                   style="font-size: 0.9rem;" href="{{ absURL "join-us" }}">
+                <a class="btn join-us-btn btn-primary text-white text-uppercase px-4 rounded-0 ms-2" type="button"
+                   style="font-size: 0.9rem; white-space: nowrap;" href="{{ absURL "join-us" }}">
                     Join Us
                 </a>
             </li>
@@ -73,8 +92,7 @@
     <div class="d-flex d-md-none offcanvas offcanvas-end" id="offcanvasNavbar">
         <div class="offcanvas-header d-flex flex-column">
             <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <a class="navbar-brand offcanvas-navbar-brand lh-sm text-center mt-4 me-0 flex-wrap"
-               href="{{ absURL "" }}">
+            <a class="navbar-brand offcanvas-navbar-brand lh-sm text-center mt-4 me-0 flex-wrap" href="{{ absURL "" }}">
                 <span style="font-size: 1.1rem">{{ site.Title }}</span><br>
                 {{ site.Params.subtitle }}
             </a>
@@ -83,22 +101,33 @@
         <div class="offcanvas-body pt-0">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 {{ range site.Params.pages }}
-                    <li class="nav-item">
-                        <a class="nav-link text-uppercase py-1 text-center"
-                           href="{{ absURL (index . 1) }}">
-                            {{ index . 0 }}
-                        </a>
-                    </li>
+                    {{ $title := index . 0 }}
+                    {{ $url := index . 1 }}
+                    {{ $subpages := index . 2 }}
+                    <!-- Check if the current navigation item has subpages -->
+                    {{ if $subpages }}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle-nav text-uppercase py-3" data-bs-toggle="dropdown">{{ $title }}</a>
+                            <ul class="dropdown-menu">
+                                {{ range $subpages }}
+                                    {{ $subpageTitle := index . 0 }}  
+                                    {{ $subpageURL := index . 1 }}
+                                    <li><a class="dropdown-item" href="{{ absURL $subpageURL }}">{{ $subpageTitle }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </li>
+                    {{ else }}
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase py-1" href="{{ absURL $url }}">{{ $title }}</a>
+                        </li>
+                    {{ end }}
                 {{ end }}
 
                 <li class="ms-2 pt-4">
-                    <button class="btn donate-btn btn-outline-primary text-uppercase px-3 rounded-0"
-                            type="button" style="font-size: 0.9rem;" data-bs-toggle="modal"
-                            data-bs-target="#donateModal">
+                    <button class="btn donate-btn btn-outline-primary text-uppercase px-3 rounded-0" type="button" style="font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#donateModal">
                         Donate
                     </button>
-                    <a class="btn btn-primary text-white text-uppercase px-3 rounded-0 ms-2" type="button"
-                       style="font-size: 0.9rem;" href="{{ absURL "join-us" }}">
+                    <a class="btn btn-primary text-white text-uppercase px-3 rounded-0 ms-2" type="button" style="font-size: 0.9rem;" href="{{ absURL "join-us" }}">
                         Join Us
                     </a>
                 </li>

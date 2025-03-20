@@ -1,0 +1,68 @@
+{{- define "main" -}}
+{{ partial "nav.html" (dict "nav_white" 1) }}
+
+<div class="row justify-content-center" style="padding-top: 6.5rem;">
+    <h2 class="text-center text-primary fw-lighter">
+        Annual <span class="fw-bold">report</span>.
+    </h2>
+    <hr class="divider my-4" />
+
+    <div class="text-center">{{ .Content }}</div>
+
+
+    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2 mt-2 mb-0">
+        <a type="button" class="btn btn-primary text-white text-uppercase rounded-0" style="width: 230px;"
+            href="{{ absURL site.Params.annualReportGoogleDriveFolderLink }}" target="_blank" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 8px rgba(0, 0, 0, 0.2)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
+            View on Google Drive
+        </a>
+    </div>
+    
+    
+    {{ range site.Data.report_resources }}
+
+            {{ range .groups }}
+            <div class="container text-center my-5" style="padding-bottom: 5rem;">
+                <div class="card border-0 card-container">
+                    <div class="row g-0">
+                        {{ range .file_ids }}
+                        <div class="col-md-4 d-flex justify-content-center thumbnail-container rounded">
+                            <div class="image-container rounded align-items-center justify-content-center">
+                                <!-- Generate image source dynamically using the file ID -->
+                                <img src="{{ absURL (printf "annual-report/%s.png" .) }}"
+                                 class="img-fluid rounded"
+                                 alt="Document Thumbnail"
+                                 style="max-width: 90%; height: auto; margin: 10%; display: flex;">
+                            </div>
+                        </div>
+                        {{ end }}
+                        
+
+                        <!-- Card body -->
+                        <div class="col-md-8">
+                            <div class="card-body flex-column justify-content-between" style="height: 60%;"> <!-- allow the card to grow with content-->
+                                <div class="transbox rounded">
+                                    <h2 class="card-title display-4 fw-light"><span class="fw-bold">{{ .title }}</span><br> ANNUAL REPORT </h2>
+                                </div>
+                                    <p class="card-text fs-5 custom-justify">{{ .description }}</p>
+                                    <div class="d-flex justify-content-end mt-5">
+                                        <a href="{{ absURL .file_link }}" target="_blank" class="btn btn-primary btn-lg rounded-pill mt-5 btn-view">VIEW NOW</a>
+                                        <a href="https://drive.google.com/uc?export=download&id={{ index .file_ids 0 }}" class= "btn btn-link text-decoration-none align-items-center ml-3 mt-5" id="downloadIcon" download>
+                                            <img src="annual-report-download-icon.png" alt="Download Icon" style="width: 100%; height: 40px;">  
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+    {{ end }}
+    
+    {{ partial "footer.html" }}
+    
+    {{ with resources.Get "annual-report.css" | postCSS | minify }}
+    <link rel="stylesheet" href="{{ .Permalink }}">
+    {{ end }}
+    
+    {{- end -}}

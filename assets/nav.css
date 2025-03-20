@@ -80,9 +80,27 @@
     color: inherit !important;
 }
 
-a.nav-link:hover, a.nav-link:focus {
+.dropdown-item:hover, a.nav-link:focus {
     color: var(--bs-gray-400) !important;
+    background-color: transparent;
 }
+
+.dropdown-toggle-nav {
+    transition: 0.15s;
+    background-color: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+
+.navbar-nav .dropdown-menu {
+    top: 100%; /* Position the dropdown below the link */
+    left: 0; /* Align the dropdown with the left edge of the link */
+    margin-top: 0; 
+}
+
 
 .offcanvas-navbar-brand,
 #mainNav.navbar-scrolled a.nav-link:hover,
@@ -117,5 +135,22 @@ a.nav-link:hover, a.nav-link:focus {
     img[alt=logo] {
         width: 42px;
         height: 42px;
+    }
+    
+    .nav-link.dropdown-toggle-nav {
+        position: relative;
+    }
+    
+    .nav-link.dropdown-toggle-nav::after {
+        content: "";
+        position: inline-block;
+        margin-left: 15px; /* Adjust this value to position the arrow */
+        top: 50%;
+        transform: translateY(-50%);
+        border: solid black; 
+        border-width: 0 4px 4px 0; /* Adjust sizing of arrow */
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg); 
     }
 }

@@ -1,0 +1,51 @@
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: #c3e1d7;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: #000000;
+}
+
+.card-container {
+    max-width: 1000px; 
+    margin: auto;
+}
+
+.thumbnail-container{
+    background-color: #097276;
+}
+
+.image-container{
+    background-color: whitesmoke;
+    width: 100%; 
+    height: auto;
+    margin: 10%; 
+    display: flex;
+}
+
+.transbox {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.transbox h2 {
+    color: #000000;
+    text-align: left;
+    margin: 3%;
+}
+
+.custom-justify {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.btn-view {
+    max-width: 50%;
+    color: white !important;
+}

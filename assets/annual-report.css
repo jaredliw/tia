@@ -46,6 +46,19 @@
 }
 
 .btn-view {
-    max-width: 50%;
+    max-width: 100%;
+    width: auto;
     color: white !important;
+    padding: 10px 16px 8px 16px;
+}
+
+.download-icon {
+    width: 40px; 
+    height: auto;
+}
+
+@media (max-width: 575.98px) {
+    .download-icon{
+        max-width: 100%;
+    }
 }

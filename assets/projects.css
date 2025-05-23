@@ -13,3 +13,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media (max-width: 576px) {
+  .register-btn {
+    font-size: 0.9rem;
+    width: 50%;
+    right: 10%;
+    bottom: 10%;
+  }
+}

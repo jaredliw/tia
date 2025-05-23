@@ -71,6 +71,7 @@
             </p>
         </div>
     </div>
+    
 
     <div class="row">
         {{- partial "footer.html" -}}
@@ -90,5 +91,25 @@
             scrollSpyOnce: true
         });
         {{ end }}
+    </script>
+
+    <div class="modal fade" id="posterModal" tabindex="-1" aria-labelledby="viaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal">
+            <div class="modal-content">
+                <div class="modal-body p-0 position-relative poster-container">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <a href="{{ absURL "projects/" }}">
+                    <img src="{{ absURL "projects-assets/via/cover.jpg" }}" alt="Poster" class="poster-container" style="cursor:pointer;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const posterModal = new bootstrap.Modal(document.getElementById('posterModal'));
+            posterModal.show();
+        });
     </script>
 {{- end -}}

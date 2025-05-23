@@ -29,3 +29,43 @@ header.masthead {
         max-width: 120px;
     }
 }
+
+/* Popup modal for Voices In Action Event Registration at Home page*/
+.custom-modal {
+    max-width: 70%;
+    width: auto;
+}
+
+@media (max-width: 576px) {
+    .custom-modal {
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .modal-content {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .poster-container {
+        width: 100%;
+        aspect-ratio: unset;
+    }
+}
+
+.poster-container {
+    width: 100%;
+    aspect-ratio: 719 / 431;
+}
+
+.poster-container .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.modal-backdrop.show {
+    background-color: black;
+    opacity: 0.7;
+}

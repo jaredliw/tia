@@ -13,6 +13,7 @@ tutorSignUpLink = 'https://docs.google.com/forms/d/e/1FAIpQLSeHHVjR6okfiQl1VurDH
 tuteeSignUpLink = 'https://docs.google.com/forms/d/e/1FAIpQLScR3awG1owNh50QbpJxPZPEkCUyCT5UOnhE1jEp6Soe6456cQ/viewform?usp=sharing'
 resourcesGoogleDriveFolderLink = 'https://drive.google.com/drive/folders/1rjg6h0bArc4QbKTAdAV6O8mYe5dVYlil?usp=drive_link'
 annualReportGoogleDriveFolderLink = 'https://drive.google.com/drive/folders/1jIhNScANMwekMIfSYT2UrXpsg1RHtQ7M?usp=sharing'
+viaRegistrationLink = 'https://forms.gle/AwTJ6fKMf72eMMvp9'
 pages = [
     ['Organisation', 'organisation', [['About', '/about'], ['Report', '/annual-report']]],
     ['Projects', '/projects'],
